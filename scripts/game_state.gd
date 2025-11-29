@@ -12,4 +12,3 @@ func set_energy(value: int) -> void:
 	if value == energy: return
 	energy = value
 	energy_changed.emit(energy)
-#tst
