@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmcobo5umwxgo"]
+
+[ext_resource type="Script" uid="uid://o55ogxfbch1i" path="res://scripts/tile.gd" id="1_2sjy5"]
+
+[node name="Tile" type="Area2D"]
+script = ExtResource("1_2sjy5")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(1, 1, 1, 0.78431374)
+polygon = PackedVector2Array(-200, -100, 50, -100, 250, 200, -200, 50)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+
+[node name="Label" type="Label" parent="."]
+z_index = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -11.0
+offset_right = 25.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.39215687)
+theme_override_font_sizes/font_size = 32
+text = "λαμ"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Line2D" type="Line2D" parent="."]
+z_index = 1
+closed = true
+width = 3.0
+default_color = Color(1, 1, 0, 0.2509804)
+sharp_limit = 1.0
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

@@ -1,0 +1,33 @@
+# Godot metadata (auto-generated, never commit)
+.godot/
+
+# Imported assets (Godot can regenerate)
+.import/
+
+# --- Windows & Executables ---
+*.exe
+*.pdb
+*.dll
+
+# --- Web (HTML5) export output ---
+*.wasm
+*.js
+*.json
+*.zip
+export/
+build/
+
+# --- Godot/Editor temporary files ---
+*.tmp
+.cache/
+logs/
+
+# --- OS garbage ---
+Thumbs.db
+.DS_Store
+
+# --- Optional ---
+# Αν βγάζεις release archives π.χ zip/rar, άστα εκτός repo:
+*.7z
+*.rar
+*.tar

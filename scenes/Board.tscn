@@ -1,0 +1,81 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgxagifxw4iul"]
+
+[ext_resource type="Script" uid="uid://dlvkcyv6kdjxs" path="res://scripts/board.gd" id="1_otxgx"]
+[ext_resource type="PackedScene" uid="uid://bhk40vre05soo" path="res://scenes/Player.tscn" id="2_hq5ls"]
+[ext_resource type="Texture2D" uid="uid://d0dds5nk7wkpc" path="res://assets/galaxy_bg.png" id="2_k0g80"]
+[ext_resource type="PackedScene" uid="uid://bmcobo5umwxgo" path="res://scenes/Tile.tscn" id="3_k0g80"]
+
+[node name="Board" type="Node2D"]
+script = ExtResource("1_otxgx")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(300, 200)
+limit_left = 0
+limit_top = 0
+limit_right = 2000
+limit_bottom = 2000
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 2.0
+rotation_smoothing_speed = 2.0
+
+[node name="Galaxy_bg" type="Sprite2D" parent="."]
+texture = ExtResource("2_k0g80")
+centered = false
+
+[node name="B01" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("3_k0g80")]
+position = Vector2(700, 650)
+tile_type = "B"
+neighbors = [NodePath("../C01")]
+
+[node name="Polygon2D" parent="B01" index="0"]
+polygon = PackedVector2Array(-150, -50, 100, -250, 100, 50, -50, 200)
+
+[node name="C01" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("3_k0g80")]
+position = Vector2(600, 400)
+tile_type = "C"
+neighbors = [NodePath("../B01"), NodePath("../D02"), NodePath("../D20")]
+
+[node name="Polygon2D" parent="C01" index="0"]
+polygon = PackedVector2Array(-150, -100, 150, -200, 200, 0, -50, 200, -200, 100)
+
+[node name="D01" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("3_k0g80")]
+position = Vector2(200, 100)
+tile_type = "D"
+neighbors = [NodePath("../D02"), NodePath("../D20")]
+
+[node name="D02" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("3_k0g80")]
+position = Vector2(500, 150)
+tile_type = "D"
+neighbors = [NodePath("../C01"), NodePath("../D01"), NodePath("../D03")]
+
+[node name="Polygon2D" parent="D02" index="0"]
+polygon = PackedVector2Array(-250, -150, 50, -150, 250, 50, -50, 150)
+
+[node name="D03" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("3_k0g80")]
+position = Vector2(800, 100)
+tile_type = "D"
+neighbors = [NodePath("../D02")]
+
+[node name="Polygon2D" parent="D03" index="0"]
+polygon = PackedVector2Array(-250, -100, 100, -100, 250, 100, -50, 100)
+
+[node name="D20" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("3_k0g80")]
+position = Vector2(200, 350)
+tile_type = "D"
+neighbors = [NodePath("../C01"), NodePath("../D01")]
+
+[node name="Polygon2D" parent="D20" index="0"]
+antialiased = true
+polygon = PackedVector2Array(-200, -200, 250, -50, 200, 150, -200, 50)
+
+[node name="Player1" parent="." instance=ExtResource("2_hq5ls")]
+position = Vector2(411, 425)
+scale = Vector2(0.6, 0.6)
+
+[editable path="B01"]
+[editable path="C01"]
+[editable path="D01"]
+[editable path="D02"]
+[editable path="D03"]
+[editable path="D20"]
