@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://da67k3nwcc1h2" path="res://scenes/Energy_gauge.tscn" id="1_b3bc3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wusub"]
-bg_color = Color(0.22352941, 0.42352942, 0.21176471, 1)
+bg_color = Color(0.17437115, 0.3214825, 0.5957968, 1)
 
 [node name="UI" type="CanvasLayer"]
 
@@ -28,6 +28,14 @@ offset_bottom = 40.0
 grow_horizontal = 2
 scale = Vector2(3, 3)
 
+[node name="Panel" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 8.399963
+offset_top = 7.0
+offset_right = 48.399963
+offset_bottom = 47.0
+scale = Vector2(5.433957, 4.1239195)
+
 [node name="Energy_gauge" parent="Panel" instance=ExtResource("1_b3bc3")]
 layout_mode = 1
 anchors_preset = 8
@@ -35,5 +43,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
+offset_left = -5.8000183
+offset_top = -229.00003
+offset_right = -5.8000183
+offset_bottom = -229.00003
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.72, 0.72)
