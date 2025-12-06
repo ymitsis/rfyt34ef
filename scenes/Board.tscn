@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dlvkcyv6kdjxs" path="res://scripts/board.gd" id="1_otxgx"]
 [ext_resource type="PackedScene" uid="uid://bhk40vre05soo" path="res://scenes/Player.tscn" id="2_hq5ls"]
-[ext_resource type="Texture2D" uid="uid://d0dds5nk7wkpc" path="res://assets/galaxy_bg.png" id="2_k0g80"]
+[ext_resource type="Texture2D" uid="uid://d0dds5nk7wkpc" path="res://assets/Icons/galaxy_bg.png" id="2_k0g80"]
 [ext_resource type="PackedScene" uid="uid://bmcobo5umwxgo" path="res://scenes/Tile.tscn" id="3_k0g80"]
 
 [node name="Board" type="Node2D"]

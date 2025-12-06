@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://drpuyot3kseii"]
+[gd_scene load_steps=4 format=3 uid="uid://drpuyot3kseii"]
 
 [ext_resource type="PackedScene" uid="uid://da67k3nwcc1h2" path="res://scenes/Energy_gauge.tscn" id="1_b3bc3"]
+[ext_resource type="PackedScene" uid="uid://cxwukqaogubv0" path="res://scenes/music_toggle.tscn" id="2_ro3t7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wusub"]
 bg_color = Color(0.17437115, 0.3214825, 0.5957968, 1)
@@ -36,17 +37,33 @@ offset_right = 48.399963
 offset_bottom = 47.0
 scale = Vector2(5.433957, 4.1239195)
 
-[node name="Energy_gauge" parent="Panel" instance=ExtResource("1_b3bc3")]
+[node name="Energy_gauge" parent="Panel/Panel" instance=ExtResource("1_b3bc3")]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -5.8000183
-offset_top = -229.00003
-offset_right = -5.8000183
-offset_bottom = -229.00003
+offset_left = -0.12498474
+offset_top = 1.0964355
+offset_right = -0.12498474
+offset_bottom = 1.0964355
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.72, 0.72)
+scale = Vector2(0.14071983, 0.18768401)
+
+[node name="Panel2" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 8.399963
+offset_top = 592.0
+offset_right = 48.399963
+offset_bottom = 632.0
+scale = Vector2(1.3527341, 1.2916919)
+
+[node name="MusicToggle" parent="Panel/Panel2" instance=ExtResource("2_ro3t7")]
+layout_mode = 1
+offset_left = -4.0486197
+offset_top = -3.6373181
+offset_right = -4.0486183
+offset_bottom = -3.6373177
+scale = Vector2(1.234437, 1.234437)
