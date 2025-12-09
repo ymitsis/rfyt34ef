@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://bj8dk0h6fwi7r"]
+
+[ext_resource type="Texture2D" uid="uid://bfbpsjt1na3x3" path="res://assets/quizzes/ans_box_normal.png" id="1_bxpj3"]
+[ext_resource type="Texture2D" uid="uid://cgmd43lqldqo2" path="res://assets/quizzes/ans_box_pressed.png" id="2_5wy16"]
+[ext_resource type="BitMap" uid="uid://l1bygv8p0ibc" path="res://assets/quizzes/ans_box_mask.png" id="3_mong1"]
+[ext_resource type="Script" uid="uid://d1wmg6pxiuvlu" path="res://scripts/ans_box.gd" id="4_ihrbx"]
+
+[node name="ans_box" type="TextureButton"]
+offset_right = 250.0
+offset_bottom = 100.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+keep_pressed_outside = true
+texture_normal = ExtResource("1_bxpj3")
+texture_pressed = ExtResource("2_5wy16")
+texture_click_mask = ExtResource("3_mong1")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("4_ihrbx")
+
+[node name="AnswerText" type="Label" parent="."]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 9.0
+offset_right = 225.0
+offset_bottom = 89.0
+theme_override_font_sizes/font_size = 20
+text = "απάντηση εδAA ώ o papaw o diamanthw ti thw ;ekane mianhwφκ λκλφσκ κφλσλκ 3 poylakia"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+
+[node name="EnergyLabel" type="Label" parent="."]
+layout_mode = 0
+offset_right = 250.0
+offset_bottom = 100.0
+rotation = -0.34906584
+pivot_offset = Vector2(125, 50)
+theme_override_colors/font_outline_color = Color(0, 0.78431374, 0, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 60
+text = "20PJ⚡"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true

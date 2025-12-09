@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://drpuyot3kseii"]
+[gd_scene load_steps=5 format=3 uid="uid://drpuyot3kseii"]
 
 [ext_resource type="PackedScene" uid="uid://da67k3nwcc1h2" path="res://scenes/Energy_gauge.tscn" id="1_b3bc3"]
+[ext_resource type="Script" uid="uid://h2yrqbmenihx" path="res://scripts/panel.gd" id="1_ro3t7"]
+[ext_resource type="PackedScene" uid="uid://cnldk7rl488nm" path="res://scenes/quizzes/q_01.tscn" id="5_75u2n"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wusub"]
-bg_color = Color(0.22352941, 0.42352942, 0.21176471, 1)
+bg_color = Color(0.19607843, 0.19607843, 0.19607843, 0.5882353)
 
 [node name="UI" type="CanvasLayer"]
 
@@ -15,25 +17,35 @@ anchor_bottom = 1.0
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_wusub")
+script = ExtResource("1_ro3t7")
 metadata/_edit_use_anchors_ = true
 
-[node name="TextureButton" type="TextureButton" parent="Panel"]
+[node name="zoom" type="HSlider" parent="Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -75.0
+offset_top = -50.0
+offset_right = 75.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Energy_gauge" parent="Panel" instance=ExtResource("1_b3bc3")]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 40.0
+offset_left = 1.5258789e-05
+offset_top = 120.0
+offset_right = 1.5258789e-05
+offset_bottom = 120.0
 grow_horizontal = 2
-scale = Vector2(3, 3)
 
-[node name="Energy_gauge" parent="Panel" instance=ExtResource("1_b3bc3")]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Q01" parent="." instance=ExtResource("5_75u2n")]
+visible = false
+pivot_offset = Vector2(513.4285, 296.5714)

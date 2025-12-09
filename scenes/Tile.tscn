@@ -10,6 +10,7 @@ color = Color(1, 1, 1, 0.78431374)
 polygon = PackedVector2Array(-200, -100, 50, -100, 250, 200, -200, 50)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
 
 [node name="Label" type="Label" parent="."]
 z_index = 1

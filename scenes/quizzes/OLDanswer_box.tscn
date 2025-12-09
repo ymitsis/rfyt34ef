@@ -1,0 +1,66 @@
+[gd_scene load_steps=2 format=3 uid="uid://bydo381fe87s8"]
+
+[ext_resource type="Script" uid="uid://du150on2qwyey" path="res://scripts/OLDanswer_box.gd" id="1_tgo33"]
+
+[node name="answer_box" type="Control"]
+z_index = 1
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tgo33")
+_energy_if_selected = 30
+
+[node name="AnswerText" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "απαντηση εδω"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="EnergyLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -41.0
+offset_top = -27.5
+offset_right = 41.0
+offset_bottom = 27.5
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.34906584
+pivot_offset = Vector2(75, 30)
+theme_override_colors/font_outline_color = Color(0, 0.78431374, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 50
+text = "20PJ"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnswerImage" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
