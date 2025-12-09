@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cxwukqaogubv0"]
 
-[ext_resource type="Script" uid="uid://y0htv306y3pl" path="res://scenes/music_toggle.gd" id="1_u5lc7"]
+[ext_resource type="Script" uid="uid://y0htv306y3pl" path="res://scripts/music_toggle.gd" id="1_u5lc7"]
 [ext_resource type="Texture2D" uid="uid://cv3poodq87f07" path="res://assets/Icons/Audio/music_off.svg" id="1_wlnam"]
 [ext_resource type="Texture2D" uid="uid://dw8b23paykvnw" path="res://assets/Icons/Audio/music_on.svg" id="2_6hufg"]
 
@@ -23,4 +23,4 @@ toggle_mode = true
 texture_normal = ExtResource("2_6hufg")
 texture_pressed = ExtResource("1_wlnam")
 
-[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="toggled" from="TextureButton" to="." method="_on_texture_button_toggled"]

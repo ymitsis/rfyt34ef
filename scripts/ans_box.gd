@@ -1,6 +1,6 @@
 extends TextureButton
 
-signal clicked(answer_box)
+#signal clicked(answer_box)
 
 @export var _energy_if_selected: int = 20
 @export var _ans_text: String = "απάντηση (αλλάζει από editor/inspector )"
@@ -21,6 +21,6 @@ func _ready() -> void:
 	add_to_group("ans_boxes")
 
 
-func _gui_input(event: InputEvent) -> void:
-	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		emit_signal("clicked", self)
+#func _gui_input(event: InputEvent) -> void:
+	#if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		#emit_signal("clicked", self)

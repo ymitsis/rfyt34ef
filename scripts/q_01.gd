@@ -14,10 +14,6 @@ func _ready():
 		b.toggled.connect(_on_answer_toggled)
 	_update_submit_enabled()
 
-func _has_any_pressed() -> bool:
-	for b in get_tree().get_nodes_in_group("ans_boxes"):
-		if b.button_pressed: return true
-	return false
 	
 func _on_answer_toggled(_pressed: bool) -> void:
 	_update_submit_enabled()
