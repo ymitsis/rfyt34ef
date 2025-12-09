@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://drpuyot3kseii"]
 
 [ext_resource type="PackedScene" uid="uid://da67k3nwcc1h2" path="res://scenes/Energy_gauge.tscn" id="1_b3bc3"]
-[ext_resource type="Script" uid="uid://h2yrqbmenihx" path="res://scripts/panel.gd" id="1_ro3t7"]
+[ext_resource type="Script" path="res://scripts/panel.gd" id="1_ro3t7"]
 [ext_resource type="PackedScene" uid="uid://cnldk7rl488nm" path="res://scenes/quizzes/q_01.tscn" id="5_75u2n"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wusub"]
@@ -47,5 +47,4 @@ offset_bottom = 120.0
 grow_horizontal = 2
 
 [node name="Q01" parent="." instance=ExtResource("5_75u2n")]
-visible = false
 pivot_offset = Vector2(513.4285, 296.5714)

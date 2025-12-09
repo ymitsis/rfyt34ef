@@ -1,8 +1,8 @@
 [gd_scene load_steps=15 format=3 uid="uid://cnldk7rl488nm"]
 
-[ext_resource type="Shader" uid="uid://by1j111ya38xo" path="res://scripts/UI.gdshader" id="1_3qmi5"]
+[ext_resource type="Shader" path="res://scripts/UI.gdshader" id="1_3qmi5"]
 [ext_resource type="Texture2D" uid="uid://bd7ossyvslgxl" path="res://assets/quizzes/quiz_bg.jpg" id="1_i5773"]
-[ext_resource type="Script" uid="uid://btwxbpu4kf2vg" path="res://scripts/q_01.gd" id="1_lt40r"]
+[ext_resource type="Script" path="res://scripts/q_01.gd" id="1_lt40r"]
 [ext_resource type="Texture2D" uid="uid://bylbkd28j37x7" path="res://assets/quizzes/q01_b.png" id="3_3qmi5"]
 [ext_resource type="Texture2D" uid="uid://bqs4nhtpnygs" path="res://assets/quizzes/submit_normal.png" id="4_63uiu"]
 [ext_resource type="Texture2D" uid="uid://dueyopowpvkhb" path="res://assets/quizzes/submit_pressed.png" id="5_lt40r"]
@@ -85,7 +85,7 @@ offset_right = 300.0
 offset_bottom = 500.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
-_ans_text = "το ηλι سσλαμ Πξاللّٰهاللّٰهμαن ي"
+_ans_text = "το ηλιακο συστημα"
 
 [node name="ans_box2" parent="Container" instance=ExtResource("9_lt40r")]
 layout_mode = 0
