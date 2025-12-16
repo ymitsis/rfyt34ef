@@ -61,12 +61,20 @@ offset_right = -4.0486183
 offset_bottom = -3.6373177
 scale = Vector2(1.234437, 1.234437)
 
+[node name="Panel3" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 2.3999634
+offset_top = 265.0
+offset_right = 228.39996
+offset_bottom = 316.0
+
+[node name="CammeraZoom" parent="Panel/Panel3" instance=ExtResource("5_75u2n")]
+layout_mode = 1
+offset_left = 4.000061
+offset_top = 6.0
+offset_right = -221.99994
+offset_bottom = -45.0
+scale = Vector2(2.3206825, 2.3206825)
+
 [node name="Q01" parent="." instance=ExtResource("4_ua6yw")]
 visible = false
-
-[node name="CammeraZoom" parent="." instance=ExtResource("5_75u2n")]
-offset_left = 928.00006
-offset_top = 271.0
-offset_right = 928.0
-offset_bottom = 271.0
-scale = Vector2(2.3206825, 2.3206825)
