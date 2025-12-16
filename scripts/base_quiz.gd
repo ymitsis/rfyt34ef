@@ -1,13 +1,15 @@
 extends ColorRect
 
+@onready var _continue_btn: TextureButton = $Container/continue
+@onready var _submit_btn: TextureButton = $Container/submit
+@onready var _result_lbl: Label = $Container/result
+
 var _won_energy : int = 0; 
 
 func _ready():
-	$Container/continue.visible = false
-	$Container/result.visible = false
+	_continue_btn.visible = false
+	_result_lbl.visible = false
 	_on_resize()
-	$Container/submit.pressed.connect(_on_submit_pressed)
-	$Container/continue.pressed.connect(_on_continue_pressed)
 	get_viewport().size_changed.connect(_on_resize)
 
 func _on_resize():
@@ -30,18 +32,29 @@ func _on_submit_pressed() -> void:
 	_won_energy = calculate_won_energy()
 	if _won_energy < 0: _won_energy = 0
 	if _won_energy == max_energy:
-		$Container/result.text = "ΤΕΛΕΙΑ! κέρδισες τη μέγιστη ενέργεια (%dPJ)" % _won_energy
-		$Container/result.add_theme_color_override("font_color", Color(0, 0.6, 0))
+		_result_lbl.text = "ΤΕΛΕΙΑ! κέρδισες τη μέγιστη ενέργεια (%dPJ)" % _won_energy
+		_result_lbl.add_theme_color_override("font_color", Color(0, 0.6, 0))
 	elif _won_energy == 0:
-		$Container/result.text = "δεν κέρδισες ενέργεια αυτή τη φορά…"
-		$Container/result.add_theme_color_override("font_color", Color(0.6, 0, 0))
+		_result_lbl.text = "δεν κέρδισες ενέργεια αυτή τη φορά…"
+		_result_lbl.add_theme_color_override("font_color", Color(0.6, 0, 0))
 	else:
-		$Container/result.text = "κέρδισες %dPJ ενέργειας (μέγιστο %dPJ)" % [_won_energy, max_energy]
-		$Container/result.add_theme_color_override("font_color", Color(0.4, 0.4, 0.4))
-	_fade_in($Container/result)
-	_fade_out($Container/submit)
-	_fade_in($Container/continue)
-	
+		_result_lbl.text = "κέρδισες %dPJ ενέργειας (μέγιστο %dPJ)" % [_won_energy, max_energy]
+		_result_lbl.add_theme_color_override("font_color", Color(0.4, 0.4, 0.4))
+	_fade_in(_result_lbl)
+	_fade_out(_submit_btn)
+	_fade_in(_continue_btn)
+
+func set_submit_button_enabled(enabled: bool):
+	_submit_btn.disabled = not enabled
+	if enabled:
+		_submit_btn.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+		$Container/submit/Label.modulate = Color(1, 1, 1, 1)
+		_submit_btn.tooltip_text = ""
+	else:
+		_submit_btn.mouse_default_cursor_shape = Control.CURSOR_ARROW
+		$Container/submit/Label.modulate = Color(1, 1, 1, 0.6)
+		_submit_btn.tooltip_text = "επέλεξε πρώτα κάτι"
+
 func _on_continue_pressed() -> void:
 	GameState.energy += _won_energy
 	queue_free()
