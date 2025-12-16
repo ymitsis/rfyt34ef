@@ -1,5 +1,6 @@
 extends "res://scripts/base_quiz.gd"
 
+
 @export var is_multiselect: bool = true
 
 var _ans_btn_group := ButtonGroup.new() 
@@ -13,7 +14,6 @@ func _ready():
 	for b in get_tree().get_nodes_in_group("ans_boxes"):
 		b.toggled.connect(_on_answer_toggled)
 	_update_submit_enabled()
-
 	
 func _on_answer_toggled(_pressed: bool) -> void:
 	_update_submit_enabled()
@@ -22,9 +22,7 @@ func _update_submit_enabled() -> void:
 	var has_pressed := false
 	for b in get_tree().get_nodes_in_group("ans_boxes"):
 		if b.button_pressed: has_pressed = true
-	$Container/submit.disabled = not has_pressed
-	if $Container/submit.disabled: $Container/submit.mouse_default_cursor_shape = Control.CURSOR_ARROW
-	else: $Container/submit.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+	set_submit_button_enabled(has_pressed)
 
 func calculate_max_energy() -> int:
 	var max_energy : int = 0

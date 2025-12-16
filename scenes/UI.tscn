@@ -1,14 +1,15 @@
 [gd_scene load_steps=6 format=3 uid="uid://drpuyot3kseii"]
 
+[ext_resource type="Script" uid="uid://dsifloa523f" path="res://scripts/ui.gd" id="1_75u2n"]
 [ext_resource type="PackedScene" uid="uid://da67k3nwcc1h2" path="res://scenes/Energy_gauge.tscn" id="1_b3bc3"]
 [ext_resource type="Script" path="res://scripts/panel.gd" id="1_ro3t7"]
 [ext_resource type="PackedScene" uid="uid://cxwukqaogubv0" path="res://scenes/music_toggle.tscn" id="2_ro3t7"]
-[ext_resource type="PackedScene" uid="uid://cnldk7rl488nm" path="res://scenes/quizzes/q_01.tscn" id="4_ua6yw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wusub"]
 bg_color = Color(0.17437115, 0.3214825, 0.5957968, 1)
 
 [node name="UI" type="CanvasLayer"]
+script = ExtResource("1_75u2n")
 
 [node name="Panel" type="Panel" parent="."]
 anchors_preset = -1
@@ -60,5 +61,20 @@ offset_right = -4.0486183
 offset_bottom = -3.6373177
 scale = Vector2(1.234437, 1.234437)
 
-[node name="Q01" parent="." instance=ExtResource("4_ua6yw")]
-visible = false
+[node name="MenuButton" type="MenuButton" parent="."]
+offset_right = 100.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 24
+toggle_mode = false
+text = "run Quiz"
+flat = false
+switch_on_hover = true
+item_count = 4
+popup/item_0/text = "quiz01"
+popup/item_0/id = 0
+popup/item_1/text = "quiz02"
+popup/item_1/id = 1
+popup/item_2/text = "quiz03"
+popup/item_2/id = 2
+popup/item_3/text = "quiz04"
+popup/item_3/id = 3

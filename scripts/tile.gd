@@ -2,6 +2,10 @@ extends Area2D
 
 signal clicked(tile)
 
+@onready var _polygon2D: Polygon2D = $Polygon2D
+@onready var _line2D: Line2D = $Line2D
+@onready var _label: Label = $Label
+
 @export var tile_type: String = ""            
 @export var neighbors: Array[Area2D] = []     
 
@@ -17,8 +21,8 @@ func init_tile() -> void:
 
 func _ready() -> void:
 	add_to_group("tiles")
-	$CollisionPolygon2D.polygon = $Polygon2D.polygon
-	$Line2D.points = $Polygon2D.polygon
+	$CollisionPolygon2D.polygon = _polygon2D.polygon
+	_line2D.points = _polygon2D.polygon
 	init_tile()
 
 
@@ -43,18 +47,18 @@ func update_visual() -> void:
 	elif is_clickable: new_color = Color(0.5, 0.5, 0.5, 0.5)               
 	else: new_color = Color(0.5, 0.5, 0.5, 0.8)  
 	var tween_poly := create_tween()
-	tween_poly.tween_property($Polygon2D, "color", new_color, 1).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+	tween_poly.tween_property(_polygon2D, "color", new_color, 1).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 	var tween_label := create_tween()
-	tween_label.tween_property($Label, "modulate", Color(1, 1, 1, 0), 1).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
-	tween_label.tween_callback(func(): $Label.text = _cost_to_string())
-	tween_label.tween_property($Label, "modulate", Color(1, 1, 1, 1), 1).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+	tween_label.tween_property(_label, "modulate", Color(1, 1, 1, 0), 1).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+	tween_label.tween_callback(func(): _label.text = _cost_to_string())
+	tween_label.tween_property(_label, "modulate", Color(1, 1, 1, 1), 1).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 
 
 func _on_mouse_entered() -> void:
 	if not is_clickable: return
-	$Line2D.width = 5
-	$Line2D.default_color = Color(1, 1, 0, 0.8)
+	_line2D.width = 5
+	_line2D.default_color = Color(1, 1, 0, 0.8)
 
 func _on_mouse_exited() -> void:
-	$Line2D.width = 3
-	$Line2D.default_color = Color(1, 1, 0, 0.25)
+	_line2D.width = 3
+	_line2D.default_color = Color(1, 1, 0, 0.25)
