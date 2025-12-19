@@ -1,12 +1,15 @@
 extends Node2D
 
+@onready var _camera: Camera2D = $Camera2D
+@onready var _player1: Node2D = $Player1
+
 var _active_tile = Node2D
 
 func init_board() -> void:
 	_active_tile = get_node("B01")
-	$Camera2D.global_position = _active_tile.global_position
-	$Player1.global_position = _active_tile.global_position
-	$Player1.init_player()
+	_camera.global_position = _active_tile.global_position
+	_player1.global_position = _active_tile.global_position
+	_player1.init_player()
 	for t in get_tree().get_nodes_in_group("tiles"): t.init_tile()
 	_update_tiles_state()
 
@@ -16,13 +19,13 @@ func _ready() -> void:
 
 
 func _on_tile_clicked(tile) -> void:
-	if $Player1.is_moving: return
+	if _player1.is_moving: return
 	GameState.energy -= tile.move_cost
 	print("energy:", GameState.energy)
 	_active_tile = tile
 	_update_tiles_state()
-	$Camera2D.global_position = _active_tile.global_position
-	$Player1.new_target = _active_tile.global_position
+	_camera.global_position = _active_tile.global_position
+	_player1.new_target = _active_tile.global_position
 
 
 func _get_move_cost(from_type: String, to_type: String) -> int:

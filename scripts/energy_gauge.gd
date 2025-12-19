@@ -4,15 +4,17 @@ var _step: int = 1
 var _current_value: int
 var _target_value: int
 
+@onready var _mask: Polygon2D = $mask
+@onready var _gauge3: Sprite2D = $gauge3
+@onready var _value: Label = $value
+
 
 func init_gauge() -> void:
 	_current_value = 0
 
-
 func _ready() -> void:
 	GameState.energy_changed.connect(_on_energy_changed)
 	init_gauge()  # προσορινο. Κανονια πρέπει init στην init του UI
-
 
 func draw_gauge(value: int) -> void:
 	var t: float = float(value) / GameState.MAX_ENERGY
@@ -26,11 +28,11 @@ func draw_gauge(value: int) -> void:
 		var seg_t: float = float(i) / POLY_EDGES
 		var ang: float = lerp(start_rad, end_rad, seg_t)
 		pts.append(Vector2(cos(ang), sin(ang)) * RADIUS)
-	$mask.polygon = pts
-	$gauge3.position = pts[1] * 0.85
+	_mask.polygon = pts
+	_gauge3.position = pts[1] * 0.85
 	var h: float = lerp(0.0, 0.333, t)
-	$gauge3.modulate = Color.from_hsv(h, 1, 0.8, 1.0)
-	$value.text = str(value)
+	_gauge3.modulate = Color.from_hsv(h, 1, 0.8, 1.0)
+	_value.text = str(value)
 
 
 func _on_energy_changed(value: int) -> void:
