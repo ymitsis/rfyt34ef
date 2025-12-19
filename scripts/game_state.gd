@@ -2,6 +2,8 @@ extends Node
 
 signal energy_changed(int)
 
+signal zoom_changed(value)
+
 const MAX_ENERGY: int = 999
 const MIN_ENERGY: int = 0
 
