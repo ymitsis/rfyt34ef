@@ -23,59 +23,363 @@ rotation_smoothing_speed = 2.0
 texture = ExtResource("2_k0g80")
 centered = false
 
+[node name="A01" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("3_k0g80")]
+position = Vector2(1000, 1000)
+tile_type = "A"
+neighbors = [NodePath("../B01"), NodePath("../B02"), NodePath("../B03"), NodePath("../B04"), NodePath("../B05"), NodePath("../B06"), NodePath("../B07"), NodePath("../B08")]
+
+[node name="Polygon2D" parent="A01" index="0"]
+polygon = PackedVector2Array(-100, -250, 100, -250, 250, -100, 250, 100, 100, 250, -100, 250, -250, 100, -250, -100)
+
 [node name="B01" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("3_k0g80")]
-position = Vector2(700, 650)
+position = Vector2(1000, 1350)
 tile_type = "B"
-neighbors = [NodePath("../C01")]
+neighbors = [NodePath("../A01"), NodePath("../B02"), NodePath("../B08"), NodePath("../C01"), NodePath("../C12")]
 
 [node name="Polygon2D" parent="B01" index="0"]
-polygon = PackedVector2Array(-150, -50, 100, -250, 100, 50, -50, 200)
+polygon = PackedVector2Array(-100, -100, 100, -100, 200, 50, 200, 200, -150, 50)
+
+[node name="B02" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("3_k0g80")]
+position = Vector2(1300, 1250)
+tile_type = "B"
+neighbors = [NodePath("../A01"), NodePath("../B01"), NodePath("../B03"), NodePath("../C01"), NodePath("../C02")]
+
+[node name="Polygon2D" parent="B02" index="0"]
+polygon = PackedVector2Array(-50, -150, 200, -50, 100, 100, -100, 150, -200, 0)
+
+[node name="B03" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("3_k0g80")]
+position = Vector2(1350, 1000)
+tile_type = "B"
+neighbors = [NodePath("../A01"), NodePath("../B02"), NodePath("../B04"), NodePath("../C03"), NodePath("../C04")]
+
+[node name="Polygon2D" parent="B03" index="0"]
+polygon = PackedVector2Array(-100, -100, 150, -150, 100, 0, 150, 200, -100, 100)
+
+[node name="B04" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("3_k0g80")]
+position = Vector2(1300, 750)
+tile_type = "B"
+neighbors = [NodePath("../A01"), NodePath("../B03"), NodePath("../B05"), NodePath("../C04"), NodePath("../C05")]
+
+[node name="Polygon2D" parent="B04" index="0"]
+polygon = PackedVector2Array(-100, -150, 150, -100, 200, 100, -50, 150, -200, 0)
+
+[node name="B05" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("3_k0g80")]
+position = Vector2(1000, 650)
+tile_type = "B"
+neighbors = [NodePath("../A01"), NodePath("../B04"), NodePath("../B06"), NodePath("../C05"), NodePath("../C06"), NodePath("../C07")]
+
+[node name="Polygon2D" parent="B05" index="0"]
+polygon = PackedVector2Array(-100, -100, 150, -200, 200, -50, 100, 100, -100, 100, -200, 0)
+
+[node name="B06" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("3_k0g80")]
+position = Vector2(750, 750)
+tile_type = "B"
+neighbors = [NodePath("../A01"), NodePath("../B05"), NodePath("../B07"), NodePath("../C07"), NodePath("../C08")]
+
+[node name="Polygon2D" parent="B06" index="0"]
+polygon = PackedVector2Array(-100, -250, 150, 0, 0, 150, -150, 100)
+
+[node name="B07" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("3_k0g80")]
+position = Vector2(600, 1000)
+tile_type = "B"
+neighbors = [NodePath("../A01"), NodePath("../B06"), NodePath("../B08"), NodePath("../C09"), NodePath("../C10")]
+
+[node name="Polygon2D" parent="B07" index="0"]
+polygon = PackedVector2Array(0, -150, 150, -100, 150, 100, 50, 200, -200, 50)
+
+[node name="B08" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("3_k0g80")]
+position = Vector2(750, 1250)
+tile_type = "B"
+neighbors = [NodePath("../A01"), NodePath("../B07"), NodePath("../B01"), NodePath("../C10"), NodePath("../C11")]
+
+[node name="Polygon2D" parent="B08" index="0"]
+polygon = PackedVector2Array(-100, -50, 0, -150, 150, 0, 100, 150, -200, 150)
 
 [node name="C01" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("3_k0g80")]
-position = Vector2(600, 400)
+position = Vector2(1350, 1600)
 tile_type = "C"
-neighbors = [NodePath("../B01"), NodePath("../D02"), NodePath("../D20")]
+neighbors = [NodePath("../B01"), NodePath("../B02"), NodePath("../C02"), NodePath("../C12"), NodePath("../D01")]
 
 [node name="Polygon2D" parent="C01" index="0"]
-polygon = PackedVector2Array(-150, -100, 150, -200, 200, 0, -50, 200, -200, 100)
+polygon = PackedVector2Array(-150, -200, 50, -250, 250, 100, -50, 200, -150, -50)
+
+[node name="C02" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("3_k0g80")]
+position = Vector2(1550, 1400)
+tile_type = "C"
+neighbors = [NodePath("../B02"), NodePath("../C01"), NodePath("../C03"), NodePath("../D02")]
+
+[node name="Polygon2D" parent="C02" index="0"]
+polygon = PackedVector2Array(-150, -50, -50, -200, 200, -150, 50, 300)
+
+[node name="C03" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("3_k0g80")]
+position = Vector2(1600, 1050)
+tile_type = "C"
+neighbors = [NodePath("../B03"), NodePath("../C02"), NodePath("../C04"), NodePath("../D03"), NodePath("../D04")]
+
+[node name="Polygon2D" parent="C03" index="0"]
+polygon = PackedVector2Array(-150, -50, 150, -250, 100, -50, 150, 200, -100, 150)
+
+[node name="C04" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("3_k0g80")]
+position = Vector2(1600, 700)
+tile_type = "C"
+neighbors = [NodePath("../B03"), NodePath("../B04"), NodePath("../C03"), NodePath("../C05"), NodePath("../D05")]
+
+[node name="Polygon2D" parent="C04" index="0"]
+polygon = PackedVector2Array(-150, -50, 0, -250, 150, 100, -150, 300, -100, 150)
+
+[node name="C05" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("3_k0g80")]
+position = Vector2(1350, 450)
+tile_type = "C"
+neighbors = [NodePath("../B04"), NodePath("../B05"), NodePath("../C04"), NodePath("../C06"), NodePath("../D06"), NodePath("../D07")]
+
+[node name="Polygon2D" parent="C05" index="0"]
+polygon = PackedVector2Array(-100, -150, 150, -100, 250, 0, 100, 200, -150, 150, -200, 0)
+
+[node name="C06" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("3_k0g80")]
+position = Vector2(1000, 350)
+tile_type = "C"
+neighbors = [NodePath("../B05"), NodePath("../C05"), NodePath("../C07"), NodePath("../D08"), NodePath("../D09")]
+
+[node name="Polygon2D" parent="C06" index="0"]
+polygon = PackedVector2Array(-300, -150, 0, -150, 250, -50, 150, 100, -100, 200)
+
+[node name="C07" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("3_k0g80")]
+position = Vector2(600, 350)
+tile_type = "C"
+neighbors = [NodePath("../B05"), NodePath("../B06"), NodePath("../C06"), NodePath("../C08"), NodePath("../D09")]
+
+[node name="Polygon2D" parent="C07" index="0"]
+polygon = PackedVector2Array(-250, 0, 100, -150, 300, 200, 200, 300, 50, 150)
+
+[node name="C08" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("3_k0g80")]
+position = Vector2(500, 650)
+tile_type = "C"
+neighbors = [NodePath("../B06"), NodePath("../C07"), NodePath("../C09"), NodePath("../D11"), NodePath("../D12")]
+
+[node name="Polygon2D" parent="C08" index="0"]
+polygon = PackedVector2Array(-100, 0, -150, -300, 150, -150, 100, 200, -250, 150)
+
+[node name="C09" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("3_k0g80")]
+position = Vector2(300, 950)
+tile_type = "C"
+neighbors = [NodePath("../B07"), NodePath("../C08"), NodePath("../C10"), NodePath("../D12"), NodePath("../D13")]
+
+[node name="Polygon2D" parent="C09" index="0"]
+polygon = PackedVector2Array(-50, -150, 300, -100, 100, 100, -50, 400, -150, 0)
+
+[node name="C10" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("3_k0g80")]
+position = Vector2(400, 1350)
+tile_type = "C"
+neighbors = [NodePath("../B07"), NodePath("../B08"), NodePath("../C09"), NodePath("../C11"), NodePath("../D14")]
+
+[node name="Polygon2D" parent="C10" index="0"]
+polygon = PackedVector2Array(-150, 0, 0, -300, 250, -150, 150, 50, -200, 300)
+
+[node name="C11" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("3_k0g80")]
+position = Vector2(600, 1500)
+tile_type = "C"
+neighbors = [NodePath("../B08"), NodePath("../C10"), NodePath("../C12"), NodePath("../D15")]
+
+[node name="Polygon2D" parent="C11" index="0"]
+polygon = PackedVector2Array(-50, -100, 250, -100, 200, 100, -400, 150)
+
+[node name="C12" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("3_k0g80")]
+position = Vector2(1000, 1600)
+tile_type = "C"
+neighbors = [NodePath("../B01"), NodePath("../C01"), NodePath("../C11"), NodePath("../D16"), NodePath("../D17")]
+
+[node name="Polygon2D" parent="C12" index="0"]
+polygon = PackedVector2Array(-200, 0, -150, -200, 200, -50, 300, 200, 0, 150)
 
 [node name="D01" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("3_k0g80")]
-position = Vector2(200, 100)
+position = Vector2(1650, 1850)
 tile_type = "D"
-neighbors = [NodePath("../D02"), NodePath("../D20")]
+neighbors = [NodePath("../C01"), NodePath("../D02"), NodePath("../D17")]
+
+[node name="Polygon2D" parent="D01" index="0"]
+polygon = PackedVector2Array(-350, -50, -50, -150, 350, 0, 350, 150, -50, 150)
 
 [node name="D02" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("3_k0g80")]
-position = Vector2(500, 150)
+position = Vector2(1800, 1600)
 tile_type = "D"
-neighbors = [NodePath("../C01"), NodePath("../D01"), NodePath("../D03")]
+neighbors = [NodePath("../C02"), NodePath("../D01"), NodePath("../D03")]
 
 [node name="Polygon2D" parent="D02" index="0"]
-polygon = PackedVector2Array(-250, -150, 50, -150, 250, 50, -50, 150)
+polygon = PackedVector2Array(-200, 100, -50, -350, 200, -50, 200, 250)
 
 [node name="D03" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("3_k0g80")]
-position = Vector2(800, 100)
+position = Vector2(1900, 1200)
 tile_type = "D"
-neighbors = [NodePath("../D02")]
+neighbors = [NodePath("../C03"), NodePath("../D02"), NodePath("../D04")]
 
 [node name="Polygon2D" parent="D03" index="0"]
-polygon = PackedVector2Array(-250, -100, 100, -100, 250, 100, -50, 100)
+polygon = PackedVector2Array(-200, -200, 100, -250, 100, 350, -150, 50)
 
-[node name="D20" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("3_k0g80")]
-position = Vector2(200, 350)
+[node name="D04" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("3_k0g80")]
+position = Vector2(1900, 800)
 tile_type = "D"
-neighbors = [NodePath("../C01"), NodePath("../D01")]
+neighbors = [NodePath("../C03"), NodePath("../D03"), NodePath("../D05")]
 
-[node name="Polygon2D" parent="D20" index="0"]
+[node name="Polygon2D" parent="D04" index="0"]
 antialiased = true
-polygon = PackedVector2Array(-200, -200, 250, -50, 200, 150, -200, 50)
+polygon = PackedVector2Array(-150, 0, 100, -350, 100, 150, -200, 200)
 
-[node name="Player1" parent="." instance=ExtResource("2_hq5ls")]
+[node name="D05" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("3_k0g80")]
+position = Vector2(1850, 450)
+tile_type = "D"
+neighbors = [NodePath("../C04"), NodePath("../D04"), NodePath("../D06")]
+
+[node name="Polygon2D" parent="D05" index="0"]
+antialiased = true
+polygon = PackedVector2Array(-250, 0, 150, -300, 150, 0, -100, 350)
+
+[node name="D06" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("3_k0g80")]
+position = Vector2(1750, 200)
+tile_type = "D"
+neighbors = [NodePath("../C05"), NodePath("../D05"), NodePath("../D07")]
+
+[node name="Polygon2D" parent="D06" index="0"]
+antialiased = true
+polygon = PackedVector2Array(-50, -200, 250, -200, 250, -50, -150, 250, -250, 150)
+
+[node name="D07" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("3_k0g80")]
+position = Vector2(1450, 150)
+tile_type = "D"
+neighbors = [NodePath("../C05"), NodePath("../D06"), NodePath("../D08")]
+
+[node name="Polygon2D" parent="D07" index="0"]
+antialiased = true
+polygon = PackedVector2Array(-150, -150, 250, -150, 50, 200, -200, 150)
+
+[node name="D08" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("3_k0g80")]
+position = Vector2(1100, 100)
+tile_type = "D"
+neighbors = [NodePath("../C06"), NodePath("../D07"), NodePath("../D09")]
+
+[node name="Polygon2D" parent="D08" index="0"]
+antialiased = true
+polygon = PackedVector2Array(-350, -100, 200, -100, 150, 200, -100, 100)
+
+[node name="D09" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("3_k0g80")]
+position = Vector2(600, 150)
+tile_type = "D"
+neighbors = [NodePath("../C06"), NodePath("../C07"), NodePath("../D08"), NodePath("../D10")]
+
+[node name="Polygon2D" parent="D09" index="0"]
+antialiased = true
+polygon = PackedVector2Array(-100, -150, 150, -150, 400, 50, 100, 50, -250, 200)
+
+[node name="D10" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("3_k0g80")]
+position = Vector2(250, 150)
+tile_type = "D"
+neighbors = [NodePath("../D09"), NodePath("../D11")]
+
+[node name="Polygon2D" parent="D10" index="0"]
+antialiased = true
+polygon = PackedVector2Array(-250, -150, 250, -150, 100, 200, -250, 0)
+
+[node name="D11" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("3_k0g80")]
+position = Vector2(150, 400)
+tile_type = "D"
+neighbors = [NodePath("../C08"), NodePath("../D10"), NodePath("../D12")]
+
+[node name="Polygon2D" parent="D11" index="0"]
+antialiased = true
+polygon = PackedVector2Array(-150, -250, 200, -50, 250, 250, -150, 100)
+
+[node name="D12" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("3_k0g80")]
+position = Vector2(150, 750)
+tile_type = "D"
+neighbors = [NodePath("../C08"), NodePath("../C09"), NodePath("../D11"), NodePath("../D13")]
+
+[node name="Polygon2D" parent="D12" index="0"]
+antialiased = true
+polygon = PackedVector2Array(-150, -250, 250, -100, 100, 50, 0, 200, -150, 250)
+
+[node name="D13" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("3_k0g80")]
+position = Vector2(100, 1250)
+tile_type = "D"
+neighbors = [NodePath("../C09"), NodePath("../D12"), NodePath("../D14")]
+
+[node name="Polygon2D" parent="D13" index="0"]
+antialiased = true
+polygon = PackedVector2Array(-100, -250, 50, -300, 150, 100, -100, 350)
+
+[node name="D14" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("3_k0g80")]
+position = Vector2(100, 1800)
+tile_type = "D"
+neighbors = [NodePath("../C10"), NodePath("../D13"), NodePath("../D15")]
+
+[node name="Polygon2D" parent="D14" index="0"]
+antialiased = true
+polygon = PackedVector2Array(-100, -200, 150, -450, 100, -150, 200, 200, -100, 200)
+
+[node name="D15" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("3_k0g80")]
+position = Vector2(450, 1800)
+tile_type = "D"
+neighbors = [NodePath("../C11"), NodePath("../D14"), NodePath("../D16")]
+
+[node name="Polygon2D" parent="D15" index="0"]
+antialiased = true
+polygon = PackedVector2Array(-250, -150, 350, -200, 0, 200, -150, 200)
+
+[node name="D16" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("3_k0g80")]
+position = Vector2(800, 1850)
+tile_type = "D"
+neighbors = [NodePath("../C12"), NodePath("../D15"), NodePath("../D17")]
+
+[node name="Polygon2D" parent="D16" index="0"]
+antialiased = true
+polygon = PackedVector2Array(0, -250, 200, -100, 100, 150, -350, 150)
+
+[node name="D17" parent="." node_paths=PackedStringArray("neighbors") instance=ExtResource("3_k0g80")]
+position = Vector2(1150, 1900)
+tile_type = "D"
+neighbors = [NodePath("../C12"), NodePath("../D01"), NodePath("../D16")]
+
+[node name="Polygon2D" parent="D17" index="0"]
+antialiased = true
+polygon = PackedVector2Array(-150, -150, 150, -100, 450, 100, -250, 100)
+
+[node name="Player" parent="." instance=ExtResource("2_hq5ls")]
 position = Vector2(411, 425)
 scale = Vector2(0.6, 0.6)
 
+[editable path="A01"]
 [editable path="B01"]
+[editable path="B02"]
+[editable path="B03"]
+[editable path="B04"]
+[editable path="B05"]
+[editable path="B06"]
+[editable path="B07"]
+[editable path="B08"]
 [editable path="C01"]
+[editable path="C02"]
+[editable path="C03"]
+[editable path="C04"]
+[editable path="C05"]
+[editable path="C06"]
+[editable path="C07"]
+[editable path="C08"]
+[editable path="C09"]
+[editable path="C10"]
+[editable path="C11"]
+[editable path="C12"]
 [editable path="D01"]
 [editable path="D02"]
 [editable path="D03"]
-[editable path="D20"]
+[editable path="D04"]
+[editable path="D05"]
+[editable path="D06"]
+[editable path="D07"]
+[editable path="D08"]
+[editable path="D09"]
+[editable path="D10"]
+[editable path="D11"]
+[editable path="D12"]
+[editable path="D13"]
+[editable path="D14"]
+[editable path="D15"]
+[editable path="D16"]
+[editable path="D17"]

@@ -2,11 +2,11 @@ extends Panel
 
 var last_width: float
 
-func _ready() -> void:
+func _ready():
 	last_width = size.x
 	resized.connect(_on_resized)
 
-func _on_resized() -> void:
+func _on_resized():
 	var new_width: float = size.x
 	var factor: float = new_width / last_width
 
