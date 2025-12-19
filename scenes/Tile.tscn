@@ -36,7 +36,7 @@ vertical_alignment = 1
 z_index = 1
 closed = true
 width = 3.0
-default_color = Color(1, 1, 0, 0.2509804)
+default_color = Color(1, 1, 0, 0.3019608)
 sharp_limit = 1.0
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

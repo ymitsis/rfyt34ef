@@ -1,9 +1,9 @@
 extends Node2D
 
-func _init_main() -> void:
-	GameState.energy = 400
-	$Board.init_board()
+func init():
+	GameState.energy = 999
+	$Board.init()
 
 
-func _ready() -> void:
-	_init_main()
+func _ready():
+	init()

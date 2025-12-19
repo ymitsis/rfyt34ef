@@ -1,47 +1,57 @@
+# Board controller.
+# Διαχειρίζεται τον χάρτη του παιχνιδιού, το ενεργό tile, το κόστος μετακίνησης
+# και τη λογική μετάβασης του παίκτη μεταξύ tiles με βάση την ενέργεια.
 extends Node2D
 
 @onready var _camera: Camera2D = $Camera2D
-@onready var _player1: Node2D = $Player1
+@onready var _player: Player = $Player
+@onready var _tiles: Array = get_tree().get_nodes_in_group("tiles")
 
-var _active_tile = Node2D
+var _active_tile: Tile
 
-func init_board() -> void:
-	_active_tile = get_node("B01")
+
+# Αρχικοποιεί το board: ορίζει αρχικό tile, παίκτη, κάμερα και tiles
+func init():
+	_active_tile = get_node("A01")
 	_camera.global_position = _active_tile.global_position
-	_player1.global_position = _active_tile.global_position
-	_player1.init_player()
-	for t in get_tree().get_nodes_in_group("tiles"): t.init_tile()
-	_update_tiles_state()
+	_player.global_position = _active_tile.global_position
+	_player.init()
+	for t in _tiles: t.init()
+	update_tiles_state()
 
 
-func _ready() -> void:
-	for t in get_tree().get_nodes_in_group("tiles"): t.clicked.connect(_on_tile_clicked)
+# Συνδέει τα click signals όλων των tiles
+func _ready():
+	for t in _tiles: t.clicked.connect(_on_tile_clicked)
 
-
-func _on_tile_clicked(tile) -> void:
-	if _player1.is_moving: return
-	GameState.energy -= tile.move_cost
-	print("energy:", GameState.energy)
+# Χειρίζεται click σε clickabe tile και ξεκινά τη μετακίνηση του παίκτη
+func _on_tile_clicked(tile: Tile):
+	if _player.is_moving: return
+	GameState.energy += tile.move_energy
 	_active_tile = tile
-	_update_tiles_state()
+	update_tiles_state()
 	_camera.global_position = _active_tile.global_position
-	_player1.new_target = _active_tile.global_position
+	_player.new_target = _active_tile.global_position
 
 
-func _get_move_cost(from_type: String, to_type: String) -> int:
-	if from_type > to_type: return 0
-	if from_type == to_type: return 20
-	if from_type == "A" and to_type == "B": return 50
-	if from_type == "B" and to_type == "C": return 100
-	if from_type == "C" and to_type == "D": return 200
-	return -1
+# Υπολογίζει το ενεργειακό κόστος μετάβασης μεταξύ δύο τύπων tiles
+func get_move_energy(from_type: String, to_type: String) -> int:
+	if from_type == "A" and to_type == "B": return -50
+	if from_type == "B" and to_type == "A": return 20
+	if from_type == "B" and to_type == "C": return -100
+	if from_type == "C" and to_type == "B": return 40
+	if from_type == "C" and to_type == "D": return -200
+	if from_type == "D" and to_type == "C": return 80
+	if from_type == to_type: return -20
+	return 0
 
 
-func _update_tiles_state() -> void:
-	for t in get_tree().get_nodes_in_group("tiles"):
-		t.is_clickable = false; t.move_cost = -1;
+# Ενημερώνει την κατάσταση όλων των tiles (active, clickable, κόστος, visuals)
+func update_tiles_state():
+	for t in _tiles:
+		t.is_clickable = false; t.move_energy = 0;
 		t.is_active = (t == _active_tile)
 		if t in _active_tile.neighbors:
-			t.move_cost = _get_move_cost(_active_tile.tile_type, t.tile_type)
-			t.is_clickable = t.move_cost <= GameState.energy
+			t.move_energy = get_move_energy(_active_tile.tile_type, t.tile_type)
+			t.is_clickable = (GameState.energy + t.move_energy >= 0)
 		t.update_visual()

@@ -1,3 +1,7 @@
+# Κοινή βάση για όλους τους τύπους quiz.
+# Διαχειρίζεται:
+# responsive scaling του container, submit / continue flow, εμφάνιση αποτελέσματος, απονομή ενέργειας στο GameState
+# Οι επιμέρους τύποι quiz οφείλουν να υλοποιούν: calculate_max_energy() και calculate_won_energy()
 extends ColorRect
 
 @onready var _continue_btn: TextureButton = $Container/continue
@@ -6,12 +10,18 @@ extends ColorRect
 
 var _won_energy : int = 0; 
 
-func _ready():
+# αρχικοποιηση και προσαρμογη μεγεθους
+func init():
 	_continue_btn.visible = false
 	_result_lbl.visible = false
 	_on_resize()
-	get_viewport().size_changed.connect(_on_resize)
 
+#συνδεση με signal resize
+func _ready():
+	get_viewport().size_changed.connect(_on_resize)
+	init()
+
+#προσαρμογη μεγέθους
 func _on_resize():
 	const BASE = Vector2(1100, 600)
 	const MARGIN = 0.044
@@ -21,13 +31,16 @@ func _on_resize():
 	$Container.scale = Vector2(scale_factor, scale_factor)
 	$Container.position = (vp - BASE * scale_factor) * 0.5
 
+#πρέπει να γινει override από τους διάφορους τυπους quiz
 func calculate_max_energy() -> int:
 	return 0
-	
+
+#πρέπει να γινει override από τους διάφορους τυπους quiz
 func calculate_won_energy() -> int:
 	return 0
 
-func _on_submit_pressed() -> void:
+#εμφανιση αποτελέσματος και κουμπιου "συνεχεια"
+func _on_submit_pressed():
 	var max_energy := calculate_max_energy()
 	_won_energy = calculate_won_energy()
 	if _won_energy < 0: _won_energy = 0
@@ -44,6 +57,7 @@ func _on_submit_pressed() -> void:
 	_fade_out(_submit_btn)
 	_fade_in(_continue_btn)
 
+#θέτει τη leitoyrghkothta και τη μορφοποιηση του κουμπιου "submit" οταν ειναι enabled/disabled
 func set_submit_button_enabled(enabled: bool):
 	_submit_btn.disabled = not enabled
 	if enabled:
@@ -55,17 +69,18 @@ func set_submit_button_enabled(enabled: bool):
 		$Container/submit/Label.modulate = Color(1, 1, 1, 0.6)
 		_submit_btn.tooltip_text = "επέλεξε πρώτα κάτι"
 
-func _on_continue_pressed() -> void:
+#κατοχυρωση ενεργειας και κλεισιμο quiz με το πάτημα του κοθμπιου "συνεχεια"
+func _on_continue_pressed():
 	GameState.energy += _won_energy
 	queue_free()
 
-func _fade_in(node: CanvasItem, duration := 1.0) -> void:
+#βοηθητικες συναρτησεις εμφανησης/αποκυψης κουμπιών και αποτελέσματος
+func _fade_in(node: CanvasItem, duration := 1.0):
 	node.visible = true
 	node.modulate.a = 0.0
 	var t := create_tween()
 	t.tween_property(node, "modulate:a", 1.0, duration)
-
-func _fade_out(node: CanvasItem, duration := 1.0) -> void:
+func _fade_out(node: CanvasItem, duration := 1.0):
 	var t := create_tween()
 	t.tween_property(node, "modulate:a", 0.0, duration)
 	t.finished.connect(func() -> void: node.visible = false)
