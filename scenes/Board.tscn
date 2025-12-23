@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bgxagifxw4iul"]
+[gd_scene load_steps=5 format=3 uid="uid://bgxagifxw4iul"]
 
 [ext_resource type="Script" uid="uid://dlvkcyv6kdjxs" path="res://scripts/board.gd" id="1_otxgx"]
 [ext_resource type="PackedScene" uid="uid://bhk40vre05soo" path="res://scenes/Player.tscn" id="2_hq5ls"]
 [ext_resource type="Texture2D" uid="uid://d0dds5nk7wkpc" path="res://assets/Icons/galaxy_bg.png" id="2_k0g80"]
-[ext_resource type="Script" uid="uid://dheeis83gpp03" path="res://scripts/camera_2d.gd" id="2_xdl3i"]
 [ext_resource type="PackedScene" uid="uid://bmcobo5umwxgo" path="res://scenes/Tile.tscn" id="3_k0g80"]
 
 [node name="Board" type="Node2D"]
@@ -11,15 +10,13 @@ script = ExtResource("1_otxgx")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(300, 200)
-limit_left = 0
-limit_top = 0
-limit_right = 2000
-limit_bottom = 2000
+limit_left = -100
+limit_top = -100
+limit_right = 2400
+limit_bottom = 2100
 limit_smoothed = true
 position_smoothing_enabled = true
 position_smoothing_speed = 2.0
-rotation_smoothing_speed = 2.0
-script = ExtResource("2_xdl3i")
 
 [node name="Galaxy_bg" type="Sprite2D" parent="."]
 texture = ExtResource("2_k0g80")

@@ -1,41 +1,86 @@
-[gd_scene load_steps=6 format=3 uid="uid://da67k3nwcc1h2"]
+[gd_scene load_steps=7 format=3 uid="uid://camnjaj6mgjso"]
 
-[ext_resource type="Script" uid="uid://k21q01muup0s" path="res://scripts/energy_gauge.gd" id="1_2317s"]
-[ext_resource type="Texture2D" uid="uid://oesdeegoamf7" path="res://assets/Icons/gauge2.webp" id="2_p28ti"]
-[ext_resource type="Texture2D" uid="uid://cf730vtgex0po" path="res://assets/Icons/gauge1.webp" id="3_nfwgw"]
+[ext_resource type="Script" uid="uid://452urc1kk4vi" path="res://scripts/energy_gauge.gd" id="1_m7joo"]
+[ext_resource type="Texture2D" uid="uid://bcrkr72bsyjel" path="res://assets/Icons/gauge2.png" id="2_ne157"]
+[ext_resource type="Texture2D" uid="uid://brbhrlhdk0s1p" path="res://assets/Icons/gauge1.png" id="3_brk7q"]
 [ext_resource type="Texture2D" uid="uid://7m8e1fp52rsw" path="res://assets/Icons/gauge3.png" id="4_nfwgw"]
 [ext_resource type="FontFile" uid="uid://cj7nrhbig5nw7" path="res://assets/Fonts/digital-7 (mono).ttf" id="5_ak2vr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m7joo"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
 
 [node name="Energy_gauge" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("1_2317s")
+offset_right = 200.0
+offset_bottom = 200.0
+script = ExtResource("1_m7joo")
 
-[node name="gauge2" type="Sprite2D" parent="."]
-texture = ExtResource("2_p28ti")
-offset = Vector2(0, -16)
+[node name="Scaler" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 220.0
+offset_bottom = 195.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_m7joo")
 
-[node name="mask" type="Polygon2D" parent="."]
+[node name="gauge2" type="TextureRect" parent="Scaler"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 210.0
+offset_bottom = 210.0
+texture = ExtResource("2_ne157")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="mask" type="Polygon2D" parent="Scaler/gauge2"]
+position = Vector2(100, 100)
 color = Color(0.19607843, 0.19607843, 0.19607843, 1)
 polygon = PackedVector2Array(0, 0, 20, -90, 90, -20, 70, 60)
 
-[node name="gauge1" type="Sprite2D" parent="."]
-texture = ExtResource("3_nfwgw")
-offset = Vector2(0, -14)
+[node name="gauge1" type="TextureRect" parent="Scaler"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 210.0
+offset_bottom = 210.0
+texture = ExtResource("3_brk7q")
+expand_mode = 1
+stretch_mode = 4
 
-[node name="gauge3" type="Sprite2D" parent="."]
+[node name="gauge3" type="TextureRect" parent="Scaler/gauge1"]
+layout_mode = 0
+offset_right = 47.0
+offset_bottom = 47.0
 texture = ExtResource("4_nfwgw")
+expand_mode = 1
+stretch_mode = 4
 
-[node name="label" type="Label" parent="."]
+[node name="labels_container" type="Control" parent="Scaler"]
+anchors_preset = 0
+offset_left = 60.0
+offset_top = 60.0
+offset_right = 160.0
+offset_bottom = 160.0
+
+[node name="energy_lbl" type="Label" parent="Scaler/labels_container"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -39.5
+offset_left = -40.0
 offset_top = -47.0
-offset_right = 39.5
+offset_right = 40.0
 offset_bottom = -13.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -44,25 +89,26 @@ text = "energy"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="label2" type="Label" parent="."]
+[node name="pj_lbl" type="Label" parent="Scaler/labels_container"]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 0.41
 anchor_right = 0.5
-anchor_bottom = 0.5
+anchor_bottom = 0.41
 offset_left = -34.5
-offset_top = -19.5
+offset_top = -11.5
 offset_right = 34.5
-offset_bottom = 3.5
+offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 12
 text = "(PetaJoule)"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
-[node name="value" type="Label" parent="."]
+[node name="value_lbl" type="Label" parent="Scaler/labels_container"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -70,9 +116,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -30.5
-offset_top = 5.5
+offset_top = -1.5
 offset_right = 30.5
-offset_bottom = 52.5
+offset_bottom = 45.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 1, 1, 1)
