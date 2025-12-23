@@ -1,18 +1,65 @@
-[gd_scene load_steps=7 format=3 uid="uid://drpuyot3kseii"]
+[gd_scene load_steps=17 format=3 uid="uid://drpuyot3kseii"]
 
 [ext_resource type="Script" uid="uid://dsifloa523f" path="res://scripts/ui.gd" id="1_75u2n"]
-[ext_resource type="PackedScene" uid="uid://da67k3nwcc1h2" path="res://scenes/Energy_gauge.tscn" id="1_b3bc3"]
-[ext_resource type="Script" uid="uid://h2yrqbmenihx" path="res://scripts/panel.gd" id="1_ro3t7"]
-[ext_resource type="PackedScene" uid="uid://cxwukqaogubv0" path="res://scenes/music_toggle.tscn" id="2_ro3t7"]
-[ext_resource type="PackedScene" uid="uid://b3gn31vtajvye" path="res://scenes/cammera_zoom.tscn" id="5_75u2n"]
+[ext_resource type="Shader" uid="uid://c05ur7p2rhp36" path="res://scripts/panel.gdshader" id="2_3wlde"]
+[ext_resource type="PackedScene" uid="uid://camnjaj6mgjso" path="res://scenes/Energy_gauge.tscn" id="4_3wlde"]
+[ext_resource type="Texture2D" uid="uid://bvlil2sslhogy" path="res://assets/Icons/glassPanel.png" id="4_xpksx"]
+[ext_resource type="Texture2D" uid="uid://tl7xnht0l6ve" path="res://assets/Icons/sound_on.png" id="5_3wlde"]
+[ext_resource type="Texture2D" uid="uid://di7uyk137a7tv" path="res://assets/Icons/sound_off.png" id="6_xpksx"]
+[ext_resource type="Texture2D" uid="uid://bblr20fphu6py" path="res://assets/Icons/maximize_window.png" id="7_24e4x"]
+[ext_resource type="Texture2D" uid="uid://dg213yd0vne3c" path="res://assets/Icons/restore_window.png" id="8_ukj8e"]
+[ext_resource type="AudioStream" uid="uid://bqajt28ihwll2" path="res://assets/Sounds/Music/space_Music.mp3" id="9_ukj8e"]
+[ext_resource type="PackedScene" uid="uid://bw4ue5tt708j7" path="res://scenes/quizzes/Quiz02.tscn" id="11_aputy"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xpksx"]
+shader = ExtResource("2_3wlde")
+shader_parameter/blur_size = 3.0
+shader_parameter/radius = 4
+shader_parameter/desat = 0.30000001425
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wusub"]
-bg_color = Color(0.17437115, 0.3214825, 0.5957968, 1)
+bg_color = Color(0.17254902, 0.32156864, 0.59607846, 0.5019608)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_75u2n"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="DPITexture" id="DPITexture_75u2n"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><circle cx=\"8\" cy=\"8\" r=\"7\" fill=\"#fefefe\" fill-opacity=\".75\"/></svg>
+"
+base_scale = 1.5
+
+[sub_resource type="DPITexture" id="DPITexture_3wlde"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><circle cx=\"8\" cy=\"8\" r=\"7\" fill=\"#fefefe\"/></svg>
+"
+base_scale = 1.5
+
+[sub_resource type="DPITexture" id="DPITexture_xpksx"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><circle cx=\"8\" cy=\"8\" r=\"7\" fill=\"#fefefe\" fill-opacity=\".37\"/></svg>
+"
+base_scale = 1.5
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource("1_75u2n")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Bg_music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_ukj8e")
+autoplay = true
+bus = &"Music"
+
+[node name="BackBufferCopy_A" type="BackBufferCopy" parent="."]
+copy_mode = 2
+
+[node name="Main_panel" type="Panel" parent="."]
+material = SubResource("ShaderMaterial_xpksx")
 anchors_preset = -1
 anchor_left = 0.8
 anchor_right = 1.0
@@ -20,62 +67,116 @@ anchor_bottom = 1.0
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_wusub")
-script = ExtResource("1_ro3t7")
 metadata/_edit_use_anchors_ = true
 
-[node name="Panel" type="Panel" parent="Panel"]
-layout_mode = 0
-offset_left = 8.399963
-offset_top = 7.0
-offset_right = 48.399963
-offset_bottom = 47.0
-scale = Vector2(5.433957, 4.1239195)
-
-[node name="Energy_gauge" parent="Panel/Panel" instance=ExtResource("1_b3bc3")]
+[node name="glass_texture" type="NinePatchRect" parent="Main_panel"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -0.12498474
-offset_top = 1.0964355
-offset_right = -0.12498474
-offset_bottom = 1.0964355
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -10.0
+offset_right = 3.0
+offset_bottom = 5.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.14071983, 0.18768401)
+texture = ExtResource("4_xpksx")
+patch_margin_left = 20
+patch_margin_top = 20
+patch_margin_right = 20
+patch_margin_bottom = 20
 
-[node name="Panel2" type="Panel" parent="Panel"]
-layout_mode = 0
-offset_left = 8.399963
-offset_top = 592.0
-offset_right = 48.399963
-offset_bottom = 632.0
-scale = Vector2(1.3527341, 1.2916919)
-
-[node name="MusicToggle" parent="Panel/Panel2" instance=ExtResource("2_ro3t7")]
+[node name="Energy_panel" type="Panel" parent="Main_panel"]
 layout_mode = 1
-offset_left = -4.0486197
-offset_top = -3.6373181
-offset_right = -4.0486183
-offset_bottom = -3.6373177
-scale = Vector2(1.234437, 1.234437)
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = 0.01
+anchor_right = 0.95
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_75u2n")
 
-[node name="Panel3" type="Panel" parent="Panel"]
-layout_mode = 0
-offset_left = 2.3999634
-offset_top = 265.0
-offset_right = 228.39996
-offset_bottom = 316.0
-
-[node name="CammeraZoom" parent="Panel/Panel3" instance=ExtResource("5_75u2n")]
+[node name="Energy_gauge" parent="Main_panel/Energy_panel" instance=ExtResource("4_3wlde")]
 layout_mode = 1
-offset_left = 4.000061
-offset_top = 6.0
-offset_right = -221.99994
-offset_bottom = -45.0
-scale = Vector2(2.3206825, 2.3206825)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Zoom_panel" type="Panel" parent="Main_panel"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = 0.75
+anchor_right = 0.95
+anchor_bottom = 0.8
+offset_left = 2.0980835e-05
+offset_right = 4.5776367e-05
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Zoom_slider" type="HSlider" parent="Main_panel/Zoom_panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_icons/grabber = SubResource("DPITexture_75u2n")
+theme_override_icons/grabber_highlight = SubResource("DPITexture_3wlde")
+theme_override_icons/grabber_disabled = SubResource("DPITexture_xpksx")
+max_value = 1.0
+step = 0.01
+value = 1.0
+tick_count = 6
+ticks_on_borders = true
+
+[node name="Options_panel" type="Panel" parent="Main_panel"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = 0.9
+anchor_right = 0.95
+anchor_bottom = 0.95
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sound_toggle" type="TextureButton" parent="Main_panel/Options_panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.1
+anchor_right = 0.5
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+toggle_mode = true
+texture_normal = ExtResource("5_3wlde")
+texture_pressed = ExtResource("6_xpksx")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="window_size" type="TextureButton" parent="Main_panel/Options_panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.1
+anchor_right = 1.0
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+toggle_mode = true
+texture_normal = ExtResource("7_24e4x")
+texture_pressed = ExtResource("8_ukj8e")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="BackBufferCopy_B" type="BackBufferCopy" parent="."]
+copy_mode = 2
 
 [node name="MenuButton" type="MenuButton" parent="."]
 offset_right = 100.0
@@ -94,3 +195,10 @@ popup/item_2/text = "quiz03"
 popup/item_2/id = 2
 popup/item_3/text = "quiz04"
 popup/item_3/id = 3
+
+[node name="quiz2new" parent="." instance=ExtResource("11_aputy")]
+
+[connection signal="resized" from="Main_panel" to="." method="_on_main_panel_resized"]
+[connection signal="value_changed" from="Main_panel/Zoom_panel/Zoom_slider" to="." method="_on_zoom_slider_value_changed"]
+[connection signal="toggled" from="Main_panel/Options_panel/Sound_toggle" to="." method="_on_sound_button_toggled"]
+[connection signal="toggled" from="Main_panel/Options_panel/window_size" to="." method="_on_window_size_toggled"]

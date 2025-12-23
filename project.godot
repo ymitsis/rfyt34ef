@@ -18,7 +18,6 @@ config/icon="res://assets/Icons/icon.svg"
 [autoload]
 
 GameState="*res://scripts/game_state.gd"
-BgMusic="*res://scenes/bg_music.tscn"
 
 [editor]
 
@@ -33,4 +32,3 @@ theme/custom_font="uid://hckt2v3yv11d"
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
-environment/defaults/default_clear_color=Color(0, 0, 0, 1)

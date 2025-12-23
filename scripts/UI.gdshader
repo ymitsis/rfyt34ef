@@ -12,7 +12,7 @@ void fragment() {
     for (int x = -radius; x <= radius; x++) {
         for (int y = -radius; y <= radius; y++) {
             vec2 offset = vec2(float(x), float(y)) * blur_size * SCREEN_PIXEL_SIZE;
-            col += texture(screen_tex, UV + offset);
+            col += texture(screen_tex, SCREEN_UV + offset);
             count += 1.0;
         }
     }

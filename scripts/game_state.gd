@@ -16,3 +16,9 @@ func set_energy(value: int):
 	if value == energy: return
 	energy = value
 	energy_changed.emit(energy)
+	
+var board_zoom_normalized: float: set = set_board_zoom_normalized
+# Setter board zoom
+func set_board_zoom_normalized(value: float):
+	board_zoom_normalized = value
+	zoom_changed.emit(board_zoom_normalized)

@@ -1,34 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://cnfkba0da8faa"]
+[gd_scene load_steps=2 format=3 uid="uid://dqcurm0m0rwxa"]
 
-[ext_resource type="Script" uid="uid://bb4gurn10siyl" path="res://scripts/drop_zone.gd" id="1_c8olg"]
+[ext_resource type="Script" uid="uid://bsa17on3os4qk" path="res://scripts/drop_zone_b.gd" id="1_dmkx6"]
 
-[node name="drop_zone" type="Panel"]
+[node name="drop_zoneB" type="Panel"]
 offset_right = 100.0
-offset_bottom = 50.0
-script = ExtResource("1_c8olg")
-
-[node name="EnergyLabel" type="Label" parent="."]
-z_index = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -100.0
-offset_top = -40.0
-offset_right = 100.0
-offset_bottom = 40.0
-grow_horizontal = 2
-grow_vertical = 2
-rotation = -0.34906584
-pivot_offset = Vector2(100, 40)
-theme_override_colors/font_outline_color = Color(0, 0.78431374, 0, 1)
-theme_override_constants/outline_size = 20
-theme_override_font_sizes/font_size = 40
-text = "20PJ⚡"
-horizontal_alignment = 1
-vertical_alignment = 1
-clip_text = true
-
-[connection signal="child_order_changed" from="." to="." method="_on_child_order_changed"]
+offset_bottom = 500.0
+script = ExtResource("1_dmkx6")
