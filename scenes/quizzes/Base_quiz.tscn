@@ -1,7 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://cnldk7rl488nm"]
 
-[ext_resource type="Shader" path="res://scripts/UI.gdshader" id="1_3qmi5"]
-[ext_resource type="Texture2D" uid="uid://bd7ossyvslgxl" path="res://assets/quizzes/quiz_bg.jpg" id="1_i5773"]
+[ext_resource type="Shader" uid="uid://by1j111ya38xo" path="res://scripts/UI.gdshader" id="1_3qmi5"]
 [ext_resource type="Script" uid="uid://di6pssgdnbj03" path="res://scripts/base_quiz.gd" id="2_nmvrc"]
 [ext_resource type="Texture2D" uid="uid://bqs4nhtpnygs" path="res://assets/quizzes/submit_normal.png" id="4_63uiu"]
 [ext_resource type="Texture2D" uid="uid://dueyopowpvkhb" path="res://assets/quizzes/submit_pressed.png" id="5_lt40r"]
@@ -17,6 +16,13 @@ shader = ExtResource("1_3qmi5")
 shader_parameter/blur_size = 3.0
 shader_parameter/radius = 4
 shader_parameter/darkness = 0.5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pqw67"]
+bg_color = Color(0.18294623, 0.29420888, 0.40914735, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [node name="Base_quiz" type="ColorRect"]
 material = SubResource("ShaderMaterial_wgbe7")
@@ -41,15 +47,11 @@ offset_bottom = 300.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Bg_image" type="TextureRect" parent="Container"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("1_i5773")
-expand_mode = 1
+[node name="Panel" type="Panel" parent="Container"]
+layout_mode = 0
+offset_right = 1100.0
+offset_bottom = 600.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_pqw67")
 
 [node name="submit" type="TextureButton" parent="Container"]
 layout_mode = 0

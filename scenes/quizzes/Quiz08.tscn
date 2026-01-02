@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://e268cxtc1q0e"]
+
+[ext_resource type="PackedScene" uid="uid://cnldk7rl488nm" path="res://scenes/quizzes/Base_quiz.tscn" id="1_py7ko"]
+[ext_resource type="Script" uid="uid://70q847xes0nc" path="res://scripts/quiz_typeA.gd" id="2_je6v2"]
+[ext_resource type="Texture2D" uid="uid://3w3o6xtirgq5" path="res://assets/Man_looking_at_sky..jpg" id="3_py7ko"]
+[ext_resource type="PackedScene" uid="uid://bj8dk0h6fwi7r" path="res://scenes/quizzes/ans_box.tscn" id="4_g0n7d"]
+
+[node name="Base_quiz" instance=ExtResource("1_py7ko")]
+script = ExtResource("2_je6v2")
+is_multiselect = false
+
+[node name="TextureRect" type="TextureRect" parent="Container" index="4"]
+clip_contents = true
+layout_mode = 0
+offset_left = 25.0
+offset_top = 25.0
+offset_right = 1075.0
+offset_bottom = 292.0
+size_flags_horizontal = 3
+texture = ExtResource("3_py7ko")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Container" index="5"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 291.0
+offset_right = 1075.0
+offset_bottom = 400.0
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(0.078431375, 0.078431375, 0.078431375, 1)
+theme_override_font_sizes/normal_font_size = 24
+text = "Το ανθρώπονο μάτι είναι ενα εξαιρετικό όργανο παρατήρησης.
+Εχει μεγάλη ευαισθησία και μπόρε'να αντιληφθεί το σύνολο του ηλεκρομαγνητικού φάσματος"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ans_box1" parent="Container" index="6" instance=ExtResource("4_g0n7d")]
+layout_mode = 0
+offset_left = 220.0
+offset_top = 410.0
+offset_right = 470.0
+offset_bottom = 510.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+_energy_if_selected = -40
+_ans_text = "Σωστό"
+
+[node name="ans_box2" parent="Container" index="7" instance=ExtResource("4_g0n7d")]
+layout_mode = 0
+offset_left = 630.0
+offset_top = 410.0
+offset_right = 880.0
+offset_bottom = 510.0
+size_flags_horizontal = 0
+_energy_if_selected = 40
+_ans_text = "Λάθος"

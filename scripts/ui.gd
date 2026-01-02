@@ -11,6 +11,11 @@ func _on_menu_item_pressed(id: int):
 	if id == 1: scene = load("res://scenes/quizzes/Quiz02.tscn")
 	if id == 2: scene = load("res://scenes/quizzes/Quiz03.tscn")
 	if id == 3: scene = load("res://scenes/quizzes/Quiz04.tscn")
+	if id == 4: scene = load("res://scenes/quizzes/Quiz05.tscn")
+	if id == 5: scene = load("res://scenes/quizzes/Quiz06.tscn")
+	if id == 6: scene = load("res://scenes/quizzes/Quiz07.tscn")
+	if id == 7: scene = load("res://scenes/quizzes/Quiz08.tscn")
+	if id == 8: scene = load("res://scenes/quizzes/Quiz09.tscn")
 	var inst: Node = scene.instantiate()
 	add_child(inst)
 
