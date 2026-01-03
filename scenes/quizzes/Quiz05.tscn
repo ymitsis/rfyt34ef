@@ -1,0 +1,66 @@
+[gd_scene load_steps=5 format=3 uid="uid://c2f0qreorpwh5"]
+
+[ext_resource type="PackedScene" uid="uid://cnldk7rl488nm" path="res://scenes/quizzes/Base_quiz.tscn" id="1_h4dry"]
+[ext_resource type="Script" uid="uid://70q847xes0nc" path="res://scripts/quiz_typeA.gd" id="2_je2a7"]
+[ext_resource type="Texture2D" uid="uid://2icnyk3ts5b7" path="res://assets/Milky_way.jpg" id="3_h4dry"]
+[ext_resource type="PackedScene" uid="uid://bj8dk0h6fwi7r" path="res://scenes/quizzes/ans_box.tscn" id="4_gr5vj"]
+
+[node name="Base_quiz" instance=ExtResource("1_h4dry")]
+script = ExtResource("2_je2a7")
+is_multiselect = false
+
+[node name="TextureRect" type="TextureRect" parent="Container" index="4"]
+clip_contents = true
+layout_mode = 0
+offset_left = 25.0
+offset_top = 25.0
+offset_right = 1075.0
+offset_bottom = 325.0
+size_flags_horizontal = 3
+texture = ExtResource("3_h4dry")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Container" index="5"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 325.0
+offset_right = 1075.0
+offset_bottom = 400.0
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(0.078431375, 0.078431375, 0.078431375, 1)
+theme_override_font_sizes/normal_font_size = 24
+text = "Πως ονομάζεται ο δικός μας γαλαξίας. "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ans_box1" parent="Container" index="6" instance=ExtResource("4_gr5vj")]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 410.0
+offset_right = 275.0
+offset_bottom = 510.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+_energy_if_selected = -40
+_ans_text = "Andromeda"
+
+[node name="ans_box2" parent="Container" index="7" instance=ExtResource("4_gr5vj")]
+layout_mode = 0
+offset_left = 425.0
+offset_top = 410.0
+offset_right = 675.0
+offset_bottom = 510.0
+size_flags_horizontal = 0
+_energy_if_selected = 40
+_ans_text = "Milky way"
+
+[node name="ans_box3" parent="Container" index="8" instance=ExtResource("4_gr5vj")]
+layout_mode = 0
+offset_left = 825.0
+offset_top = 410.0
+offset_right = 1075.0
+offset_bottom = 510.0
+size_flags_horizontal = 0
+_energy_if_selected = -40
+_ans_text = "Triangulum"

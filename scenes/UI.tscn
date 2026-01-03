@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://drpuyot3kseii"]
+[gd_scene load_steps=16 format=3 uid="uid://drpuyot3kseii"]
 
 [ext_resource type="Script" uid="uid://dsifloa523f" path="res://scripts/ui.gd" id="1_75u2n"]
 [ext_resource type="Shader" uid="uid://c05ur7p2rhp36" path="res://scripts/panel.gdshader" id="2_3wlde"]
@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://bblr20fphu6py" path="res://assets/Icons/maximize_window.png" id="7_24e4x"]
 [ext_resource type="Texture2D" uid="uid://dg213yd0vne3c" path="res://assets/Icons/restore_window.png" id="8_ukj8e"]
 [ext_resource type="AudioStream" uid="uid://bqajt28ihwll2" path="res://assets/Sounds/Music/space_Music.mp3" id="9_ukj8e"]
-[ext_resource type="PackedScene" uid="uid://bw4ue5tt708j7" path="res://scenes/quizzes/Quiz02.tscn" id="11_aputy"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xpksx"]
 shader = ExtResource("2_3wlde")
@@ -186,7 +185,7 @@ toggle_mode = false
 text = "run Quiz"
 flat = false
 switch_on_hover = true
-item_count = 4
+item_count = 9
 popup/item_0/text = "quiz01"
 popup/item_0/id = 0
 popup/item_1/text = "quiz02"
@@ -195,8 +194,16 @@ popup/item_2/text = "quiz03"
 popup/item_2/id = 2
 popup/item_3/text = "quiz04"
 popup/item_3/id = 3
-
-[node name="quiz2new" parent="." instance=ExtResource("11_aputy")]
+popup/item_4/text = "quiz05"
+popup/item_4/id = 4
+popup/item_5/text = "quiz06"
+popup/item_5/id = 5
+popup/item_6/text = "quiz07"
+popup/item_6/id = 6
+popup/item_7/text = "quiz08"
+popup/item_7/id = 7
+popup/item_8/text = "quiz09"
+popup/item_8/id = 8
 
 [connection signal="resized" from="Main_panel" to="." method="_on_main_panel_resized"]
 [connection signal="value_changed" from="Main_panel/Zoom_panel/Zoom_slider" to="." method="_on_zoom_slider_value_changed"]

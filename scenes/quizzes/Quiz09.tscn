@@ -1,0 +1,77 @@
+[gd_scene load_steps=5 format=3 uid="uid://mtm78n6siw17"]
+
+[ext_resource type="PackedScene" uid="uid://cnldk7rl488nm" path="res://scenes/quizzes/Base_quiz.tscn" id="1_2n2kq"]
+[ext_resource type="Script" uid="uid://70q847xes0nc" path="res://scripts/quiz_typeA.gd" id="2_bvq52"]
+[ext_resource type="Texture2D" uid="uid://byhh3qgu5v50i" path="res://assets/radiotelskop.jpg" id="3_2n2kq"]
+[ext_resource type="PackedScene" uid="uid://bj8dk0h6fwi7r" path="res://scenes/quizzes/ans_box.tscn" id="4_1oqm2"]
+
+[node name="Base_quiz" instance=ExtResource("1_2n2kq")]
+script = ExtResource("2_bvq52")
+is_multiselect = true
+
+[node name="TextureRect" type="TextureRect" parent="Container" index="4"]
+clip_contents = true
+layout_mode = 0
+offset_left = 25.0
+offset_top = 25.0
+offset_right = 1075.0
+offset_bottom = 325.0
+size_flags_horizontal = 3
+texture = ExtResource("3_2n2kq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Container" index="5"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 325.0
+offset_right = 1075.0
+offset_bottom = 400.0
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(0.078431375, 0.078431375, 0.078431375, 1)
+theme_override_font_sizes/normal_font_size = 24
+text = "Για να προκύψει καλή εικόνα από τις παρατηρήσεις ενός ραδιοτηλεσκοπίου είνα σημαντικό"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ans_box1" parent="Container" index="6" instance=ExtResource("4_1oqm2")]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 410.0
+offset_right = 275.0
+offset_bottom = 510.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+_energy_if_selected = 13
+_ans_text = "Να έχει πολλές κεραίες"
+
+[node name="ans_box2" parent="Container" index="7" instance=ExtResource("4_1oqm2")]
+layout_mode = 0
+offset_left = 292.0
+offset_top = 410.0
+offset_right = 542.0
+offset_bottom = 509.99997
+size_flags_horizontal = 0
+_energy_if_selected = 13
+_ans_text = "Ο χρόνος παρατήρησής να είναι μεγάλος "
+
+[node name="ans_box3" parent="Container" index="8" instance=ExtResource("4_1oqm2")]
+layout_mode = 0
+offset_left = 559.0
+offset_top = 410.0
+offset_right = 809.0
+offset_bottom = 510.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+_energy_if_selected = -39
+_ans_text = "Οι κεραίες να είναι κοντά η μία στην άλλη"
+
+[node name="ans_box4" parent="Container" index="9" instance=ExtResource("4_1oqm2")]
+layout_mode = 0
+offset_left = 826.0
+offset_top = 410.0
+offset_right = 1076.0
+offset_bottom = 509.99997
+size_flags_horizontal = 0
+_energy_if_selected = 13
+_ans_text = "Οι παρατηρήσεις να γίνουν σε διαφορετικές συχνότητες"
