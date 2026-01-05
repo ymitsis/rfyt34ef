@@ -1,0 +1,87 @@
+[gd_scene load_steps=5 format=3 uid="uid://biecre8f3r16b"]
+
+[ext_resource type="PackedScene" uid="uid://cnldk7rl488nm" path="res://quizzes/common/Base_quiz.tscn" id="1_tvsqp"]
+[ext_resource type="Script" uid="uid://70q847xes0nc" path="res://quizzes/common/quiz_typeA.gd" id="2_6eyqb"]
+[ext_resource type="Texture2D" uid="uid://b58td6mc4li1c" path="res://quizzes/quiz22/strong_radio.png" id="3_usuoi"]
+[ext_resource type="PackedScene" uid="uid://bj8dk0h6fwi7r" path="res://quizzes/common/ans_box.tscn" id="4_y45b7"]
+
+[node name="Base_quiz" instance=ExtResource("1_tvsqp")]
+script = ExtResource("2_6eyqb")
+is_multiselect = true
+
+[node name="TextureRect" type="TextureRect" parent="Container" index="4"]
+clip_contents = true
+layout_mode = 0
+offset_left = 25.0
+offset_top = 25.0
+offset_right = 496.0
+offset_bottom = 305.0
+size_flags_horizontal = 3
+texture = ExtResource("3_usuoi")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Container" index="5"]
+layout_mode = 0
+offset_left = 535.0
+offset_top = 25.0
+offset_right = 1075.0
+offset_bottom = 305.0
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(0.078431375, 0.078431375, 0.078431375, 1)
+theme_override_font_sizes/normal_font_size = 24
+text = "Ποιο από τα παρακάτω αστρονομικά αντικείμενα εκπέμπει ισχυρά στην περιοχή των ραδιοκυμάτων;"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ans_box1" parent="Container" index="6" instance=ExtResource("4_y45b7")]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 335.0
+offset_right = 335.0
+offset_bottom = 410.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+_energy_if_selected = -20
+_ans_text = "κομήτης"
+
+[node name="ans_box2" parent="Container" index="7" instance=ExtResource("4_y45b7")]
+layout_mode = 0
+offset_left = 435.0
+offset_top = 335.0
+offset_right = 665.0
+offset_bottom = 410.0
+size_flags_horizontal = 0
+button_mask = 5
+_energy_if_selected = 13
+_ans_text = "πάλσαρ"
+
+[node name="ans_box3" parent="Container" index="8" instance=ExtResource("4_y45b7")]
+layout_mode = 0
+offset_left = 765.0
+offset_top = 335.0
+offset_right = 995.0
+offset_bottom = 410.0
+size_flags_horizontal = 0
+_energy_if_selected = 13
+_ans_text = "κβάζαρ"
+
+[node name="ans_box4" parent="Container" index="9" instance=ExtResource("4_y45b7")]
+layout_mode = 0
+offset_left = 270.0
+offset_top = 435.0
+offset_right = 500.0
+offset_bottom = 510.0
+size_flags_horizontal = 0
+_energy_if_selected = 13
+_ans_text = "υπολείματα υπερκαινοφανούς"
+
+[node name="ans_box5" parent="Container" index="10" instance=ExtResource("4_y45b7")]
+layout_mode = 0
+offset_left = 600.0
+offset_top = 435.0
+offset_right = 830.0
+offset_bottom = 510.0
+size_flags_horizontal = 0
+_energy_if_selected = -20
+_ans_text = "αστεροειδής"

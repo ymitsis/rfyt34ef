@@ -1,0 +1,166 @@
+[gd_scene load_steps=29 format=3 uid="uid://dmuuv5ufn172m"]
+
+[ext_resource type="PackedScene" uid="uid://cnldk7rl488nm" path="res://quizzes/common/Base_quiz.tscn" id="1_vs5k2"]
+[ext_resource type="Script" uid="uid://70q847xes0nc" path="res://quizzes/common/quiz_typeA.gd" id="2_x5wx1"]
+[ext_resource type="PackedScene" uid="uid://bj8dk0h6fwi7r" path="res://quizzes/common/ans_box.tscn" id="4_u66l6"]
+[ext_resource type="Texture2D" uid="uid://b8wbr5h3b0u12" path="res://quizzes/quiz31/pulsar01.png" id="5_sit3i"]
+[ext_resource type="Texture2D" uid="uid://csmdjdh2fcukb" path="res://quizzes/quiz31/pulsar02.png" id="6_ikekl"]
+[ext_resource type="Texture2D" uid="uid://cdmlyumqaquq6" path="res://quizzes/quiz31/pulsar03.png" id="7_1sd4x"]
+[ext_resource type="Texture2D" uid="uid://dgk3lm7wwluu3" path="res://quizzes/quiz31/pulsar04.png" id="8_jxu3y"]
+[ext_resource type="Texture2D" uid="uid://c6jp625rc6la1" path="res://quizzes/quiz31/pulsar05.png" id="9_1jpuk"]
+[ext_resource type="Texture2D" uid="uid://rwekpt2vk3sh" path="res://quizzes/quiz31/pulsar06.png" id="10_bxgmc"]
+[ext_resource type="Texture2D" uid="uid://b6tqaxaysvm1v" path="res://quizzes/quiz31/pulsar07.png" id="11_v1ol8"]
+[ext_resource type="Texture2D" uid="uid://dihmht1cw32dy" path="res://quizzes/quiz31/pulsar08.png" id="12_j8kck"]
+[ext_resource type="Texture2D" uid="uid://objebv2ifucu" path="res://quizzes/quiz31/pulsar09.png" id="13_gncly"]
+[ext_resource type="Texture2D" uid="uid://bp20m5dw8pka6" path="res://quizzes/quiz31/pulsar10.png" id="14_75qx0"]
+[ext_resource type="Texture2D" uid="uid://rds4g05wa4bb" path="res://quizzes/quiz31/pulsar11.png" id="15_tasw4"]
+[ext_resource type="Texture2D" uid="uid://d1j68dlxnplc2" path="res://quizzes/quiz31/pulsar12.png" id="16_5ngby"]
+[ext_resource type="Texture2D" uid="uid://dvyncd7ybfksn" path="res://quizzes/quiz31/pulsar13.png" id="17_gki2r"]
+[ext_resource type="Texture2D" uid="uid://b4p5nv1sjnfru" path="res://quizzes/quiz31/pulsar14.png" id="18_hi3se"]
+[ext_resource type="Texture2D" uid="uid://dp4jf4xa2e3kt" path="res://quizzes/quiz31/pulsar15.png" id="19_laetx"]
+[ext_resource type="Texture2D" uid="uid://cnib6killrxxq" path="res://quizzes/quiz31/pulsar16.png" id="20_2selw"]
+[ext_resource type="Texture2D" uid="uid://7rci5i2jfhv1" path="res://quizzes/quiz31/pulsar17.png" id="21_76dd2"]
+[ext_resource type="Texture2D" uid="uid://0abk833g7xt4" path="res://quizzes/quiz31/pulsar18.png" id="22_rjsvk"]
+[ext_resource type="Texture2D" uid="uid://b3ie8bmxh1nkm" path="res://quizzes/quiz31/pulsar19.png" id="23_b05ji"]
+[ext_resource type="Texture2D" uid="uid://dkofo4muyc5ie" path="res://quizzes/quiz31/pulsar20.png" id="24_d1d2y"]
+[ext_resource type="Texture2D" uid="uid://cc8eo8sj2a6nm" path="res://quizzes/quiz31/pulsar21.png" id="25_lcd1q"]
+[ext_resource type="Texture2D" uid="uid://c3aaxo87fbad5" path="res://quizzes/quiz31/pulsar22.png" id="26_u5wfs"]
+[ext_resource type="Texture2D" uid="uid://duylsyojfxybv" path="res://quizzes/quiz31/pulsar23.png" id="27_wgpcd"]
+[ext_resource type="Texture2D" uid="uid://c3c6e3bnc6hi" path="res://quizzes/quiz31/pulsar24.png" id="28_10do5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r6d51"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_sit3i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ikekl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_1sd4x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_jxu3y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_1jpuk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_bxgmc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_v1ol8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_j8kck")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_gncly")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_75qx0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_tasw4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_5ngby")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_gki2r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_hi3se")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_laetx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_2selw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_76dd2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_rjsvk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_b05ji")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_d1d2y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_lcd1q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_u5wfs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_wgpcd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_10do5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[node name="Base_quiz" instance=ExtResource("1_vs5k2")]
+script = ExtResource("2_x5wx1")
+is_multiselect = true
+
+[node name="pulsar_anim" type="AnimatedSprite2D" parent="Container" index="4"]
+position = Vector2(125, 100)
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_r6d51")
+autoplay = "default"
+frame = 10
+centered = false
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Container" index="5"]
+layout_mode = 0
+offset_left = 393.0
+offset_top = 100.0
+offset_right = 975.0
+offset_bottom = 279.0
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(0.078431375, 0.078431375, 0.078431375, 1)
+theme_override_font_sizes/normal_font_size = 24
+text = "Το διπλανό αστρονομικό αντικείμενο είναι"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ans_box1" parent="Container" index="6" instance=ExtResource("4_u66l6")]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 400.0
+offset_right = 325.0
+offset_bottom = 480.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+_energy_if_selected = 40
+_ans_text = "ένα πάλσαρ"
+
+[node name="ans_box2" parent="Container" index="7" instance=ExtResource("4_u66l6")]
+layout_mode = 0
+offset_left = 450.0
+offset_top = 400.0
+offset_right = 650.0
+offset_bottom = 480.0
+size_flags_horizontal = 0
+button_mask = 5
+_energy_if_selected = -20
+_ans_text = "ένας πλανήτης"
+
+[node name="ans_box3" parent="Container" index="8" instance=ExtResource("4_u66l6")]
+layout_mode = 0
+offset_left = 775.0
+offset_top = 400.0
+offset_right = 975.0
+offset_bottom = 480.0
+size_flags_horizontal = 0
+_energy_if_selected = -20
+_ans_text = "ένα κβάζαρ"

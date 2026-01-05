@@ -1,0 +1,290 @@
+[gd_scene load_steps=16 format=3 uid="uid://c8a7c4xfq4sn5"]
+
+[ext_resource type="PackedScene" uid="uid://cnldk7rl488nm" path="res://quizzes/common/Base_quiz.tscn" id="1_17no3"]
+[ext_resource type="Script" uid="uid://cp4aovf7g1xff" path="res://quizzes/common/quiz_typeD.gd" id="2_xhri6"]
+[ext_resource type="PackedScene" uid="uid://dqcurm0m0rwxa" path="res://quizzes/common/drop_zone.tscn" id="4_7rue4"]
+[ext_resource type="Texture2D" uid="uid://dbdaj6qlgtsof" path="res://quizzes/quiz13/diameter1.png" id="5_td716"]
+[ext_resource type="PackedScene" uid="uid://b6atihsv3hgoo" path="res://quizzes/common/draggable_control.tscn" id="5_yr7bm"]
+[ext_resource type="Texture2D" uid="uid://cp63qm683fday" path="res://quizzes/quiz13/diameter2.png" id="6_87dxo"]
+[ext_resource type="Texture2D" uid="uid://b3lark5k5qdvs" path="res://quizzes/quiz13/diameter3.png" id="7_36vir"]
+[ext_resource type="Texture2D" uid="uid://cr0okilc53ecw" path="res://quizzes/quiz13/diameter4.png" id="8_kpok4"]
+[ext_resource type="Texture2D" uid="uid://clh827jlu4gy8" path="res://quizzes/quiz13/diameter5.png" id="9_iugty"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yrxcr"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5kcxl"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_20hmw"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kmyuq"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tw83r"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u0wt7"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[node name="Base_quiz" instance=ExtResource("1_17no3")]
+script = ExtResource("2_xhri6")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Container" index="4"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 350.0
+offset_right = 1075.0
+offset_bottom = 460.0
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(0.078431375, 0.078431375, 0.078431375, 1)
+theme_override_font_sizes/normal_font_size = 24
+text = "Κατατάξτε τα παρακάτω αστρονομικά αντικείμενα από το μικρότερο στο μεγαλύτερο, με βάση τη διάμετρό τους."
+horizontal_alignment = 3
+vertical_alignment = 1
+
+[node name="order_zone" parent="Container" index="5" instance=ExtResource("4_7rue4")]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 60.0
+offset_right = 1075.0
+offset_bottom = 369.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_yrxcr")
+is_storage = true
+is_horizontal = true
+padding = 30.0
+
+[node name="draggable_ctrl1" parent="Container/order_zone" index="0" instance=ExtResource("5_yr7bm")]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 200.0
+offset_bottom = 289.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5kcxl")
+energy_if_correct = 8
+energy_if_uncorrect = -4
+correct_position = 0
+
+[node name="TR1" type="TextureRect" parent="Container/order_zone/draggable_ctrl1" index="1"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+texture = ExtResource("5_td716")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Container/order_zone/draggable_ctrl1" index="2"]
+layout_mode = 0
+offset_top = 220.0
+offset_right = 180.0
+offset_bottom = 250.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.39215687)
+theme_override_font_sizes/font_size = 16
+text = "αστέρας νετρονίων"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="draggable_ctrl2" parent="Container/order_zone" index="1" instance=ExtResource("5_yr7bm")]
+layout_mode = 0
+offset_left = 220.0
+offset_top = 20.0
+offset_right = 400.0
+offset_bottom = 289.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_20hmw")
+energy_if_correct = 8
+energy_if_uncorrect = -4
+correct_position = 3
+
+[node name="TR4" type="TextureRect" parent="Container/order_zone/draggable_ctrl2" index="1"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+texture = ExtResource("6_87dxo")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Container/order_zone/draggable_ctrl2" index="2"]
+layout_mode = 0
+offset_top = 220.0
+offset_right = 180.0
+offset_bottom = 250.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.39215687)
+theme_override_font_sizes/font_size = 16
+text = "νεφέλωμα"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="draggable_ctrl3" parent="Container/order_zone" index="2" instance=ExtResource("5_yr7bm")]
+layout_mode = 0
+offset_left = 420.0
+offset_top = 20.0
+offset_right = 600.0
+offset_bottom = 289.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_kmyuq")
+energy_if_correct = 8
+energy_if_uncorrect = -4
+correct_position = 2
+
+[node name="TR3" type="TextureRect" parent="Container/order_zone/draggable_ctrl3" index="1"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+texture = ExtResource("7_36vir")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Container/order_zone/draggable_ctrl3" index="2"]
+layout_mode = 0
+offset_top = 220.0
+offset_right = 180.0
+offset_bottom = 250.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.39215687)
+theme_override_font_sizes/font_size = 16
+text = "αστέρι"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="draggable_ctrl4" parent="Container/order_zone" index="3" instance=ExtResource("5_yr7bm")]
+layout_mode = 0
+offset_left = 620.0
+offset_top = 20.0
+offset_right = 800.0
+offset_bottom = 289.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_tw83r")
+energy_if_correct = 8
+energy_if_uncorrect = -4
+correct_position = 1
+
+[node name="TR2" type="TextureRect" parent="Container/order_zone/draggable_ctrl4" index="1"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+texture = ExtResource("8_kpok4")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Container/order_zone/draggable_ctrl4" index="2"]
+layout_mode = 0
+offset_top = 220.0
+offset_right = 180.0
+offset_bottom = 250.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.39215687)
+theme_override_font_sizes/font_size = 16
+text = "πλανήτης"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="draggable_ctrl5" parent="Container/order_zone" index="4" instance=ExtResource("5_yr7bm")]
+layout_mode = 0
+offset_left = 820.0
+offset_top = 20.0
+offset_right = 1000.0
+offset_bottom = 289.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_u0wt7")
+energy_if_correct = 8
+energy_if_uncorrect = -4
+correct_position = 4
+
+[node name="TR5" type="TextureRect" parent="Container/order_zone/draggable_ctrl5" index="1"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+texture = ExtResource("9_iugty")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Container/order_zone/draggable_ctrl5" index="2"]
+layout_mode = 0
+offset_top = 220.0
+offset_right = 180.0
+offset_bottom = 250.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.39215687)
+theme_override_font_sizes/font_size = 16
+text = "γαλαξίας"
+horizontal_alignment = 1
+vertical_alignment = 1

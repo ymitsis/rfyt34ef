@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlba4bhj1ostd"]
+
+[ext_resource type="Script" uid="uid://b8m5e0memgc76" path="res://quizzes/common/play_pause.gd" id="1_rdgy7"]
+[ext_resource type="Texture2D" uid="uid://d34ykedwy8lup" path="res://quizzes/common/play.png" id="1_sf0f0"]
+[ext_resource type="Texture2D" uid="uid://d347s6tv5740b" path="res://quizzes/common/pause.png" id="2_7floe"]
+
+[node name="play-pause" type="TextureButton"]
+offset_right = 50.0
+offset_bottom = 50.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("1_sf0f0")
+texture_pressed = ExtResource("2_7floe")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("1_rdgy7")
+_loop_sound = true
+
+[node name="audio" type="AudioStreamPlayer" parent="."]
+
+[connection signal="toggled" from="." to="." method="_on_toggled"]
+[connection signal="tree_exiting" from="." to="." method="_on_tree_exiting"]

@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://byrd3cshh3qh7"]
+
+[ext_resource type="PackedScene" uid="uid://cnldk7rl488nm" path="res://quizzes/common/Base_quiz.tscn" id="1_kts3m"]
+[ext_resource type="Script" uid="uid://bf6c2038c4evm" path="res://quizzes/common/quiz_typeC.gd" id="2_o3a1d"]
+[ext_resource type="PackedScene" uid="uid://cup7ljxri3bk" path="res://quizzes/quiz04/swap_puzzle.tscn" id="3_60un7"]
+[ext_resource type="Texture2D" uid="uid://c2g4tfoisomu7" path="res://quizzes/quiz04/alma.webp" id="4_5ws88"]
+
+[node name="Base_quiz" instance=ExtResource("1_kts3m")]
+script = ExtResource("2_o3a1d")
+
+[node name="SwapPuzzle" parent="Container" index="4" instance=ExtResource("3_60un7")]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 25.0
+offset_right = 665.0
+offset_bottom = 505.0
+full_img = ExtResource("4_5ws88")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Container" index="5"]
+layout_mode = 0
+offset_left = 675.0
+offset_top = 230.0
+offset_right = 1075.0
+offset_bottom = 505.0
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(0.078431375, 0.078431375, 0.078431375, 1)
+theme_override_font_sizes/normal_font_size = 24
+text = "Η εικόνα δείχνει μερικές από τις 66 κεραίες του ραδιοτηλεσκοπίου ALMA που βρίσκεται στην έρημο Ατακάμα της Χιλής.
+Προσπάθησε να τη σχηματίσεις σωστά με όσο το δυνατόν λιγότερες κινήσεις."
+horizontal_alignment = 3
+vertical_alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="Container" index="6"]
+clip_contents = true
+layout_mode = 0
+offset_left = 879.0
+offset_top = 25.0
+offset_right = 1075.0
+offset_bottom = 172.0
+size_flags_horizontal = 3
+texture = ExtResource("4_5ws88")
+expand_mode = 1
+stretch_mode = 5

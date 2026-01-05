@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://dsd4wyuqjxolu"
+path="res://.godot/imported/cont_mask.png-1c1f75cc0726390f3e0c9802f9bdb617.res"
+
+[deps]
+
+source_file="res://quizzes/common/cont_mask.png"
+dest_files=["res://.godot/imported/cont_mask.png-1c1f75cc0726390f3e0c9802f9bdb617.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

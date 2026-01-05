@@ -1,0 +1,68 @@
+[gd_scene load_steps=5 format=3 uid="uid://bx5673ermb7ae"]
+
+[ext_resource type="PackedScene" uid="uid://cnldk7rl488nm" path="res://quizzes/common/Base_quiz.tscn" id="1_iamwl"]
+[ext_resource type="Script" uid="uid://70q847xes0nc" path="res://quizzes/common/quiz_typeA.gd" id="2_6hlje"]
+[ext_resource type="Texture2D" uid="uid://dala0g0lt4vnb" path="res://quizzes/quiz17/fast.png" id="3_bwido"]
+[ext_resource type="PackedScene" uid="uid://bj8dk0h6fwi7r" path="res://quizzes/common/ans_box.tscn" id="4_em68x"]
+
+[node name="Base_quiz" instance=ExtResource("1_iamwl")]
+script = ExtResource("2_6hlje")
+is_multiselect = true
+
+[node name="TextureRect" type="TextureRect" parent="Container" index="4"]
+clip_contents = true
+layout_mode = 0
+offset_left = 25.0
+offset_top = 25.0
+offset_right = 496.0
+offset_bottom = 355.0
+size_flags_horizontal = 3
+texture = ExtResource("3_bwido")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Container" index="5"]
+layout_mode = 0
+offset_left = 535.0
+offset_top = 25.0
+offset_right = 1075.0
+offset_bottom = 355.0
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(0.078431375, 0.078431375, 0.078431375, 1)
+theme_override_font_sizes/normal_font_size = 24
+text = "Το ραδιοτηλεσκόπιο ενιαίου κατόπτρου με τη μεγαλύτερη διάμετρο είναι το FAST στην Κίνα. Ποια είναι η διάμετρος του κατόπτρου του;"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ans_box1" parent="Container" index="6" instance=ExtResource("4_em68x")]
+layout_mode = 0
+offset_left = 155.0
+offset_top = 420.0
+offset_right = 315.0
+offset_bottom = 490.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+_energy_if_selected = -20
+_ans_text = "50m"
+
+[node name="ans_box2" parent="Container" index="7" instance=ExtResource("4_em68x")]
+layout_mode = 0
+offset_left = 470.0
+offset_top = 420.0
+offset_right = 630.0
+offset_bottom = 490.0
+size_flags_horizontal = 0
+button_mask = 5
+_energy_if_selected = 40
+_ans_text = "500m"
+
+[node name="ans_box3" parent="Container" index="8" instance=ExtResource("4_em68x")]
+layout_mode = 0
+offset_left = 785.0
+offset_top = 420.0
+offset_right = 945.0
+offset_bottom = 490.0
+size_flags_horizontal = 0
+_energy_if_selected = -20
+_ans_text = "5000m"
+_auto_unpressed_img = false

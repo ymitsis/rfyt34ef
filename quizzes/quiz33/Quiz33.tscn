@@ -1,0 +1,75 @@
+[gd_scene load_steps=5 format=3 uid="uid://do8mdhchvouo6"]
+
+[ext_resource type="PackedScene" uid="uid://cnldk7rl488nm" path="res://quizzes/common/Base_quiz.tscn" id="1_vqd68"]
+[ext_resource type="Script" uid="uid://70q847xes0nc" path="res://quizzes/common/quiz_typeA.gd" id="2_rx3r6"]
+[ext_resource type="Texture2D" uid="uid://bnsloe0krs4kl" path="res://quizzes/quiz33/jwst.png" id="3_lj87u"]
+[ext_resource type="PackedScene" uid="uid://bj8dk0h6fwi7r" path="res://quizzes/common/ans_box.tscn" id="4_kla6b"]
+
+[node name="Base_quiz" instance=ExtResource("1_vqd68")]
+script = ExtResource("2_rx3r6")
+is_multiselect = true
+
+[node name="TextureRect" type="TextureRect" parent="Container" index="4"]
+clip_contents = true
+layout_mode = 0
+offset_left = 25.0
+offset_top = 25.0
+offset_right = 468.0
+offset_bottom = 275.0
+size_flags_horizontal = 3
+texture = ExtResource("3_lj87u")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Container" index="5"]
+layout_mode = 0
+offset_left = 480.0
+offset_top = 25.0
+offset_right = 1075.0
+offset_bottom = 275.0
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(0.078431375, 0.078431375, 0.078431375, 1)
+theme_override_font_sizes/normal_font_size = 24
+text = "Γιατί, εκτός από επίγεια, κατασκευάζουμε και διαστημικά τηλεσκόπια, παρότι το κόστος τους είναι 10 ή και 100 φορές μεγαλύτερο;"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ans_box1" parent="Container" index="6" instance=ExtResource("4_kla6b")]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 315.0
+offset_right = 525.0
+offset_bottom = 395.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+_ans_text = "η ατμόσφαιρα της Γης αλλοιώνει τις αστρονομικές παρατηρήσεις"
+
+[node name="ans_box2" parent="Container" index="7" instance=ExtResource("4_kla6b")]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 430.0
+offset_right = 525.0
+offset_bottom = 510.0
+size_flags_horizontal = 0
+button_mask = 5
+_energy_if_selected = -20
+_ans_text = "η βαρυτική έλξη της Γης εμποδίζει τη σωστή λειτουργία των τηλεσκοπίων"
+
+[node name="ans_box3" parent="Container" index="8" instance=ExtResource("4_kla6b")]
+layout_mode = 0
+offset_left = 575.0
+offset_top = 430.0
+offset_right = 1075.0
+offset_bottom = 510.0
+size_flags_horizontal = 0
+_energy_if_selected = -20
+_ans_text = "στο Διάστημα το φως διαδίδεται με μεγαλύτερη ταχύτητα"
+
+[node name="ans_box4" parent="Container" index="9" instance=ExtResource("4_kla6b")]
+layout_mode = 0
+offset_left = 575.0
+offset_top = 315.0
+offset_right = 1075.0
+offset_bottom = 395.0
+size_flags_horizontal = 0
+_ans_text = "η φωτορύπανση δυσκολεύει τις αστρονομικές παρατηρήσεις από τη Γη"

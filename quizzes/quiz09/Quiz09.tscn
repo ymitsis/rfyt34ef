@@ -1,0 +1,238 @@
+[gd_scene load_steps=9 format=3 uid="uid://h21yxsowhoak"]
+
+[ext_resource type="PackedScene" uid="uid://cnldk7rl488nm" path="res://quizzes/common/Base_quiz.tscn" id="1_pmjxj"]
+[ext_resource type="Script" uid="uid://crhhao28q6jwu" path="res://quizzes/common/quiz_typeB.gd" id="2_fnp3c"]
+[ext_resource type="PackedScene" uid="uid://dqcurm0m0rwxa" path="res://quizzes/common/drop_zone.tscn" id="3_pd2o0"]
+[ext_resource type="PackedScene" uid="uid://b6atihsv3hgoo" path="res://quizzes/common/draggable_control.tscn" id="4_4vv0d"]
+[ext_resource type="Texture2D" uid="uid://i8a4vi52oh02" path="res://quizzes/quiz09/katoptriko.png" id="5_d4avv"]
+[ext_resource type="Texture2D" uid="uid://dq8pphhvojd5m" path="res://quizzes/quiz09/dioptriko.png" id="6_6771d"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d4avv"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6771d"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[node name="Base_quiz" instance=ExtResource("1_pmjxj")]
+script = ExtResource("2_fnp3c")
+
+[node name="storage_zone" parent="Container" index="4" instance=ExtResource("3_pd2o0")]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 50.0
+offset_right = 700.0
+offset_bottom = 450.0
+is_storage = true
+padding = 17.0
+
+[node name="draggable_controlB1" parent="Container/storage_zone" index="0" node_paths=PackedStringArray("correct_dropzone") instance=ExtResource("4_4vv0d")]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 15.0
+offset_right = 295.0
+correct_dropzone = NodePath("../../diop_zone")
+energy_if_correct = 7
+energy_if_uncorrect = -7
+
+[node name="Label" type="Label" parent="Container/storage_zone/draggable_controlB1" index="1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 18
+text = "φακός ως κύριο στοιχείο"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="draggable_controlB2" parent="Container/storage_zone" index="1" node_paths=PackedStringArray("correct_dropzone") instance=ExtResource("4_4vv0d")]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 70.0
+offset_right = 295.0
+offset_bottom = 105.0
+correct_dropzone = NodePath("../../katop_zone")
+energy_if_correct = 7
+energy_if_uncorrect = -7
+
+[node name="Label" type="Label" parent="Container/storage_zone/draggable_controlB2" index="1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 18
+text = "καθρέπτης ως κύριο στοιχείο"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="draggable_controlB3" parent="Container/storage_zone" index="2" node_paths=PackedStringArray("correct_dropzone") instance=ExtResource("4_4vv0d")]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 125.0
+offset_right = 295.0
+offset_bottom = 160.0
+correct_dropzone = NodePath("../../katop_zone")
+energy_if_correct = 7
+energy_if_uncorrect = -7
+
+[node name="Label" type="Label" parent="Container/storage_zone/draggable_controlB3" index="1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 18
+text = "δυνατότητα μεγάλης διαμέτρου"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="draggable_controlB4" parent="Container/storage_zone" index="3" node_paths=PackedStringArray("correct_dropzone") instance=ExtResource("4_4vv0d")]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 180.0
+offset_right = 295.0
+offset_bottom = 215.0
+correct_dropzone = NodePath("../../diop_zone")
+energy_if_correct = 7
+energy_if_uncorrect = -7
+
+[node name="Label" type="Label" parent="Container/storage_zone/draggable_controlB4" index="1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 18
+text = "συλλέγει σχετικά λίγο φως"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="draggable_controlB5" parent="Container/storage_zone" index="4" node_paths=PackedStringArray("correct_dropzone") instance=ExtResource("4_4vv0d")]
+layout_mode = 0
+offset_left = 79.0
+offset_top = 235.0
+offset_right = 220.7
+offset_bottom = 308.3
+theme_override_styles/panel = SubResource("StyleBoxFlat_d4avv")
+correct_dropzone = NodePath("../../katop_zone")
+energy_if_correct = 7
+energy_if_uncorrect = -7
+
+[node name="img01" type="TextureRect" parent="Container/storage_zone/draggable_controlB5" index="1"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+texture = ExtResource("5_d4avv")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="draggable_controlB6" parent="Container/storage_zone" index="5" node_paths=PackedStringArray("correct_dropzone") instance=ExtResource("4_4vv0d")]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 320.0
+offset_right = 233.7
+offset_bottom = 382.5
+theme_override_styles/panel = SubResource("StyleBoxFlat_6771d")
+correct_dropzone = NodePath("../../diop_zone")
+energy_if_correct = 7
+energy_if_uncorrect = -7
+
+[node name="img02" type="TextureRect" parent="Container/storage_zone/draggable_controlB6" index="1"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+texture = ExtResource("6_6771d")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="diopt_Lbl" type="Label" parent="Container" index="5"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 25.0
+offset_right = 325.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = "διοπτρικό"
+horizontal_alignment = 1
+clip_text = true
+
+[node name="diop_zone" parent="Container" index="6" instance=ExtResource("3_pd2o0")]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 50.0
+offset_right = 325.0
+offset_bottom = 450.0
+padding = 15.0
+
+[node name="katop_Lbl" type="Label" parent="Container" index="7"]
+layout_mode = 0
+offset_left = 775.0
+offset_top = 25.0
+offset_right = 1075.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = "κατοπτρικό"
+horizontal_alignment = 1
+clip_text = true
+
+[node name="katop_zone" parent="Container" index="8" instance=ExtResource("3_pd2o0")]
+layout_mode = 0
+offset_left = 775.0
+offset_top = 50.0
+offset_right = 1075.0
+offset_bottom = 450.0
+padding = 15.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Container" index="9"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 450.0
+offset_right = 1075.0
+offset_bottom = 530.0
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(0.078431375, 0.078431375, 0.078431375, 1)
+theme_override_font_sizes/normal_font_size = 24
+text = "Τα οπτικά τηλεσκόπια διακρίνονται σε διοπτρικά και κατοπτρικά. Τοποθέτησε τα στοιχεία της μεσαίας στήλης, στη σωστή κατηγορία."
+horizontal_alignment = 3
+vertical_alignment = 1

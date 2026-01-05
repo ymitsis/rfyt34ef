@@ -1,0 +1,306 @@
+[gd_scene load_steps=16 format=3 uid="uid://drpuyot3kseii"]
+
+[ext_resource type="Script" uid="uid://dsifloa523f" path="res://ui/ui.gd" id="1_au5f4"]
+[ext_resource type="AudioStream" uid="uid://bqajt28ihwll2" path="res://main/space_Music.mp3" id="2_mwp23"]
+[ext_resource type="Shader" uid="uid://c05ur7p2rhp36" path="res://ui/panel.gdshader" id="3_1qfk0"]
+[ext_resource type="Texture2D" uid="uid://bvlil2sslhogy" path="res://ui/glassPanel.png" id="4_16sqb"]
+[ext_resource type="PackedScene" uid="uid://camnjaj6mgjso" path="res://ui/Energy_gauge.tscn" id="5_6d87a"]
+[ext_resource type="Texture2D" uid="uid://tl7xnht0l6ve" path="res://ui/sound_on.png" id="6_3bffh"]
+[ext_resource type="Texture2D" uid="uid://di7uyk137a7tv" path="res://ui/sound_off.png" id="7_a4etw"]
+[ext_resource type="Texture2D" uid="uid://bblr20fphu6py" path="res://ui/maximize_window.png" id="8_jo024"]
+[ext_resource type="Texture2D" uid="uid://dg213yd0vne3c" path="res://ui/restore_window.png" id="9_evet4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xpksx"]
+shader = ExtResource("3_1qfk0")
+shader_parameter/blur_size = 3.0
+shader_parameter/radius = 4
+shader_parameter/desat = 0.30000001425
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wusub"]
+bg_color = Color(0.17254902, 0.32156864, 0.59607846, 0.5019608)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_75u2n"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="DPITexture" id="DPITexture_75u2n"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><circle cx=\"8\" cy=\"8\" r=\"7\" fill=\"#fefefe\" fill-opacity=\".75\"/></svg>
+"
+base_scale = 1.5
+
+[sub_resource type="DPITexture" id="DPITexture_3wlde"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><circle cx=\"8\" cy=\"8\" r=\"7\" fill=\"#fefefe\"/></svg>
+"
+base_scale = 1.5
+
+[sub_resource type="DPITexture" id="DPITexture_xpksx"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><circle cx=\"8\" cy=\"8\" r=\"7\" fill=\"#fefefe\" fill-opacity=\".37\"/></svg>
+"
+base_scale = 1.5
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_au5f4")
+
+[node name="Bg_music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_mwp23")
+autoplay = true
+bus = &"Music"
+
+[node name="BackBufferCopy_A" type="BackBufferCopy" parent="."]
+copy_mode = 2
+
+[node name="Main_panel" type="Panel" parent="."]
+material = SubResource("ShaderMaterial_xpksx")
+anchors_preset = -1
+anchor_left = 0.8
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wusub")
+metadata/_edit_use_anchors_ = true
+
+[node name="glass_texture" type="NinePatchRect" parent="Main_panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -10.0
+offset_right = 3.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_16sqb")
+patch_margin_left = 20
+patch_margin_top = 20
+patch_margin_right = 20
+patch_margin_bottom = 20
+
+[node name="Energy_panel" type="Panel" parent="Main_panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = 0.01
+anchor_right = 0.95
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_75u2n")
+
+[node name="Energy_gauge" parent="Main_panel/Energy_panel" instance=ExtResource("5_6d87a")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Zoom_panel" type="Panel" parent="Main_panel"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = 0.75
+anchor_right = 0.95
+anchor_bottom = 0.8
+offset_left = 2.0980835e-05
+offset_right = 4.5776367e-05
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Zoom_slider" type="HSlider" parent="Main_panel/Zoom_panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_icons/grabber = SubResource("DPITexture_75u2n")
+theme_override_icons/grabber_highlight = SubResource("DPITexture_3wlde")
+theme_override_icons/grabber_disabled = SubResource("DPITexture_xpksx")
+max_value = 1.0
+step = 0.01
+value = 1.0
+tick_count = 6
+ticks_on_borders = true
+
+[node name="Options_panel" type="Panel" parent="Main_panel"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = 0.9
+anchor_right = 0.95
+anchor_bottom = 0.95
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sound_toggle" type="TextureButton" parent="Main_panel/Options_panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.1
+anchor_right = 0.5
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+toggle_mode = true
+texture_normal = ExtResource("6_3bffh")
+texture_pressed = ExtResource("7_a4etw")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="window_size" type="TextureButton" parent="Main_panel/Options_panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.1
+anchor_right = 1.0
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+toggle_mode = true
+texture_normal = ExtResource("8_jo024")
+texture_pressed = ExtResource("9_evet4")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="BackBufferCopy_B" type="BackBufferCopy" parent="."]
+copy_mode = 2
+
+[node name="MenuButton1" type="MenuButton" parent="."]
+offset_right = 100.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 24
+toggle_mode = false
+text = "Qz 01-10"
+flat = false
+switch_on_hover = true
+item_count = 10
+popup/item_0/text = "quiz01"
+popup/item_0/id = 0
+popup/item_1/text = "quiz02"
+popup/item_1/id = 1
+popup/item_2/text = "quiz03"
+popup/item_2/id = 2
+popup/item_3/text = "quiz04"
+popup/item_3/id = 3
+popup/item_4/text = "quiz05"
+popup/item_4/id = 4
+popup/item_5/text = "quiz06"
+popup/item_5/id = 5
+popup/item_6/text = "quiz07"
+popup/item_6/id = 6
+popup/item_7/text = "quiz08"
+popup/item_7/id = 7
+popup/item_8/text = "quiz09"
+popup/item_8/id = 8
+popup/item_9/text = "quiz10"
+popup/item_9/id = 9
+
+[node name="MenuButton2" type="MenuButton" parent="."]
+offset_left = 115.0
+offset_right = 221.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 24
+toggle_mode = false
+text = "Qz 11-20"
+flat = false
+switch_on_hover = true
+item_count = 10
+popup/item_0/text = "quiz11"
+popup/item_0/id = 0
+popup/item_1/text = "quiz12"
+popup/item_1/id = 1
+popup/item_2/text = "quiz13"
+popup/item_2/id = 2
+popup/item_3/text = "quiz14"
+popup/item_3/id = 3
+popup/item_4/text = "quiz15"
+popup/item_4/id = 4
+popup/item_5/text = "quiz16"
+popup/item_5/id = 5
+popup/item_6/text = "quiz17"
+popup/item_6/id = 6
+popup/item_7/text = "quiz18"
+popup/item_7/id = 7
+popup/item_8/text = "quiz19"
+popup/item_8/id = 8
+popup/item_9/text = "quiz20"
+popup/item_9/id = 9
+
+[node name="MenuButton3" type="MenuButton" parent="."]
+offset_left = 230.0
+offset_right = 336.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 24
+toggle_mode = false
+text = "Qz 21-30"
+flat = false
+switch_on_hover = true
+item_count = 10
+popup/item_0/text = "quiz21"
+popup/item_0/id = 0
+popup/item_1/text = "quiz22"
+popup/item_1/id = 1
+popup/item_2/text = "quiz23"
+popup/item_2/id = 2
+popup/item_3/text = "quiz24"
+popup/item_3/id = 3
+popup/item_4/text = "quiz25"
+popup/item_4/id = 4
+popup/item_5/text = "quiz26"
+popup/item_5/id = 5
+popup/item_6/text = "quiz27"
+popup/item_6/id = 6
+popup/item_7/text = "quiz28"
+popup/item_7/id = 7
+popup/item_8/text = "quiz29"
+popup/item_8/id = 8
+popup/item_9/text = "quiz30"
+popup/item_9/id = 9
+
+[node name="MenuButton4" type="MenuButton" parent="."]
+offset_left = 345.0
+offset_right = 452.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 24
+toggle_mode = false
+text = "Qz 31-40"
+flat = false
+switch_on_hover = true
+item_count = 10
+popup/item_0/text = "quiz31"
+popup/item_0/id = 0
+popup/item_1/text = "quiz32"
+popup/item_1/id = 1
+popup/item_2/text = "quiz33"
+popup/item_2/id = 2
+popup/item_3/text = "quiz34"
+popup/item_3/id = 3
+popup/item_4/text = "quiz35"
+popup/item_4/id = 4
+popup/item_5/text = "quiz36"
+popup/item_5/id = 5
+popup/item_6/text = "quiz37"
+popup/item_6/id = 6
+popup/item_7/text = "quiz38"
+popup/item_7/id = 7
+popup/item_8/text = "quiz39"
+popup/item_8/id = 8
+popup/item_9/text = "quiz40"
+popup/item_9/id = 9
+
+[connection signal="resized" from="Main_panel" to="." method="_on_main_panel_resized"]
+[connection signal="value_changed" from="Main_panel/Zoom_panel/Zoom_slider" to="." method="_on_zoom_slider_value_changed"]
+[connection signal="toggled" from="Main_panel/Options_panel/Sound_toggle" to="." method="_on_sound_button_toggled"]
+[connection signal="toggled" from="Main_panel/Options_panel/window_size" to="." method="_on_window_size_toggled"]

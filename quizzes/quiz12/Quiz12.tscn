@@ -1,0 +1,298 @@
+[gd_scene load_steps=15 format=3 uid="uid://lb1jf7wjlg46"]
+
+[ext_resource type="PackedScene" uid="uid://cnldk7rl488nm" path="res://quizzes/common/Base_quiz.tscn" id="1_p7kdd"]
+[ext_resource type="Script" uid="uid://crhhao28q6jwu" path="res://quizzes/common/quiz_typeB.gd" id="2_6bqv7"]
+[ext_resource type="PackedScene" uid="uid://dqcurm0m0rwxa" path="res://quizzes/common/drop_zone.tscn" id="3_mccjf"]
+[ext_resource type="PackedScene" uid="uid://b6atihsv3hgoo" path="res://quizzes/common/draggable_control.tscn" id="4_5fcoh"]
+[ext_resource type="Texture2D" uid="uid://d070wxbppm6qp" path="res://quizzes/quiz12/galaxy1.png" id="5_8vqkc"]
+[ext_resource type="Texture2D" uid="uid://dcuuc1rbnpfo7" path="res://quizzes/quiz12/galaxy2.png" id="6_16gmx"]
+[ext_resource type="Texture2D" uid="uid://de3ulgwnu0xhj" path="res://quizzes/quiz12/galaxy3.png" id="7_2h64u"]
+[ext_resource type="Texture2D" uid="uid://dq67w7dm41go8" path="res://quizzes/quiz12/galaxy4.png" id="8_lhk82"]
+[ext_resource type="Texture2D" uid="uid://b0gtvme3b0pqg" path="res://quizzes/quiz12/galaxy5.png" id="9_gtoq0"]
+[ext_resource type="Texture2D" uid="uid://bptw2f1ne1ffl" path="res://quizzes/quiz12/galaxy6.png" id="10_otba6"]
+[ext_resource type="Texture2D" uid="uid://dggmkhx23g686" path="res://quizzes/quiz12/galaxy7.png" id="11_i7057"]
+[ext_resource type="Texture2D" uid="uid://c27j4kpf1647j" path="res://quizzes/quiz12/galaxy8.png" id="12_s5s54"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d4avv"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6771d"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[node name="Base_quiz" instance=ExtResource("1_p7kdd")]
+script = ExtResource("2_6bqv7")
+
+[node name="agn_Lbl" type="Label" parent="Container" index="4"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 25.0
+offset_right = 325.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = "ενεργοί γαλαξίες"
+clip_text = true
+
+[node name="agn_zone" parent="Container" index="5" node_paths=PackedStringArray("overflow_zone") instance=ExtResource("3_mccjf")]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 50.0
+offset_right = 1075.0
+offset_bottom = 230.0
+is_horizontal = true
+capacity = 5
+overflow_zone = NodePath("../astro_zone")
+padding = 5.0
+
+[node name="draggable_ctrl1" parent="Container/agn_zone" index="0" node_paths=PackedStringArray("correct_dropzone") instance=ExtResource("4_5fcoh")]
+layout_mode = 0
+offset_left = 106.0
+offset_top = 5.0
+offset_right = 310.0
+offset_bottom = 175.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_d4avv")
+correct_dropzone = NodePath("../../astro_zone")
+energy_if_correct = 5
+energy_if_uncorrect = -5
+
+[node name="img01" type="TextureRect" parent="Container/agn_zone/draggable_ctrl1" index="1"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+texture = ExtResource("5_8vqkc")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="draggable_ctrl2" parent="Container/agn_zone" index="1" node_paths=PackedStringArray("correct_dropzone") instance=ExtResource("4_5fcoh")]
+layout_mode = 0
+offset_left = 315.0
+offset_top = 5.0
+offset_right = 519.0
+offset_bottom = 175.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_d4avv")
+correct_dropzone = NodePath("..")
+energy_if_correct = 5
+energy_if_uncorrect = -5
+
+[node name="img02" type="TextureRect" parent="Container/agn_zone/draggable_ctrl2" index="1"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+texture = ExtResource("6_16gmx")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="draggable_ctrl3" parent="Container/agn_zone" index="2" node_paths=PackedStringArray("correct_dropzone") instance=ExtResource("4_5fcoh")]
+layout_mode = 0
+offset_left = 524.0
+offset_top = 5.0
+offset_right = 728.0
+offset_bottom = 175.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_d4avv")
+correct_dropzone = NodePath("../../astro_zone")
+energy_if_correct = 5
+energy_if_uncorrect = -5
+
+[node name="img03" type="TextureRect" parent="Container/agn_zone/draggable_ctrl3" index="1"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+texture = ExtResource("7_2h64u")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="draggable_ctrl4" parent="Container/agn_zone" index="3" node_paths=PackedStringArray("correct_dropzone") instance=ExtResource("4_5fcoh")]
+layout_mode = 0
+offset_left = 733.0
+offset_top = 5.0
+offset_right = 937.0
+offset_bottom = 175.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_d4avv")
+correct_dropzone = NodePath("..")
+energy_if_correct = 5
+energy_if_uncorrect = -5
+
+[node name="img04" type="TextureRect" parent="Container/agn_zone/draggable_ctrl4" index="1"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+texture = ExtResource("8_lhk82")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="astro_Lbl" type="Label" parent="Container" index="6"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 245.0
+offset_right = 325.0
+offset_bottom = 275.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = "αστρογόνοι γαλαξίες"
+clip_text = true
+
+[node name="astro_zone" parent="Container" index="7" node_paths=PackedStringArray("overflow_zone") instance=ExtResource("3_mccjf")]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 270.0
+offset_right = 1075.0
+offset_bottom = 450.0
+is_horizontal = true
+capacity = 5
+overflow_zone = NodePath("../agn_zone")
+padding = 5.0
+
+[node name="draggable_ctrl5" parent="Container/astro_zone" index="0" node_paths=PackedStringArray("correct_dropzone") instance=ExtResource("4_5fcoh")]
+layout_mode = 0
+offset_left = 106.0
+offset_top = 5.0
+offset_right = 310.0
+offset_bottom = 175.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6771d")
+correct_dropzone = NodePath("..")
+energy_if_correct = 5
+energy_if_uncorrect = -5
+
+[node name="img02" type="TextureRect" parent="Container/astro_zone/draggable_ctrl5" index="1"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+texture = ExtResource("9_gtoq0")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="draggable_ctrl6" parent="Container/astro_zone" index="1" node_paths=PackedStringArray("correct_dropzone") instance=ExtResource("4_5fcoh")]
+layout_mode = 0
+offset_left = 315.0
+offset_top = 5.0
+offset_right = 519.0
+offset_bottom = 175.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6771d")
+correct_dropzone = NodePath("..")
+energy_if_correct = 5
+energy_if_uncorrect = -5
+
+[node name="img06" type="TextureRect" parent="Container/astro_zone/draggable_ctrl6" index="1"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+texture = ExtResource("10_otba6")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="draggable_ctrl7" parent="Container/astro_zone" index="2" node_paths=PackedStringArray("correct_dropzone") instance=ExtResource("4_5fcoh")]
+layout_mode = 0
+offset_left = 524.0
+offset_top = 5.0
+offset_right = 728.0
+offset_bottom = 175.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6771d")
+correct_dropzone = NodePath("../../agn_zone")
+energy_if_correct = 5
+energy_if_uncorrect = -5
+
+[node name="img07" type="TextureRect" parent="Container/astro_zone/draggable_ctrl7" index="1"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+texture = ExtResource("11_i7057")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="draggable_ctrl8" parent="Container/astro_zone" index="3" node_paths=PackedStringArray("correct_dropzone") instance=ExtResource("4_5fcoh")]
+layout_mode = 0
+offset_left = 733.0
+offset_top = 5.0
+offset_right = 937.0
+offset_bottom = 175.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6771d")
+correct_dropzone = NodePath("../../agn_zone")
+energy_if_correct = 5
+energy_if_uncorrect = -5
+
+[node name="img08" type="TextureRect" parent="Container/astro_zone/draggable_ctrl8" index="1"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+texture = ExtResource("12_s5s54")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Container" index="8"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 450.0
+offset_right = 1075.0
+offset_bottom = 530.0
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(0.078431375, 0.078431375, 0.078431375, 1)
+theme_override_font_sizes/normal_font_size = 24
+text = "Τακτοποίησε τις παραπάνω εικόνες ώστε η επάνω σειρά να έχει μόνο ενεργούς γαλαξίες και η κάτω μόνο αστρογόνους."
+horizontal_alignment = 3
+vertical_alignment = 1

@@ -1,0 +1,58 @@
+[gd_scene load_steps=5 format=3 uid="uid://yg7elh0b6k2k"]
+
+[ext_resource type="PackedScene" uid="uid://cnldk7rl488nm" path="res://quizzes/common/Base_quiz.tscn" id="1_o7ly7"]
+[ext_resource type="Script" uid="uid://70q847xes0nc" path="res://quizzes/common/quiz_typeA.gd" id="2_1refm"]
+[ext_resource type="Texture2D" uid="uid://bwpyxvmhq0814" path="res://quizzes/quiz20/galaxy.png" id="3_37pxb"]
+[ext_resource type="PackedScene" uid="uid://bj8dk0h6fwi7r" path="res://quizzes/common/ans_box.tscn" id="4_h0nt5"]
+
+[node name="Base_quiz" instance=ExtResource("1_o7ly7")]
+script = ExtResource("2_1refm")
+is_multiselect = false
+
+[node name="TextureRect" type="TextureRect" parent="Container" index="4"]
+clip_contents = true
+layout_mode = 0
+offset_left = 25.0
+offset_top = 25.0
+offset_right = 1075.0
+offset_bottom = 305.0
+size_flags_horizontal = 3
+texture = ExtResource("3_37pxb")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Container" index="5"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 305.0
+offset_right = 1075.0
+offset_bottom = 385.0
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(0.078431375, 0.078431375, 0.078431375, 1)
+theme_override_font_sizes/normal_font_size = 24
+text = "Οι αστρογόνοι γαλαξίες έχουν στο κέντρο τους μια υπερμεγέθη μαύρη τρύπα."
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 35
+
+[node name="ans_box1" parent="Container" index="6" instance=ExtResource("4_h0nt5")]
+layout_mode = 0
+offset_left = 280.0
+offset_top = 400.0
+offset_right = 440.0
+offset_bottom = 470.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+_energy_if_selected = 0
+_ans_text = "σωστό"
+
+[node name="ans_box2" parent="Container" index="7" instance=ExtResource("4_h0nt5")]
+layout_mode = 0
+offset_left = 660.0
+offset_top = 400.0
+offset_right = 820.0
+offset_bottom = 470.0
+size_flags_horizontal = 0
+button_mask = 5
+_energy_if_selected = 40
+_ans_text = "λάθος"

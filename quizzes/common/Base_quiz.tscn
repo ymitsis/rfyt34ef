@@ -1,0 +1,113 @@
+[gd_scene load_steps=13 format=3 uid="uid://cnldk7rl488nm"]
+
+[ext_resource type="Shader" uid="uid://by1j111ya38xo" path="res://quizzes/common/UI.gdshader" id="1_3qmi5"]
+[ext_resource type="Texture2D" uid="uid://bd7ossyvslgxl" path="res://quizzes/common/quiz_bg.jpg" id="1_i5773"]
+[ext_resource type="Script" uid="uid://di6pssgdnbj03" path="res://quizzes/common/base_quiz.gd" id="2_nmvrc"]
+[ext_resource type="Texture2D" uid="uid://bqs4nhtpnygs" path="res://quizzes/common/submit_normal.png" id="4_63uiu"]
+[ext_resource type="Texture2D" uid="uid://dueyopowpvkhb" path="res://quizzes/common/submit_pressed.png" id="5_lt40r"]
+[ext_resource type="Texture2D" uid="uid://eeoc5kh4fy5k" path="res://quizzes/common/submit_hover.png" id="6_74qxq"]
+[ext_resource type="Texture2D" uid="uid://qhbh56cw552n" path="res://quizzes/common/submit_disabled.png" id="7_iikh4"]
+[ext_resource type="Texture2D" uid="uid://cp1a1kxe026ag" path="res://quizzes/common/cont_normal.png" id="10_65g4x"]
+[ext_resource type="Texture2D" uid="uid://d1g1ecrs34dju" path="res://quizzes/common/cont_pressed.png" id="11_wgbe7"]
+[ext_resource type="Texture2D" uid="uid://uheaq13adjya" path="res://quizzes/common/cont_hover.png" id="12_gcj7o"]
+[ext_resource type="BitMap" uid="uid://dsd4wyuqjxolu" path="res://quizzes/common/cont_mask.png" id="13_cte8i"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wgbe7"]
+shader = ExtResource("1_3qmi5")
+shader_parameter/blur_size = 3.0
+shader_parameter/radius = 4
+shader_parameter/darkness = 0.5
+
+[node name="Base_quiz" type="ColorRect"]
+material = SubResource("ShaderMaterial_wgbe7")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_nmvrc")
+
+[node name="Container" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -550.0
+offset_top = -300.0
+offset_right = 550.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Bg_image" type="TextureRect" parent="Container"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_i5773")
+expand_mode = 1
+
+[node name="submit" type="TextureButton" parent="Container"]
+layout_mode = 0
+offset_left = 900.0
+offset_top = 530.0
+offset_right = 1050.0
+offset_bottom = 580.0
+mouse_default_cursor_shape = 2
+disabled = true
+texture_normal = ExtResource("4_63uiu")
+texture_pressed = ExtResource("5_lt40r")
+texture_hover = ExtResource("6_74qxq")
+texture_disabled = ExtResource("7_iikh4")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Container/submit"]
+layout_mode = 0
+offset_right = 150.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 25
+text = "έλεγχος"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="continue" type="TextureButton" parent="Container"]
+layout_mode = 0
+offset_left = 870.0
+offset_top = 530.0
+offset_right = 1070.0
+offset_bottom = 580.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("10_65g4x")
+texture_pressed = ExtResource("11_wgbe7")
+texture_hover = ExtResource("12_gcj7o")
+texture_click_mask = ExtResource("13_cte8i")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Container/continue"]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 25
+text = "συνέχεια..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="result" type="Label" parent="Container"]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 540.0
+offset_right = 850.0
+offset_bottom = 600.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 34
+text = "κέρδισες x ενέργεια από y"
+clip_text = true
+
+[connection signal="pressed" from="Container/submit" to="." method="_on_submit_pressed"]
+[connection signal="pressed" from="Container/continue" to="." method="_on_continue_pressed"]

@@ -1,0 +1,116 @@
+[gd_scene load_steps=11 format=3 uid="uid://1r430j78b1jv"]
+
+[ext_resource type="PackedScene" uid="uid://cnldk7rl488nm" path="res://quizzes/common/Base_quiz.tscn" id="1_xidvh"]
+[ext_resource type="Script" uid="uid://70q847xes0nc" path="res://quizzes/common/quiz_typeA.gd" id="2_gi1t1"]
+[ext_resource type="PackedScene" uid="uid://bj8dk0h6fwi7r" path="res://quizzes/common/ans_box.tscn" id="3_nu0hw"]
+[ext_resource type="Texture2D" uid="uid://cc4ym1w3oc0yk" path="res://quizzes/quiz30/pulsar1.png" id="4_m6uh2"]
+[ext_resource type="PackedScene" uid="uid://dlba4bhj1ostd" path="res://quizzes/common/play_pause.tscn" id="5_8ksb5"]
+[ext_resource type="Texture2D" uid="uid://bov04s5lsalhc" path="res://quizzes/quiz30/pulsar2.png" id="7_e1v1n"]
+[ext_resource type="AudioStream" uid="uid://b2quybc3ngwmm" path="res://quizzes/quiz30/audio1.ogg" id="8_m6uh2"]
+[ext_resource type="AudioStream" uid="uid://b046xldx6htwm" path="res://quizzes/quiz30/audio2.ogg" id="8_oswev"]
+[ext_resource type="Texture2D" uid="uid://b3wng66eyryxn" path="res://quizzes/quiz30/pulsar3.png" id="9_bb883"]
+[ext_resource type="AudioStream" uid="uid://qbxserunracs" path="res://quizzes/quiz30/audio3.ogg" id="10_m6uh2"]
+
+[node name="Base_quiz" instance=ExtResource("1_xidvh")]
+script = ExtResource("2_gi1t1")
+is_multiselect = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Container" index="4"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 25.0
+offset_right = 1075.0
+offset_bottom = 135.0
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(0.078431375, 0.078431375, 0.078431375, 1)
+theme_override_font_sizes/normal_font_size = 24
+text = "Παρακάτω μπορείς να ακούσεις τρία ηχητικά σήματα που προέκυψαν από παρατηρήσεις παλσάρ με ραδιοτηλεσκόπια. Επέλεξε το παλσάρ που περιστρέφεται πιο γρήγορα."
+horizontal_alignment = 3
+justification_flags = 35
+
+[node name="ans_box1" parent="Container" index="5" instance=ExtResource("3_nu0hw")]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 140.0
+offset_bottom = 340.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_normal = ExtResource("4_m6uh2")
+_energy_if_selected = -20
+_ans_text = ""
+_is_txt = false
+
+[node name="Label" type="Label" parent="Container/ans_box1" index="4"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 5.0
+offset_right = 157.0
+offset_bottom = 45.0
+theme_override_font_sizes/font_size = 20
+text = "PSR B0329+54"
+
+[node name="play-pause" parent="Container/ans_box1" index="5" instance=ExtResource("5_8ksb5")]
+layout_mode = 0
+offset_left = 145.0
+offset_top = 145.0
+offset_right = 195.0
+offset_bottom = 195.0
+_sound_file = ExtResource("8_m6uh2")
+
+[node name="ans_box2" parent="Container" index="6" instance=ExtResource("3_nu0hw")]
+layout_mode = 0
+offset_left = 450.0
+offset_top = 140.0
+offset_right = 650.0
+offset_bottom = 340.0
+size_flags_horizontal = 0
+texture_normal = ExtResource("7_e1v1n")
+_energy_if_selected = -20
+_ans_text = ""
+_is_txt = false
+
+[node name="Label" type="Label" parent="Container/ans_box2" index="4"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 5.0
+offset_right = 157.0
+offset_bottom = 45.0
+theme_override_font_sizes/font_size = 20
+text = "PSR B0833-45"
+
+[node name="play-pause" parent="Container/ans_box2" index="5" instance=ExtResource("5_8ksb5")]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 140.0
+offset_right = 190.0
+offset_bottom = 190.0
+_sound_file = ExtResource("8_oswev")
+
+[node name="ans_box3" parent="Container" index="7" instance=ExtResource("3_nu0hw")]
+layout_mode = 0
+offset_left = 850.0
+offset_top = 140.0
+offset_right = 1050.0
+offset_bottom = 340.0
+size_flags_horizontal = 0
+texture_normal = ExtResource("9_bb883")
+_energy_if_selected = 40
+_ans_text = ""
+_is_txt = false
+
+[node name="Label" type="Label" parent="Container/ans_box3" index="4"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 5.0
+offset_right = 157.0
+offset_bottom = 45.0
+theme_override_font_sizes/font_size = 20
+text = "PSR B0531-21"
+
+[node name="play-pause" parent="Container/ans_box3" index="5" instance=ExtResource("5_8ksb5")]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 140.0
+offset_right = 190.0
+offset_bottom = 190.0
+_sound_file = ExtResource("10_m6uh2")

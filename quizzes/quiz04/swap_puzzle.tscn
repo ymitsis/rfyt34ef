@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cup7ljxri3bk"]
+
+[ext_resource type="Script" uid="uid://b0qhkd6nlayvs" path="res://quizzes/quiz04/swap_puzzle.gd" id="1_fwu1b"]
+[ext_resource type="PackedScene" uid="uid://c4mppv86vtf70" path="res://quizzes/quiz04/swap_tile.tscn" id="2_5xx48"]
+
+[node name="SwapPuzzle" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 620.0
+offset_bottom = 465.0
+script = ExtResource("1_fwu1b")
+swap_tile_scene = ExtResource("2_5xx48")

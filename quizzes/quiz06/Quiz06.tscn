@@ -1,0 +1,358 @@
+[gd_scene load_steps=13 format=3 uid="uid://f4wdw87dr6t5"]
+
+[ext_resource type="PackedScene" uid="uid://cnldk7rl488nm" path="res://quizzes/common/Base_quiz.tscn" id="1_qhh4o"]
+[ext_resource type="Script" uid="uid://crhhao28q6jwu" path="res://quizzes/common/quiz_typeB.gd" id="2_qnxe3"]
+[ext_resource type="Texture2D" uid="uid://dddmcyd1yij8m" path="res://quizzes/quiz06/star.png" id="3_1rw0y"]
+[ext_resource type="Texture2D" uid="uid://dj7yrigfa68cm" path="res://quizzes/quiz06/pulsar.png" id="4_m278i"]
+[ext_resource type="PackedScene" uid="uid://dqcurm0m0rwxa" path="res://quizzes/common/drop_zone.tscn" id="4_xj7ei"]
+[ext_resource type="Texture2D" uid="uid://cdx28ekbwoluw" path="res://quizzes/quiz06/nefeloma.png" id="5_3ugwd"]
+[ext_resource type="PackedScene" uid="uid://b6atihsv3hgoo" path="res://quizzes/common/draggable_control.tscn" id="5_ob50s"]
+[ext_resource type="Texture2D" uid="uid://dvjjyhqj4np0q" path="res://quizzes/quiz06/planet.png" id="6_qbqho"]
+[ext_resource type="Texture2D" uid="uid://c46e2g1u2juyn" path="res://quizzes/quiz06/kvazar.png" id="7_vlpnv"]
+[ext_resource type="Texture2D" uid="uid://b21dvrgw6mt7o" path="res://quizzes/quiz06/galaxy.png" id="8_w8eij"]
+[ext_resource type="Texture2D" uid="uid://cjn7pj17vbxef" path="res://quizzes/quiz06/komitis.png" id="9_2aruw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_62b6o"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(1, 1, 1, 0.5019608)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[node name="Base_quiz" instance=ExtResource("1_qhh4o")]
+script = ExtResource("2_qnxe3")
+
+[node name="storage" parent="Container" index="4" instance=ExtResource("4_xj7ei")]
+layout_mode = 0
+offset_left = 940.0
+offset_top = 25.0
+offset_right = 1080.0
+offset_bottom = 420.0
+is_storage = true
+padding = 20.0
+
+[node name="draggable_controlB1" parent="Container/storage" index="0" node_paths=PackedStringArray("correct_dropzone") instance=ExtResource("5_ob50s")]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 15.0
+offset_right = 132.0
+offset_bottom = 49.0
+correct_dropzone = NodePath("../../img03/drop_zoneB03")
+energy_if_correct = 6
+
+[node name="Label" type="Label" parent="Container/storage/draggable_controlB1" index="1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 18
+text = "νεφέλωμα"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="draggable_controlB2" parent="Container/storage" index="1" node_paths=PackedStringArray("correct_dropzone") instance=ExtResource("5_ob50s")]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 70.0
+offset_right = 132.0
+offset_bottom = 104.0
+correct_dropzone = NodePath("../../img05/drop_zoneB05")
+energy_if_correct = 6
+
+[node name="Label" type="Label" parent="Container/storage/draggable_controlB2" index="1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 18
+text = "κβάζαρ"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="draggable_controlB3" parent="Container/storage" index="2" node_paths=PackedStringArray("correct_dropzone") instance=ExtResource("5_ob50s")]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 125.0
+offset_right = 132.0
+offset_bottom = 159.0
+correct_dropzone = NodePath("../../img01/drop_zoneB01")
+energy_if_correct = 6
+
+[node name="Label" type="Label" parent="Container/storage/draggable_controlB3" index="1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 18
+text = "αστέρι"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="draggable_controlB4" parent="Container/storage" index="3" node_paths=PackedStringArray("correct_dropzone") instance=ExtResource("5_ob50s")]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 180.0
+offset_right = 132.0
+offset_bottom = 214.0
+correct_dropzone = NodePath("../../img06/drop_zoneB06")
+energy_if_correct = 6
+
+[node name="Label" type="Label" parent="Container/storage/draggable_controlB4" index="1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 18
+text = "γαλαξίας"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="draggable_controlB5" parent="Container/storage" index="4" node_paths=PackedStringArray("correct_dropzone") instance=ExtResource("5_ob50s")]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 235.0
+offset_right = 132.0
+offset_bottom = 269.0
+correct_dropzone = NodePath("../../img02/drop_zoneB02")
+energy_if_correct = 6
+
+[node name="Label" type="Label" parent="Container/storage/draggable_controlB5" index="1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 18
+text = "πάλσαρ"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="draggable_controlB6" parent="Container/storage" index="5" node_paths=PackedStringArray("correct_dropzone") instance=ExtResource("5_ob50s")]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 290.0
+offset_right = 132.0
+offset_bottom = 324.0
+correct_dropzone = NodePath("../../img07/drop_zoneB07")
+energy_if_correct = 6
+
+[node name="Label" type="Label" parent="Container/storage/draggable_controlB6" index="1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 18
+text = "κομήτης"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="draggable_controlB7" parent="Container/storage" index="6" node_paths=PackedStringArray("correct_dropzone") instance=ExtResource("5_ob50s")]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 345.0
+offset_right = 132.0
+offset_bottom = 379.0
+correct_dropzone = NodePath("../../img04/drop_zoneB04")
+energy_if_correct = 6
+
+[node name="Label" type="Label" parent="Container/storage/draggable_controlB7" index="1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 18
+text = "πλανήτης"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="img01" type="TextureRect" parent="Container" index="5"]
+clip_contents = true
+layout_mode = 0
+offset_left = 25.0
+offset_top = 25.0
+offset_right = 195.0
+offset_bottom = 195.0
+size_flags_horizontal = 3
+texture = ExtResource("3_1rw0y")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="drop_zoneB01" parent="Container/img01" index="0" node_paths=PackedStringArray("overflow_zone") instance=ExtResource("4_xj7ei")]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 125.0
+offset_right = 150.0
+offset_bottom = 165.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_62b6o")
+capacity = 1
+overflow_zone = NodePath("../../storage")
+
+[node name="img02" type="TextureRect" parent="Container" index="6"]
+clip_contents = true
+layout_mode = 0
+offset_left = 265.0
+offset_top = 25.0
+offset_right = 435.0
+offset_bottom = 195.0
+size_flags_horizontal = 3
+texture = ExtResource("4_m278i")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="drop_zoneB02" parent="Container/img02" index="0" node_paths=PackedStringArray("overflow_zone") instance=ExtResource("4_xj7ei")]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 125.0
+offset_right = 150.0
+offset_bottom = 165.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_62b6o")
+capacity = 1
+overflow_zone = NodePath("../../storage")
+
+[node name="img03" type="TextureRect" parent="Container" index="7"]
+clip_contents = true
+layout_mode = 0
+offset_left = 505.0
+offset_top = 25.0
+offset_right = 675.0
+offset_bottom = 195.0
+size_flags_horizontal = 3
+texture = ExtResource("5_3ugwd")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="drop_zoneB03" parent="Container/img03" index="0" node_paths=PackedStringArray("overflow_zone") instance=ExtResource("4_xj7ei")]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 125.0
+offset_right = 150.0
+offset_bottom = 165.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_62b6o")
+capacity = 1
+overflow_zone = NodePath("../../storage")
+
+[node name="img04" type="TextureRect" parent="Container" index="8"]
+clip_contents = true
+layout_mode = 0
+offset_left = 745.0
+offset_top = 25.0
+offset_right = 915.0
+offset_bottom = 195.0
+size_flags_horizontal = 3
+texture = ExtResource("6_qbqho")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="drop_zoneB04" parent="Container/img04" index="0" node_paths=PackedStringArray("overflow_zone") instance=ExtResource("4_xj7ei")]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 125.0
+offset_right = 150.0
+offset_bottom = 165.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_62b6o")
+capacity = 1
+overflow_zone = NodePath("../../storage")
+
+[node name="img05" type="TextureRect" parent="Container" index="9"]
+clip_contents = true
+layout_mode = 0
+offset_left = 145.0
+offset_top = 250.0
+offset_right = 315.0
+offset_bottom = 420.0
+size_flags_horizontal = 3
+texture = ExtResource("7_vlpnv")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="drop_zoneB05" parent="Container/img05" index="0" node_paths=PackedStringArray("overflow_zone") instance=ExtResource("4_xj7ei")]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 125.0
+offset_right = 150.0
+offset_bottom = 165.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_62b6o")
+capacity = 1
+overflow_zone = NodePath("../../storage")
+
+[node name="img06" type="TextureRect" parent="Container" index="10"]
+clip_contents = true
+layout_mode = 0
+offset_left = 385.0
+offset_top = 250.0
+offset_right = 555.0
+offset_bottom = 420.0
+size_flags_horizontal = 3
+texture = ExtResource("8_w8eij")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="drop_zoneB06" parent="Container/img06" index="0" node_paths=PackedStringArray("overflow_zone") instance=ExtResource("4_xj7ei")]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 125.0
+offset_right = 150.0
+offset_bottom = 165.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_62b6o")
+capacity = 1
+overflow_zone = NodePath("../../storage")
+
+[node name="img07" type="TextureRect" parent="Container" index="11"]
+clip_contents = true
+layout_mode = 0
+offset_left = 625.0
+offset_top = 250.0
+offset_right = 795.0
+offset_bottom = 420.0
+size_flags_horizontal = 3
+texture = ExtResource("9_2aruw")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="drop_zoneB07" parent="Container/img07" index="0" node_paths=PackedStringArray("overflow_zone") instance=ExtResource("4_xj7ei")]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 125.0
+offset_right = 150.0
+offset_bottom = 165.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_62b6o")
+capacity = 1
+overflow_zone = NodePath("../../storage")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Container" index="12"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 450.0
+offset_right = 1075.0
+offset_bottom = 530.0
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(0.078431375, 0.078431375, 0.078431375, 1)
+theme_override_font_sizes/normal_font_size = 24
+text = "Στις παραπάνω εικόνες παρουσιάζονται διάφορα αστρονομικά αντικείμενα. Τοποθέτησε κάθε όνομα της δεξιάς στήλης στο σωστό ουράνιο σώμα."
+horizontal_alignment = 3
+vertical_alignment = 1

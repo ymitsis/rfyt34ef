@@ -1,0 +1,77 @@
+[gd_scene load_steps=5 format=3 uid="uid://br2x28jgm68n6"]
+
+[ext_resource type="PackedScene" uid="uid://cnldk7rl488nm" path="res://quizzes/common/Base_quiz.tscn" id="1_dq7ac"]
+[ext_resource type="Script" uid="uid://70q847xes0nc" path="res://quizzes/common/quiz_typeA.gd" id="2_w2lc5"]
+[ext_resource type="Texture2D" uid="uid://bj7ppr25nb3cu" path="res://quizzes/quiz27/radioteleskope.png" id="3_8vw4t"]
+[ext_resource type="PackedScene" uid="uid://bj8dk0h6fwi7r" path="res://quizzes/common/ans_box.tscn" id="4_32sr1"]
+
+[node name="Base_quiz" instance=ExtResource("1_dq7ac")]
+script = ExtResource("2_w2lc5")
+is_multiselect = true
+
+[node name="TextureRect" type="TextureRect" parent="Container" index="4"]
+clip_contents = true
+layout_mode = 0
+offset_left = 25.0
+offset_top = 25.0
+offset_right = 441.0
+offset_bottom = 325.0
+size_flags_horizontal = 3
+texture = ExtResource("3_8vw4t")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Container" index="5"]
+layout_mode = 0
+offset_left = 470.0
+offset_top = 25.0
+offset_right = 1075.0
+offset_bottom = 325.0
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(0.078431375, 0.078431375, 0.078431375, 1)
+theme_override_font_sizes/normal_font_size = 24
+text = "Για να προκύψει καλή εικόνα από τις παρατηρήσεις ενός ραδιοτηλεσκοπίου, είναι σημαντικό"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ans_box1" parent="Container" index="6" instance=ExtResource("4_32sr1")]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 345.0
+offset_right = 525.0
+offset_bottom = 415.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+_energy_if_selected = 13
+_ans_text = "να έχει πολλές κεραίες"
+
+[node name="ans_box2" parent="Container" index="7" instance=ExtResource("4_32sr1")]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 440.0
+offset_right = 525.0
+offset_bottom = 510.0
+size_flags_horizontal = 0
+button_mask = 5
+_energy_if_selected = 13
+_ans_text = "ο χρόνος παρατήρησης να είναι μεγάλος"
+
+[node name="ans_box3" parent="Container" index="8" instance=ExtResource("4_32sr1")]
+layout_mode = 0
+offset_left = 575.0
+offset_top = 440.0
+offset_right = 975.0
+offset_bottom = 510.0
+size_flags_horizontal = 0
+_energy_if_selected = -39
+_ans_text = "οι κεραίες να είναι πολύ κοντά η μια στη άλλη"
+
+[node name="ans_box4" parent="Container" index="9" instance=ExtResource("4_32sr1")]
+layout_mode = 0
+offset_left = 575.0
+offset_top = 345.0
+offset_right = 975.0
+offset_bottom = 415.0
+size_flags_horizontal = 0
+_energy_if_selected = 13
+_ans_text = "οι παρατηρήσεις να γίνουν σε διαφορετικές συχνότητες"

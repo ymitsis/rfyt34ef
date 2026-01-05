@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://ctyob776jvqne"]
-
-[ext_resource type="AudioStream" uid="uid://bqajt28ihwll2" path="res://assets/Sounds/Music/space_Music.mp3" id="1_f6gl3"]
-
-[node name="BGMusic" type="AudioStreamPlayer"]
-stream = ExtResource("1_f6gl3")
-autoplay = true
-bus = &"Music"
-parameters/looping = true

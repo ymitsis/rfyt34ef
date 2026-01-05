@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqcurm0m0rwxa"]
+
+[ext_resource type="Script" uid="uid://bsa17on3os4qk" path="res://quizzes/common/drop_zone.gd" id="1_dmkx6"]
+
+[node name="drop_zone" type="Panel"]
+offset_right = 100.0
+offset_bottom = 500.0
+script = ExtResource("1_dmkx6")

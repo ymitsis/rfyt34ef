@@ -1,0 +1,317 @@
+[gd_scene load_steps=8 format=3 uid="uid://c1cny63vwhja0"]
+
+[ext_resource type="PackedScene" uid="uid://cnldk7rl488nm" path="res://quizzes/common/Base_quiz.tscn" id="1_f5ivt"]
+[ext_resource type="Script" uid="uid://crhhao28q6jwu" path="res://quizzes/common/quiz_typeB.gd" id="2_qp0e2"]
+[ext_resource type="PackedScene" uid="uid://dqcurm0m0rwxa" path="res://quizzes/common/drop_zone.tscn" id="3_j46dp"]
+[ext_resource type="PackedScene" uid="uid://b6atihsv3hgoo" path="res://quizzes/common/draggable_control.tscn" id="4_c615e"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rtkxh"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0.39215687)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m5y3v"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0.39215687)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_36jl1"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0.39215687)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[node name="Base_quiz" instance=ExtResource("1_f5ivt")]
+script = ExtResource("2_qp0e2")
+
+[node name="single_Lbl" type="Label" parent="Container" index="4"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 25.0
+offset_right = 275.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = "ενιαίου κατόπτρου"
+clip_text = true
+
+[node name="single_zone" parent="Container" index="5" instance=ExtResource("3_j46dp")]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 50.0
+offset_right = 275.0
+offset_bottom = 450.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_rtkxh")
+padding = 16.0
+
+[node name="storage_Lbl" type="Label" parent="Container" index="6"]
+layout_mode = 0
+offset_left = 425.0
+offset_top = 25.0
+offset_right = 675.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = "ραδιοτηλεσκόπια"
+clip_text = true
+
+[node name="storage_zone" parent="Container" index="7" instance=ExtResource("3_j46dp")]
+layout_mode = 0
+offset_left = 425.0
+offset_top = 50.0
+offset_right = 675.0
+offset_bottom = 450.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_m5y3v")
+is_storage = true
+padding = 13.0
+
+[node name="draggable_ctrl01" parent="Container/storage_zone" index="0" node_paths=PackedStringArray("correct_dropzone") instance=ExtResource("4_c615e")]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 16.0
+offset_right = 245.0
+offset_bottom = 46.0
+correct_dropzone = NodePath("../../single_zone")
+energy_if_correct = 5
+energy_if_uncorrect = -5
+
+[node name="Label" type="Label" parent="Container/storage_zone/draggable_ctrl01" index="1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "Green Bank"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="draggable_ctrl02" parent="Container/storage_zone" index="1" node_paths=PackedStringArray("correct_dropzone") instance=ExtResource("4_c615e")]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 58.0
+offset_right = 245.0
+offset_bottom = 88.0
+correct_dropzone = NodePath("../../single_zone")
+energy_if_correct = 5
+energy_if_uncorrect = -5
+
+[node name="Label" type="Label" parent="Container/storage_zone/draggable_ctrl02" index="1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "FAST"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="draggable_ctrl03" parent="Container/storage_zone" index="2" node_paths=PackedStringArray("correct_dropzone") instance=ExtResource("4_c615e")]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 100.0
+offset_right = 245.0
+offset_bottom = 130.0
+correct_dropzone = NodePath("../../interf_zone")
+energy_if_correct = 5
+energy_if_uncorrect = -5
+
+[node name="Label" type="Label" parent="Container/storage_zone/draggable_ctrl03" index="1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "LOFAR"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="draggable_ctrl04" parent="Container/storage_zone" index="3" node_paths=PackedStringArray("correct_dropzone") instance=ExtResource("4_c615e")]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 142.0
+offset_right = 245.0
+offset_bottom = 172.0
+correct_dropzone = NodePath("../../single_zone")
+energy_if_correct = 5
+energy_if_uncorrect = -5
+
+[node name="Label" type="Label" parent="Container/storage_zone/draggable_ctrl04" index="1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "Effelsberg"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="draggable_ctrl05" parent="Container/storage_zone" index="4" node_paths=PackedStringArray("correct_dropzone") instance=ExtResource("4_c615e")]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 185.0
+offset_right = 245.0
+offset_bottom = 215.0
+correct_dropzone = NodePath("../../interf_zone")
+energy_if_correct = 5
+energy_if_uncorrect = -5
+
+[node name="Label" type="Label" parent="Container/storage_zone/draggable_ctrl05" index="1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "ALMA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="draggable_ctrl06" parent="Container/storage_zone" index="5" node_paths=PackedStringArray("correct_dropzone") instance=ExtResource("4_c615e")]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 227.0
+offset_right = 245.0
+offset_bottom = 257.0
+correct_dropzone = NodePath("../../interf_zone")
+energy_if_correct = 5
+energy_if_uncorrect = -5
+
+[node name="Label" type="Label" parent="Container/storage_zone/draggable_ctrl06" index="1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "GMRT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="draggable_ctrl07" parent="Container/storage_zone" index="6" node_paths=PackedStringArray("correct_dropzone") instance=ExtResource("4_c615e")]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 269.0
+offset_right = 245.0
+offset_bottom = 299.0
+correct_dropzone = NodePath("../../single_zone")
+energy_if_correct = 5
+energy_if_uncorrect = -5
+
+[node name="Label" type="Label" parent="Container/storage_zone/draggable_ctrl07" index="1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "Parkes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="draggable_ctrl08" parent="Container/storage_zone" index="7" node_paths=PackedStringArray("correct_dropzone") instance=ExtResource("4_c615e")]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 312.0
+offset_right = 245.0
+offset_bottom = 342.0
+correct_dropzone = NodePath("../../single_zone")
+energy_if_correct = 5
+energy_if_uncorrect = -5
+
+[node name="Label" type="Label" parent="Container/storage_zone/draggable_ctrl08" index="1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "Arecibo"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="draggable_ctrl09" parent="Container/storage_zone" index="8" node_paths=PackedStringArray("correct_dropzone") instance=ExtResource("4_c615e")]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 354.0
+offset_right = 245.0
+offset_bottom = 384.0
+correct_dropzone = NodePath("../../interf_zone")
+energy_if_correct = 5
+energy_if_uncorrect = -5
+
+[node name="Label" type="Label" parent="Container/storage_zone/draggable_ctrl09" index="1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "VLA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="interf_Lbl" type="Label" parent="Container" index="8"]
+layout_mode = 0
+offset_left = 825.0
+offset_top = 25.0
+offset_right = 1075.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = "συμβολομετρίας"
+clip_text = true
+
+[node name="interf_zone" parent="Container" index="9" instance=ExtResource("3_j46dp")]
+layout_mode = 0
+offset_left = 825.0
+offset_top = 50.0
+offset_right = 1075.0
+offset_bottom = 450.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_36jl1")
+padding = 16.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Container" index="10"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 450.0
+offset_right = 1075.0
+offset_bottom = 530.0
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(0.078431375, 0.078431375, 0.078431375, 1)
+theme_override_font_sizes/normal_font_size = 24
+text = "Παραπάνω αναφέρονται μερικά από τα σημαντικότερα ραδιοτηλεσκόπια. Τοποθέτησε καθένα από αυτά στην στήλη που αντιστοιχεί στην κατηγορία του."
+horizontal_alignment = 3
+vertical_alignment = 1

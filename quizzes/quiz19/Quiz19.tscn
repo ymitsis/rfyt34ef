@@ -1,0 +1,77 @@
+[gd_scene load_steps=5 format=3 uid="uid://bno0ab56x5c33"]
+
+[ext_resource type="PackedScene" uid="uid://cnldk7rl488nm" path="res://quizzes/common/Base_quiz.tscn" id="1_n2y3g"]
+[ext_resource type="Script" uid="uid://70q847xes0nc" path="res://quizzes/common/quiz_typeA.gd" id="2_52vak"]
+[ext_resource type="Texture2D" uid="uid://d4am82ucb6xtx" path="res://quizzes/quiz19/fast.png" id="3_17qwv"]
+[ext_resource type="PackedScene" uid="uid://bj8dk0h6fwi7r" path="res://quizzes/common/ans_box.tscn" id="4_t2oin"]
+
+[node name="Base_quiz" instance=ExtResource("1_n2y3g")]
+script = ExtResource("2_52vak")
+is_multiselect = true
+
+[node name="TextureRect" type="TextureRect" parent="Container" index="4"]
+clip_contents = true
+layout_mode = 0
+offset_left = 25.0
+offset_top = 25.0
+offset_right = 525.0
+offset_bottom = 375.0
+size_flags_horizontal = 3
+texture = ExtResource("3_17qwv")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Container" index="5"]
+layout_mode = 0
+offset_left = 554.0
+offset_top = 25.0
+offset_right = 1074.0
+offset_bottom = 375.0
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(0.078431375, 0.078431375, 0.078431375, 1)
+theme_override_font_sizes/normal_font_size = 24
+text = "Ποιο είναι το μεγαλύτερο σε διάμετρο ραδιοτηλεσκόπιο ενιαίου κατόπτρου;"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ans_box1" parent="Container" index="6" instance=ExtResource("4_t2oin")]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 410.0
+offset_right = 275.0
+offset_bottom = 510.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+_energy_if_selected = -13
+_ans_text = "Arecibo (Πουέρτο Ρίκο)"
+
+[node name="ans_box2" parent="Container" index="7" instance=ExtResource("4_t2oin")]
+layout_mode = 0
+offset_left = 292.0
+offset_top = 410.0
+offset_right = 542.0
+offset_bottom = 510.0
+size_flags_horizontal = 0
+button_mask = 5
+_energy_if_selected = -13
+_ans_text = "LOFAR (Ολλανδία)"
+
+[node name="ans_box3" parent="Container" index="8" instance=ExtResource("4_t2oin")]
+layout_mode = 0
+offset_left = 558.0
+offset_top = 410.0
+offset_right = 808.0
+offset_bottom = 510.0
+size_flags_horizontal = 0
+_energy_if_selected = 40
+_ans_text = "FAST (Κίνα)"
+
+[node name="ans_box4" parent="Container" index="9" instance=ExtResource("4_t2oin")]
+layout_mode = 0
+offset_left = 825.0
+offset_top = 410.0
+offset_right = 1075.0
+offset_bottom = 510.0
+size_flags_horizontal = 0
+_energy_if_selected = -13
+_ans_text = "VLA (ΗΠΑ)"

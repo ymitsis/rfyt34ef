@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=3 uid="uid://domn8iyi0aw8t"]
+
+[ext_resource type="PackedScene" uid="uid://cnldk7rl488nm" path="res://quizzes/common/Base_quiz.tscn" id="1_obl13"]
+[ext_resource type="Script" uid="uid://70q847xes0nc" path="res://quizzes/common/quiz_typeA.gd" id="2_iu74s"]
+[ext_resource type="Texture2D" uid="uid://dnyhihdpbvw1d" path="res://quizzes/quiz29/sychnotron.png" id="3_ca7g0"]
+[ext_resource type="PackedScene" uid="uid://bj8dk0h6fwi7r" path="res://quizzes/common/ans_box.tscn" id="4_ijbt5"]
+
+[node name="Base_quiz" instance=ExtResource("1_obl13")]
+script = ExtResource("2_iu74s")
+is_multiselect = true
+
+[node name="TextureRect" type="TextureRect" parent="Container" index="4"]
+clip_contents = true
+layout_mode = 0
+offset_left = 25.0
+offset_top = 25.0
+offset_right = 545.0
+offset_bottom = 372.0
+size_flags_horizontal = 3
+texture = ExtResource("3_ca7g0")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Container" index="5"]
+layout_mode = 0
+offset_left = 565.0
+offset_top = 25.0
+offset_right = 1075.0
+offset_bottom = 372.0
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(0.078431375, 0.078431375, 0.078431375, 1)
+theme_override_font_sizes/normal_font_size = 24
+text = "Η ακτινοβολία σύγχροτρον"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ans_box1" parent="Container" index="6" instance=ExtResource("4_ijbt5")]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 400.0
+offset_right = 325.0
+offset_bottom = 500.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+_ans_text = "υποδηλώνει παρουσία ισχυρών μαγνητικών πεδίων"
+
+[node name="ans_box2" parent="Container" index="7" instance=ExtResource("4_ijbt5")]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 400.0
+offset_right = 700.0
+offset_bottom = 500.0
+size_flags_horizontal = 0
+button_mask = 5
+_ans_text = "εκπέμπεται και από ενεργούς γαλαξικούς πυρήνες"
+
+[node name="ans_box3" parent="Container" index="8" instance=ExtResource("4_ijbt5")]
+layout_mode = 0
+offset_left = 775.0
+offset_top = 400.0
+offset_right = 1075.0
+offset_bottom = 500.0
+size_flags_horizontal = 0
+_energy_if_selected = -40
+_ans_text = "εκπέμπεται από πολύ θερμά αστέρια"
