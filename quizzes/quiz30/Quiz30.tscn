@@ -24,7 +24,7 @@ offset_bottom = 135.0
 size_flags_horizontal = 3
 theme_override_colors/default_color = Color(0.078431375, 0.078431375, 0.078431375, 1)
 theme_override_font_sizes/normal_font_size = 24
-text = "Παρακάτω μπορείς να ακούσεις τρία ηχητικά σήματα που προέκυψαν από παρατηρήσεις παλσάρ με ραδιοτηλεσκόπια. Επέλεξε το παλσάρ που περιστρέφεται πιο γρήγορα."
+text = "QUIZ30_QSTN"
 horizontal_alignment = 3
 justification_flags = 35
 
@@ -36,8 +36,7 @@ offset_bottom = 340.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
 texture_normal = ExtResource("4_m6uh2")
-_energy_if_selected = -20
-_ans_text = ""
+_energy_if_selected = -30
 _is_txt = false
 
 [node name="Label" type="Label" parent="Container/ans_box1" index="4"]
@@ -47,7 +46,7 @@ offset_top = 5.0
 offset_right = 157.0
 offset_bottom = 45.0
 theme_override_font_sizes/font_size = 20
-text = "PSR B0329+54"
+text = "QUIZ30_ANS1"
 
 [node name="play-pause" parent="Container/ans_box1" index="5" instance=ExtResource("5_8ksb5")]
 layout_mode = 0
@@ -65,8 +64,7 @@ offset_right = 650.0
 offset_bottom = 340.0
 size_flags_horizontal = 0
 texture_normal = ExtResource("7_e1v1n")
-_energy_if_selected = -20
-_ans_text = ""
+_energy_if_selected = -30
 _is_txt = false
 
 [node name="Label" type="Label" parent="Container/ans_box2" index="4"]
@@ -76,7 +74,7 @@ offset_top = 5.0
 offset_right = 157.0
 offset_bottom = 45.0
 theme_override_font_sizes/font_size = 20
-text = "PSR B0833-45"
+text = "QUIZ30_ANS2"
 
 [node name="play-pause" parent="Container/ans_box2" index="5" instance=ExtResource("5_8ksb5")]
 layout_mode = 0
@@ -94,8 +92,7 @@ offset_right = 1050.0
 offset_bottom = 340.0
 size_flags_horizontal = 0
 texture_normal = ExtResource("9_bb883")
-_energy_if_selected = 40
-_ans_text = ""
+_energy_if_selected = 60
 _is_txt = false
 
 [node name="Label" type="Label" parent="Container/ans_box3" index="4"]
@@ -105,7 +102,7 @@ offset_top = 5.0
 offset_right = 157.0
 offset_bottom = 45.0
 theme_override_font_sizes/font_size = 20
-text = "PSR B0531-21"
+text = "QUIZ30_ANS3"
 
 [node name="play-pause" parent="Container/ans_box3" index="5" instance=ExtResource("5_8ksb5")]
 layout_mode = 0

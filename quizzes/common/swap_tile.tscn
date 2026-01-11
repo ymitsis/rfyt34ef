@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4mppv86vtf70"]
+
+[ext_resource type="Script" uid="uid://y443cdolkfkp" path="res://quizzes/common/swap_tile.gd" id="1_qmv11"]
+
+[node name="SwapTile" type="TextureRect"]
+offset_right = 100.0
+offset_bottom = 100.0
+mouse_default_cursor_shape = 2
+expand_mode = 1
+script = ExtResource("1_qmv11")

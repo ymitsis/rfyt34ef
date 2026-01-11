@@ -42,7 +42,7 @@ offset_bottom = 530.0
 size_flags_horizontal = 3
 theme_override_colors/default_color = Color(0.078431375, 0.078431375, 0.078431375, 1)
 theme_override_font_sizes/normal_font_size = 24
-text = "Στην παραπάνω εικόνα παρουσιάζονται σε πραγματικές αναλογίες μεγέθους ο Ήλιος και οι πλανήτες του. Τοποθέτησε κάθε όνομα της δεξιάς στήλης στο σωστό ουράνιο σώμα."
+text = "QUIZ02_QSTN"
 horizontal_alignment = 3
 vertical_alignment = 1
 
@@ -61,7 +61,7 @@ offset_top = 10.0
 offset_right = 125.0
 offset_bottom = 45.0
 correct_dropzone = NodePath("../../drop_zoneB01")
-energy_if_correct = 5
+energy_if_correct = 7
 
 [node name="Label" type="Label" parent="Container/storage/draggable_controlB1" index="1"]
 layout_mode = 1
@@ -71,7 +71,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 18
-text = "Ερμής"
+text = "QUIZ02_ANS1"
 horizontal_alignment = 1
 vertical_alignment = 1
 clip_text = true
@@ -82,7 +82,7 @@ offset_top = 50.0
 offset_right = 125.0
 offset_bottom = 85.0
 correct_dropzone = NodePath("../../drop_zoneB02")
-energy_if_correct = 5
+energy_if_correct = 7
 
 [node name="Label" type="Label" parent="Container/storage/draggable_controlB2" index="1"]
 layout_mode = 1
@@ -92,7 +92,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 18
-text = "Ήλιος"
+text = "QUIZ02_ANS2"
 horizontal_alignment = 1
 vertical_alignment = 1
 clip_text = true
@@ -103,7 +103,7 @@ offset_top = 90.0
 offset_right = 125.0
 offset_bottom = 125.0
 correct_dropzone = NodePath("../../drop_zoneB03")
-energy_if_correct = 5
+energy_if_correct = 7
 
 [node name="Label" type="Label" parent="Container/storage/draggable_controlB3" index="1"]
 layout_mode = 1
@@ -113,7 +113,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 18
-text = "Ουρανός"
+text = "QUIZ02_ANS3"
 horizontal_alignment = 1
 vertical_alignment = 1
 clip_text = true
@@ -124,7 +124,7 @@ offset_top = 130.0
 offset_right = 125.0
 offset_bottom = 165.0
 correct_dropzone = NodePath("../../drop_zoneB04")
-energy_if_correct = 5
+energy_if_correct = 7
 
 [node name="Label" type="Label" parent="Container/storage/draggable_controlB4" index="1"]
 layout_mode = 1
@@ -134,7 +134,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 18
-text = "Άρης"
+text = "QUIZ02_ANS4"
 horizontal_alignment = 1
 vertical_alignment = 1
 clip_text = true
@@ -145,7 +145,7 @@ offset_top = 170.0
 offset_right = 125.0
 offset_bottom = 205.0
 correct_dropzone = NodePath("../../drop_zoneB05")
-energy_if_correct = 5
+energy_if_correct = 7
 
 [node name="Label" type="Label" parent="Container/storage/draggable_controlB5" index="1"]
 layout_mode = 1
@@ -155,7 +155,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 18
-text = "Γη"
+text = "QUIZ02_ANS5"
 horizontal_alignment = 1
 vertical_alignment = 1
 clip_text = true
@@ -166,7 +166,7 @@ offset_top = 210.0
 offset_right = 125.0
 offset_bottom = 245.0
 correct_dropzone = NodePath("../../drop_zoneB06")
-energy_if_correct = 5
+energy_if_correct = 7
 
 [node name="Label" type="Label" parent="Container/storage/draggable_controlB6" index="1"]
 layout_mode = 1
@@ -176,7 +176,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 18
-text = "Κρόνος"
+text = "QUIZ02_ANS6"
 horizontal_alignment = 1
 vertical_alignment = 1
 clip_text = true
@@ -187,7 +187,7 @@ offset_top = 250.0
 offset_right = 125.0
 offset_bottom = 285.0
 correct_dropzone = NodePath("../../drop_zoneB07")
-energy_if_correct = 5
+energy_if_correct = 7
 
 [node name="Label" type="Label" parent="Container/storage/draggable_controlB7" index="1"]
 layout_mode = 1
@@ -197,7 +197,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 18
-text = "Αφροδίτη"
+text = "QUIZ02_ANS7"
 horizontal_alignment = 1
 vertical_alignment = 1
 clip_text = true
@@ -208,7 +208,7 @@ offset_top = 290.0
 offset_right = 125.0
 offset_bottom = 325.0
 correct_dropzone = NodePath("../../drop_zoneB08")
-energy_if_correct = 5
+energy_if_correct = 7
 
 [node name="Label" type="Label" parent="Container/storage/draggable_controlB8" index="1"]
 layout_mode = 1
@@ -218,7 +218,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 18
-text = "Ποσειδώνας"
+text = "QUIZ02_ANS8"
 horizontal_alignment = 1
 vertical_alignment = 1
 clip_text = true
@@ -229,7 +229,7 @@ offset_top = 330.0
 offset_right = 125.0
 offset_bottom = 365.0
 correct_dropzone = NodePath("../../drop_zoneB09")
-energy_if_correct = 5
+energy_if_correct = 7
 
 [node name="Label" type="Label" parent="Container/storage/draggable_controlB9" index="1"]
 layout_mode = 1
@@ -239,7 +239,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 18
-text = "Δίας"
+text = "QUIZ02_ANS9"
 horizontal_alignment = 1
 vertical_alignment = 1
 clip_text = true

@@ -71,7 +71,7 @@ layout_mode = 0
 offset_right = 150.0
 offset_bottom = 50.0
 theme_override_font_sizes/font_size = 25
-text = "έλεγχος"
+text = "QUIZ_SUBMIT"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -94,7 +94,7 @@ layout_mode = 0
 offset_right = 200.0
 offset_bottom = 50.0
 theme_override_font_sizes/font_size = 25
-text = "συνέχεια..."
+text = "QUIZ_CONTINUE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -106,7 +106,7 @@ offset_right = 850.0
 offset_bottom = 600.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 34
-text = "κέρδισες x ενέργεια από y"
+text = "xx"
 clip_text = true
 
 [connection signal="pressed" from="Container/submit" to="." method="_on_submit_pressed"]

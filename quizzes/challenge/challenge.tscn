@@ -1,0 +1,145 @@
+[gd_scene load_steps=7 format=3 uid="uid://f1ljki6pdg6g"]
+
+[ext_resource type="Shader" uid="uid://by1j111ya38xo" path="res://quizzes/common/UI.gdshader" id="1_c45j1"]
+[ext_resource type="Script" uid="uid://d1cpxgduepaud" path="res://quizzes/challenge/challenge.gd" id="2_38rt2"]
+[ext_resource type="Texture2D" uid="uid://bvlil2sslhogy" path="res://ui/glassPanel.png" id="3_38rt2"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wgbe7"]
+shader = ExtResource("1_c45j1")
+shader_parameter/blur_size = 3.0
+shader_parameter/radius = 4
+shader_parameter/darkness = 0.5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_38rt2"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0.39215687)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_64ue7"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0.39215687)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+corner_detail = 5
+
+[node name="challengeDlg" type="ColorRect"]
+material = SubResource("ShaderMaterial_wgbe7")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_38rt2")
+
+[node name="Container" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -225.0
+offset_right = 400.0
+offset_bottom = 225.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="glass_texture" type="NinePatchRect" parent="Container"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -8.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_38rt2")
+patch_margin_left = 20
+patch_margin_top = 20
+patch_margin_right = 20
+patch_margin_bottom = 20
+
+[node name="title_lbl" type="Label" parent="Container"]
+clip_contents = true
+layout_mode = 0
+offset_left = 50.0
+offset_top = 25.0
+offset_right = 750.0
+offset_bottom = 130.0
+theme_override_colors/font_color = Color(0.8235294, 0.8235294, 0.8235294, 1)
+theme_override_constants/line_spacing = 0
+theme_override_font_sizes/font_size = 24
+text = "CHALLENGE_TITLE"
+horizontal_alignment = 1
+autowrap_mode = 2
+clip_text = true
+
+[node name="option1_btn" type="Button" parent="Container"]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 130.0
+offset_right = 750.0
+offset_bottom = 215.0
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_38rt2")
+
+[node name="option1_lbl" type="Label" parent="Container/option1_btn"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.7058824, 1, 0.7058824, 1)
+theme_override_constants/line_spacing = 0
+theme_override_font_sizes/font_size = 24
+text = "xx"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+justification_flags = 35
+clip_text = true
+
+[node name="option2_btn" type="Button" parent="Container"]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 240.0
+offset_right = 750.0
+offset_bottom = 395.0
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_64ue7")
+
+[node name="option2_lbl" type="Label" parent="Container/option2_btn"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.7058824, 0.7058824, 1)
+theme_override_constants/line_spacing = 0
+theme_override_font_sizes/font_size = 24
+text = "CHALLENGE_OPTION2"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+justification_flags = 35
+clip_text = true
+
+[connection signal="pressed" from="Container/option1_btn" to="." method="_on_option_1_btn_pressed"]
+[connection signal="pressed" from="Container/option2_btn" to="." method="_on_option_2_btn_pressed"]

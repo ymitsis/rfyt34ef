@@ -48,4 +48,9 @@ func _goto_target():
 	tween.tween_property(self, "global_position", new_target, 3)
 	tween.tween_property(_exhaust_left,  "scale", Vector2(0.7, 0.0), 2).set_delay(2)
 	tween.tween_property(_exhaust_right, "scale", Vector2(0.7, 0.0), 2).set_delay(2)
-	tween.finished.connect(func(): is_moving = false)
+	tween.finished.connect(_tile_arrived)
+
+#Στο τέλος της κινησης καλειται το quiz
+func _tile_arrived():
+	is_moving = false
+	GameState.request_quiz()
