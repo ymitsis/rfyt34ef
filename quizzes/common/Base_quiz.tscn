@@ -12,20 +12,32 @@
 [ext_resource type="Texture2D" uid="uid://uheaq13adjya" path="res://quizzes/common/cont_hover.png" id="12_gcj7o"]
 [ext_resource type="BitMap" uid="uid://dsd4wyuqjxolu" path="res://quizzes/common/cont_mask.png" id="13_cte8i"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_wgbe7"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qc65l"]
 shader = ExtResource("1_3qmi5")
 shader_parameter/blur_size = 3.0
 shader_parameter/radius = 4
 shader_parameter/darkness = 0.5
 
 [node name="Base_quiz" type="ColorRect"]
-material = SubResource("ShaderMaterial_wgbe7")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(1, 1, 1, 0)
 script = ExtResource("2_nmvrc")
+
+[node name="BackBufferCopy" type="BackBufferCopy" parent="."]
+
+[node name="blur" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_qc65l")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
 
 [node name="Container" type="Control" parent="."]
 layout_mode = 1
@@ -71,7 +83,7 @@ layout_mode = 0
 offset_right = 150.0
 offset_bottom = 50.0
 theme_override_font_sizes/font_size = 25
-text = "έλεγχος"
+text = "QUIZ_SUBMIT"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -94,7 +106,7 @@ layout_mode = 0
 offset_right = 200.0
 offset_bottom = 50.0
 theme_override_font_sizes/font_size = 25
-text = "συνέχεια..."
+text = "QUIZ_CONTINUE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -106,7 +118,7 @@ offset_right = 850.0
 offset_bottom = 600.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 34
-text = "κέρδισες x ενέργεια από y"
+text = "xx"
 clip_text = true
 
 [connection signal="pressed" from="Container/submit" to="." method="_on_submit_pressed"]

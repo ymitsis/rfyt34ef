@@ -1,0 +1,1009 @@
+# LANGUAGE translation for galaxy for the following files:
+# res://board/board.gd
+# res://board/Board.tscn
+# res://board/player.gd
+# res://board/Player.tscn
+# res://board/tile.gd
+# res://board/Tile.tscn
+# res://main/game_state.gd
+# res://main/main.gd
+# res://main/Main.tscn
+# res://quizzes/challenge/challenge.gd
+# res://quizzes/challenge/challenge.tscn
+# res://quizzes/challenge/mini_game.tscn
+# res://quizzes/common/ans_box.gd
+# res://quizzes/common/ans_box.tscn
+# res://quizzes/common/base_quiz.gd
+# res://quizzes/common/Base_quiz.tscn
+# res://quizzes/common/draggable_control.gd
+# res://quizzes/common/draggable_control.tscn
+# res://quizzes/common/drop_zone.gd
+# res://quizzes/common/drop_zone.tscn
+# res://quizzes/common/play_pause.gd
+# res://quizzes/common/play_pause.tscn
+# res://quizzes/common/quiz_typeA.gd
+# res://quizzes/common/quiz_typeB.gd
+# res://quizzes/common/quiz_typeC.gd
+# res://quizzes/common/quiz_typeD.gd
+# res://quizzes/common/swap_puzzle.gd
+# res://quizzes/common/swap_puzzle.tscn
+# res://quizzes/common/swap_tile.gd
+# res://quizzes/common/swap_tile.tscn
+# res://quizzes/quiz01/Quiz01.tscn
+# res://quizzes/quiz02/Quiz02.tscn
+# res://quizzes/quiz03/Quiz03.tscn
+# res://quizzes/quiz04/Quiz04.tscn
+# res://quizzes/quiz05/Quiz05.tscn
+# res://quizzes/quiz06/Quiz06.tscn
+# res://quizzes/quiz07/Quiz07.tscn
+# res://quizzes/quiz08/Quiz08.tscn
+# res://quizzes/quiz09/Quiz09.tscn
+# res://quizzes/quiz10/Quiz10.tscn
+# res://quizzes/quiz11/Quiz11.tscn
+# res://quizzes/quiz12/Quiz12.tscn
+# res://quizzes/quiz13/Quiz13.tscn
+# res://quizzes/quiz14/Quiz14.tscn
+# res://quizzes/quiz15/Quiz15.tscn
+# res://quizzes/quiz16/Quiz16.tscn
+# res://quizzes/quiz17/Quiz17.tscn
+# res://quizzes/quiz18/Quiz18.tscn
+# res://quizzes/quiz19/Quiz19.tscn
+# res://quizzes/quiz20/Quiz20.tscn
+# res://quizzes/quiz21/Quiz21.tscn
+# res://quizzes/quiz22/Quiz22.tscn
+# res://quizzes/quiz23/Quiz23.tscn
+# res://quizzes/quiz24/Quiz24.tscn
+# res://quizzes/quiz25/Quiz25.tscn
+# res://quizzes/quiz26/Quiz26.tscn
+# res://quizzes/quiz27/Quiz27.tscn
+# res://quizzes/quiz28/Quiz28.tscn
+# res://quizzes/quiz29/Quiz29.tscn
+# res://quizzes/quiz30/Quiz30.tscn
+# res://quizzes/quiz31/Quiz31.tscn
+# res://quizzes/quiz32/Quiz32.tscn
+# res://quizzes/quiz33/Quiz33.tscn
+# res://quizzes/quiz34/Quiz34.tscn
+# res://quizzes/quiz35/Quiz35.tscn
+# res://quizzes/quiz36/Quiz36.tscn
+# res://quizzes/quiz37/Quiz37.tscn
+# res://quizzes/quiz38/Quiz38.tscn
+# res://ui/energy_gauge.gd
+# res://ui/Energy_gauge.tscn
+# res://ui/ui.gd
+# res://ui/UI.tscn
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: galaxy\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: board/Tile.tscn
+#: quizzes/challenge/challenge.tscn
+#: quizzes/common/ans_box.tscn
+#: quizzes/common/Base_quiz.tscn
+#: quizzes/common/draggable_control.tscn
+#: ui/Energy_gauge.tscn
+msgid "xx"
+msgstr ""
+
+#: quizzes/challenge/challenge.gd
+msgid "CHALLENGE_OPTION1"
+msgstr ""
+
+#: quizzes/challenge/challenge.tscn
+msgid "CHALLENGE_TITLE"
+msgstr ""
+
+#: quizzes/challenge/challenge.tscn
+msgid "CHALLENGE_OPTION2"
+msgstr ""
+
+#: quizzes/common/base_quiz.gd
+msgid "QUIZ_MAX_REWARD"
+msgstr ""
+
+#: quizzes/common/base_quiz.gd
+msgid "QUIZ_NO_REWARD"
+msgstr ""
+
+#: quizzes/common/base_quiz.gd
+msgid "QUIZ_REWARD"
+msgstr ""
+
+#: quizzes/common/base_quiz.gd
+msgid ""
+msgstr ""
+
+#: quizzes/common/base_quiz.gd
+msgid "QUIZ_SUBMIT_TOOLTIP"
+msgstr ""
+
+#: quizzes/common/Base_quiz.tscn
+msgid "QUIZ_SUBMIT"
+msgstr ""
+
+#: quizzes/common/Base_quiz.tscn
+msgid "QUIZ_CONTINUE"
+msgstr ""
+
+#: quizzes/quiz01/Quiz01.tscn
+msgid "QUIZ01_QSTN"
+msgstr ""
+
+#: quizzes/quiz01/Quiz01.tscn
+msgid "QUIZ01_ANS1"
+msgstr ""
+
+#: quizzes/quiz01/Quiz01.tscn
+msgid "QUIZ01_ANS2"
+msgstr ""
+
+#: quizzes/quiz01/Quiz01.tscn
+msgid "QUIZ01_ANS3"
+msgstr ""
+
+#: quizzes/quiz02/Quiz02.tscn
+msgid "QUIZ02_QSTN"
+msgstr ""
+
+#: quizzes/quiz02/Quiz02.tscn
+msgid "QUIZ02_ANS1"
+msgstr ""
+
+#: quizzes/quiz02/Quiz02.tscn
+msgid "QUIZ02_ANS2"
+msgstr ""
+
+#: quizzes/quiz02/Quiz02.tscn
+msgid "QUIZ02_ANS3"
+msgstr ""
+
+#: quizzes/quiz02/Quiz02.tscn
+msgid "QUIZ02_ANS4"
+msgstr ""
+
+#: quizzes/quiz02/Quiz02.tscn
+msgid "QUIZ02_ANS5"
+msgstr ""
+
+#: quizzes/quiz02/Quiz02.tscn
+msgid "QUIZ02_ANS6"
+msgstr ""
+
+#: quizzes/quiz02/Quiz02.tscn
+msgid "QUIZ02_ANS7"
+msgstr ""
+
+#: quizzes/quiz02/Quiz02.tscn
+msgid "QUIZ02_ANS8"
+msgstr ""
+
+#: quizzes/quiz02/Quiz02.tscn
+msgid "QUIZ02_ANS9"
+msgstr ""
+
+#: quizzes/quiz03/Quiz03.tscn
+msgid "QUIZ03_QSTN"
+msgstr ""
+
+#: quizzes/quiz04/Quiz04.tscn
+msgid "QUIZ04_QSTN"
+msgstr ""
+
+#: quizzes/quiz05/Quiz05.tscn
+msgid "QUIZ05_QSTN1"
+msgstr ""
+
+#: quizzes/quiz05/Quiz05.tscn
+msgid "QUIZ05_QSTN2"
+msgstr ""
+
+#: quizzes/quiz05/Quiz05.tscn
+msgid "QUIZ05_QSTN3"
+msgstr ""
+
+#: quizzes/quiz05/Quiz05.tscn
+msgid "QUIZ05_QSTN4"
+msgstr ""
+
+#: quizzes/quiz05/Quiz05.tscn
+msgid "QUIZ05_QSTN5"
+msgstr ""
+
+#: quizzes/quiz06/Quiz06.tscn
+msgid "QUIZ06_QSTN1"
+msgstr ""
+
+#: quizzes/quiz06/Quiz06.tscn
+msgid "QUIZ06_QSTN2"
+msgstr ""
+
+#: quizzes/quiz06/Quiz06.tscn
+msgid "QUIZ06_QSTN3"
+msgstr ""
+
+#: quizzes/quiz06/Quiz06.tscn
+msgid "QUIZ06_QSTN4"
+msgstr ""
+
+#: quizzes/quiz06/Quiz06.tscn
+msgid "QUIZ06_QSTN5"
+msgstr ""
+
+#: quizzes/quiz06/Quiz06.tscn
+msgid "QUIZ06_QSTN6"
+msgstr ""
+
+#: quizzes/quiz06/Quiz06.tscn
+msgid "QUIZ06_QSTN7"
+msgstr ""
+
+#: quizzes/quiz06/Quiz06.tscn
+msgid "QUIZ06_QSTN8"
+msgstr ""
+
+#: quizzes/quiz07/Quiz07.tscn
+msgid "QUIZ07_QSTN1"
+msgstr ""
+
+#: quizzes/quiz07/Quiz07.tscn
+msgid "QUIZ07_QSTN2"
+msgstr ""
+
+#: quizzes/quiz07/Quiz07.tscn
+msgid "QUIZ07_QSTN3"
+msgstr ""
+
+#: quizzes/quiz07/Quiz07.tscn
+msgid "QUIZ07_QSTN4"
+msgstr ""
+
+#: quizzes/quiz07/Quiz07.tscn
+msgid "QUIZ07_QSTN5"
+msgstr ""
+
+#: quizzes/quiz07/Quiz07.tscn
+msgid "QUIZ07_QSTN6"
+msgstr ""
+
+#: quizzes/quiz08/Quiz08.tscn
+msgid "QUIZ08_QSTN1"
+msgstr ""
+
+#: quizzes/quiz09/Quiz09.tscn
+msgid "QUIZ09_QSTN1"
+msgstr ""
+
+#: quizzes/quiz09/Quiz09.tscn
+msgid "QUIZ09_QSTN2"
+msgstr ""
+
+#: quizzes/quiz09/Quiz09.tscn
+msgid "QUIZ09_QSTN3"
+msgstr ""
+
+#: quizzes/quiz09/Quiz09.tscn
+msgid "QUIZ09_QSTN4"
+msgstr ""
+
+#: quizzes/quiz09/Quiz09.tscn
+msgid "QUIZ09_QSTN5"
+msgstr ""
+
+#: quizzes/quiz09/Quiz09.tscn
+msgid "QUIZ09_QSTN6"
+msgstr ""
+
+#: quizzes/quiz09/Quiz09.tscn
+msgid "QUIZ09_QSTN7"
+msgstr ""
+
+#: quizzes/quiz10/Quiz10.tscn
+msgid "QUIZ10_QSTN1"
+msgstr ""
+
+#: quizzes/quiz10/Quiz10.tscn
+msgid "QUIZ10_QSTN2"
+msgstr ""
+
+#: quizzes/quiz10/Quiz10.tscn
+msgid "QUIZ10_QSTN3"
+msgstr ""
+
+#: quizzes/quiz11/Quiz11.tscn
+msgid "QUIZ11_QSTN1"
+msgstr ""
+
+#: quizzes/quiz12/Quiz12.tscn
+msgid "QUIZ12_QSTN1"
+msgstr ""
+
+#: quizzes/quiz12/Quiz12.tscn
+msgid "QUIZ12_QSTN2"
+msgstr ""
+
+#: quizzes/quiz12/Quiz12.tscn
+msgid "QUIZ12_QSTN3"
+msgstr ""
+
+#: quizzes/quiz13/Quiz13.tscn
+msgid "QUIZ13_QSTN6"
+msgstr ""
+
+#: quizzes/quiz13/Quiz13.tscn
+msgid "QUIZ13_QSTN1"
+msgstr ""
+
+#: quizzes/quiz13/Quiz13.tscn
+msgid "QUIZ13_QSTN2"
+msgstr ""
+
+#: quizzes/quiz13/Quiz13.tscn
+msgid "QUIZ13_QSTN3"
+msgstr ""
+
+#: quizzes/quiz13/Quiz13.tscn
+msgid "QUIZ13_QSTN4"
+msgstr ""
+
+#: quizzes/quiz13/Quiz13.tscn
+msgid "QUIZ13_QSTN5"
+msgstr ""
+
+#: quizzes/quiz14/Quiz14.tscn
+msgid "QUIZ14_QSTN01"
+msgstr ""
+
+#: quizzes/quiz14/Quiz14.tscn
+msgid "QUIZ14_QSTN02"
+msgstr ""
+
+#: quizzes/quiz14/Quiz14.tscn
+msgid "QUIZ14_QSTN04"
+msgstr ""
+
+#: quizzes/quiz14/Quiz14.tscn
+msgid "QUIZ14_QSTN05"
+msgstr ""
+
+#: quizzes/quiz14/Quiz14.tscn
+msgid "QUIZ14_QSTN06"
+msgstr ""
+
+#: quizzes/quiz14/Quiz14.tscn
+msgid "QUIZ14_QSTN07"
+msgstr ""
+
+#: quizzes/quiz14/Quiz14.tscn
+msgid "QUIZ14_QSTN08"
+msgstr ""
+
+#: quizzes/quiz14/Quiz14.tscn
+msgid "QUIZ14_QSTN09"
+msgstr ""
+
+#: quizzes/quiz14/Quiz14.tscn
+msgid "QUIZ14_QSTN10"
+msgstr ""
+
+#: quizzes/quiz14/Quiz14.tscn
+msgid "QUIZ14_QSTN11"
+msgstr ""
+
+#: quizzes/quiz14/Quiz14.tscn
+msgid "QUIZ14_QSTN12"
+msgstr ""
+
+#: quizzes/quiz14/Quiz14.tscn
+msgid "QUIZ14_QSTN03"
+msgstr ""
+
+#: quizzes/quiz14/Quiz14.tscn
+msgid "QUIZ14_QSTN13"
+msgstr ""
+
+#: quizzes/quiz15/Quiz15.tscn
+msgid "QUIZ15_QSTN"
+msgstr ""
+
+#: quizzes/quiz15/Quiz15.tscn
+msgid "QUIZ15_ANS1"
+msgstr ""
+
+#: quizzes/quiz15/Quiz15.tscn
+msgid "QUIZ15_ANS2"
+msgstr ""
+
+#: quizzes/quiz15/Quiz15.tscn
+msgid "QUIZ15_ANS3"
+msgstr ""
+
+#: quizzes/quiz15/Quiz15.tscn
+msgid "QUIZ15_ANS4"
+msgstr ""
+
+#: quizzes/quiz16/Quiz16.tscn
+msgid "QUIZ16_QSTN"
+msgstr ""
+
+#: quizzes/quiz16/Quiz16.tscn
+msgid "QUIZ16_ANS1"
+msgstr ""
+
+#: quizzes/quiz16/Quiz16.tscn
+msgid "QUIZ16_ANS2"
+msgstr ""
+
+#: quizzes/quiz17/Quiz17.tscn
+msgid "QUIZ17_QSTN"
+msgstr ""
+
+#: quizzes/quiz17/Quiz17.tscn
+msgid "QUIZ17_ANS1"
+msgstr ""
+
+#: quizzes/quiz17/Quiz17.tscn
+msgid "QUIZ17_ANS2"
+msgstr ""
+
+#: quizzes/quiz17/Quiz17.tscn
+msgid "QUIZ17_ANS3"
+msgstr ""
+
+#: quizzes/quiz18/Quiz18.tscn
+msgid "QUIZ18_QSTN"
+msgstr ""
+
+#: quizzes/quiz18/Quiz18.tscn
+msgid "QUIZ18_ANS1"
+msgstr ""
+
+#: quizzes/quiz18/Quiz18.tscn
+msgid "QUIZ18_ANS2"
+msgstr ""
+
+#: quizzes/quiz19/Quiz19.tscn
+msgid "QUIZ19_QSTN"
+msgstr ""
+
+#: quizzes/quiz19/Quiz19.tscn
+msgid "QUIZ19_ANS1"
+msgstr ""
+
+#: quizzes/quiz19/Quiz19.tscn
+msgid "QUIZ19_ANS2"
+msgstr ""
+
+#: quizzes/quiz19/Quiz19.tscn
+msgid "QUIZ19_ANS3"
+msgstr ""
+
+#: quizzes/quiz19/Quiz19.tscn
+msgid "QUIZ19_ANS4"
+msgstr ""
+
+#: quizzes/quiz20/Quiz20.tscn
+msgid "QUIZ20_QSTN"
+msgstr ""
+
+#: quizzes/quiz20/Quiz20.tscn
+msgid "QUIZ20_ANS1"
+msgstr ""
+
+#: quizzes/quiz20/Quiz20.tscn
+msgid "QUIZ20_ANS2"
+msgstr ""
+
+#: quizzes/quiz21/Quiz21.tscn
+msgid "QUIZ21_QSTN"
+msgstr ""
+
+#: quizzes/quiz21/Quiz21.tscn
+msgid "QUIZ21_ANS1"
+msgstr ""
+
+#: quizzes/quiz21/Quiz21.tscn
+msgid "QUIZ21_ANS2"
+msgstr ""
+
+#: quizzes/quiz22/Quiz22.tscn
+msgid "QUIZ22_QSTN"
+msgstr ""
+
+#: quizzes/quiz22/Quiz22.tscn
+msgid "QUIZ22_ANS1"
+msgstr ""
+
+#: quizzes/quiz22/Quiz22.tscn
+msgid "QUIZ22_ANS2"
+msgstr ""
+
+#: quizzes/quiz22/Quiz22.tscn
+msgid "QUIZ22_ANS3"
+msgstr ""
+
+#: quizzes/quiz22/Quiz22.tscn
+msgid "QUIZ22_ANS4"
+msgstr ""
+
+#: quizzes/quiz22/Quiz22.tscn
+msgid "QUIZ22_ANS5"
+msgstr ""
+
+#: quizzes/quiz23/Quiz23.tscn
+msgid "QUIZ23_QSTN"
+msgstr ""
+
+#: quizzes/quiz23/Quiz23.tscn
+msgid "QUIZ23_ANS1"
+msgstr ""
+
+#: quizzes/quiz23/Quiz23.tscn
+msgid "QUIZ23_ANS2"
+msgstr ""
+
+#: quizzes/quiz23/Quiz23.tscn
+msgid "QUIZ23_ANS3"
+msgstr ""
+
+#: quizzes/quiz24/Quiz24.tscn
+msgid "QUIZ24_QSTN"
+msgstr ""
+
+#: quizzes/quiz24/Quiz24.tscn
+msgid "QUIZ24_ANS1"
+msgstr ""
+
+#: quizzes/quiz24/Quiz24.tscn
+msgid "QUIZ24_ANS2"
+msgstr ""
+
+#: quizzes/quiz24/Quiz24.tscn
+msgid "QUIZ24_ANS3"
+msgstr ""
+
+#: quizzes/quiz25/Quiz25.tscn
+msgid "QUIZ25_QSTN"
+msgstr ""
+
+#: quizzes/quiz25/Quiz25.tscn
+msgid "QUIZ25_ANS1"
+msgstr ""
+
+#: quizzes/quiz25/Quiz25.tscn
+msgid "QUIZ25_ANS2"
+msgstr ""
+
+#: quizzes/quiz26/Quiz26.tscn
+msgid "QUIZ26_QSTN"
+msgstr ""
+
+#: quizzes/quiz26/Quiz26.tscn
+msgid "QUIZ26_ANS1"
+msgstr ""
+
+#: quizzes/quiz26/Quiz26.tscn
+msgid "QUIZ26_ANS2"
+msgstr ""
+
+#: quizzes/quiz27/Quiz27.tscn
+msgid "QUIZ27_QSTN"
+msgstr ""
+
+#: quizzes/quiz27/Quiz27.tscn
+msgid "QUIZ27_ANS1"
+msgstr ""
+
+#: quizzes/quiz27/Quiz27.tscn
+msgid "QUIZ27_ANS3"
+msgstr ""
+
+#: quizzes/quiz27/Quiz27.tscn
+msgid "QUIZ27_ANS4"
+msgstr ""
+
+#: quizzes/quiz27/Quiz27.tscn
+msgid "QUIZ27_ANS2"
+msgstr ""
+
+#: quizzes/quiz28/Quiz28.tscn
+msgid "QUIZ28_QSTN"
+msgstr ""
+
+#: quizzes/quiz28/Quiz28.tscn
+msgid "QUIZ28_ANS1"
+msgstr ""
+
+#: quizzes/quiz28/Quiz28.tscn
+msgid "QUIZ28_ANS2"
+msgstr ""
+
+#: quizzes/quiz28/Quiz28.tscn
+msgid "QUIZ28_ANS3"
+msgstr ""
+
+#: quizzes/quiz28/Quiz28.tscn
+msgid "QUIZ28_ANS4"
+msgstr ""
+
+#: quizzes/quiz29/Quiz29.tscn
+msgid "QUIZ29_QSTN"
+msgstr ""
+
+#: quizzes/quiz29/Quiz29.tscn
+msgid "QUIZ29_ANS1"
+msgstr ""
+
+#: quizzes/quiz29/Quiz29.tscn
+msgid "QUIZ29_ANS2"
+msgstr ""
+
+#: quizzes/quiz29/Quiz29.tscn
+msgid "QUIZ29_ANS3"
+msgstr ""
+
+#: quizzes/quiz30/Quiz30.tscn
+msgid "QUIZ30_QSTN"
+msgstr ""
+
+#: quizzes/quiz30/Quiz30.tscn
+msgid "QUIZ30_ANS1"
+msgstr ""
+
+#: quizzes/quiz30/Quiz30.tscn
+msgid "QUIZ30_ANS2"
+msgstr ""
+
+#: quizzes/quiz30/Quiz30.tscn
+msgid "QUIZ30_ANS3"
+msgstr ""
+
+#: quizzes/quiz31/Quiz31.tscn
+msgid "QUIZ31_QSTN"
+msgstr ""
+
+#: quizzes/quiz31/Quiz31.tscn
+msgid "QUIZ31_ANS1"
+msgstr ""
+
+#: quizzes/quiz31/Quiz31.tscn
+msgid "QUIZ31_ANS2"
+msgstr ""
+
+#: quizzes/quiz31/Quiz31.tscn
+msgid "QUIZ31_ANS3"
+msgstr ""
+
+#: quizzes/quiz32/Quiz32.tscn
+msgid "QUIZ32_QSTN"
+msgstr ""
+
+#: quizzes/quiz32/Quiz32.tscn
+msgid "QUIZ32_ANS1"
+msgstr ""
+
+#: quizzes/quiz32/Quiz32.tscn
+msgid "QUIZ32_ANS3"
+msgstr ""
+
+#: quizzes/quiz32/Quiz32.tscn
+msgid "QUIZ32_ANS4"
+msgstr ""
+
+#: quizzes/quiz32/Quiz32.tscn
+msgid "QUIZ32_ANS2"
+msgstr ""
+
+#: quizzes/quiz33/Quiz33.tscn
+msgid "QUIZ33_QSTN"
+msgstr ""
+
+#: quizzes/quiz33/Quiz33.tscn
+msgid "QUIZ33_ANS1"
+msgstr ""
+
+#: quizzes/quiz33/Quiz33.tscn
+msgid "QUIZ33_ANS3"
+msgstr ""
+
+#: quizzes/quiz33/Quiz33.tscn
+msgid "QUIZ33_ANS4"
+msgstr ""
+
+#: quizzes/quiz33/Quiz33.tscn
+msgid "QUIZ33_ANS2"
+msgstr ""
+
+#: quizzes/quiz34/Quiz34.tscn
+msgid "QUIZ34_QSTN"
+msgstr ""
+
+#: quizzes/quiz34/Quiz34.tscn
+msgid "QUIZ34_ANS1"
+msgstr ""
+
+#: quizzes/quiz34/Quiz34.tscn
+msgid "QUIZ34_ANS2"
+msgstr ""
+
+#: quizzes/quiz34/Quiz34.tscn
+msgid "QUIZ34_ANS3"
+msgstr ""
+
+#: quizzes/quiz34/Quiz34.tscn
+msgid "QUIZ34_ANS4"
+msgstr ""
+
+#: quizzes/quiz34/Quiz34.tscn
+msgid "QUIZ34_ANS5"
+msgstr ""
+
+#: quizzes/quiz34/Quiz34.tscn
+msgid "QUIZ34_ANS6"
+msgstr ""
+
+#: quizzes/quiz35/Quiz35.tscn
+msgid "QUIZ35_QSTN"
+msgstr ""
+
+#: quizzes/quiz35/Quiz35.tscn
+msgid "QUIZ35_ANS1"
+msgstr ""
+
+#: quizzes/quiz35/Quiz35.tscn
+msgid "QUIZ35_ANS3"
+msgstr ""
+
+#: quizzes/quiz35/Quiz35.tscn
+msgid "QUIZ35_ANS4"
+msgstr ""
+
+#: quizzes/quiz35/Quiz35.tscn
+msgid "QUIZ35_ANS2"
+msgstr ""
+
+#: quizzes/quiz36/Quiz36.tscn
+msgid "QUIZ36_QSTN"
+msgstr ""
+
+#: quizzes/quiz36/Quiz36.tscn
+msgid "QUIZ36_ANS1"
+msgstr ""
+
+#: quizzes/quiz36/Quiz36.tscn
+msgid "QUIZ36_ANS2"
+msgstr ""
+
+#: quizzes/quiz36/Quiz36.tscn
+msgid "QUIZ36_ANS3"
+msgstr ""
+
+#: quizzes/quiz37/Quiz37.tscn
+msgid "QUIZ37_QSTN"
+msgstr ""
+
+#: quizzes/quiz37/Quiz37.tscn
+msgid "QUIZ37_ANS1"
+msgstr ""
+
+#: quizzes/quiz37/Quiz37.tscn
+msgid "QUIZ37_ANS3"
+msgstr ""
+
+#: quizzes/quiz37/Quiz37.tscn
+msgid "QUIZ37_ANS4"
+msgstr ""
+
+#: quizzes/quiz37/Quiz37.tscn
+msgid "QUIZ37_ANS2"
+msgstr ""
+
+#: quizzes/quiz38/Quiz38.tscn
+msgid "QUIZ38_QSTN1"
+msgstr ""
+
+#: quizzes/quiz38/Quiz38.tscn
+msgid "QUIZ38_QSTN2"
+msgstr ""
+
+#: quizzes/quiz38/Quiz38.tscn
+msgid "QUIZ38_QSTN3"
+msgstr ""
+
+#: ui/Energy_gauge.tscn
+msgid "UI_ENERGY"
+msgstr ""
+
+#: ui/Energy_gauge.tscn
+msgid "UI_PJ"
+msgstr ""
+
+#: ui/ui.gd
+msgid "eng"
+msgstr ""
+
+#: ui/ui.gd
+#: ui/UI.tscn
+msgid "ελλ"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "Qz 01-10"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz01"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz02"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz03"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz04"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz05"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz06"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz07"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz08"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz09"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz10"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "Qz 11-20"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz11"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz12"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz13"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz14"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz15"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz16"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz17"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz18"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz19"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz20"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "Qz 21-30"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz21"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz22"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz23"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz24"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz25"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz26"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz27"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz28"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz29"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz30"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "Qz 31-40"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz31"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz32"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz33"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz34"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz35"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz36"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz37"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz38"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz39"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz40"
+msgstr ""

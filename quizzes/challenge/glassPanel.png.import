@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://buj0an8wqyd5t"
-path="res://.godot/imported/galaxy.icon.png-cacc8a42da612a8a1f52489c9f4388da.ctex"
+uid="uid://d2hxouc1c6l22"
+path="res://.godot/imported/glassPanel.png-c6a82a4f500bd962c1661c3db5edb84f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://galaxy.icon.png"
-dest_files=["res://.godot/imported/galaxy.icon.png-cacc8a42da612a8a1f52489c9f4388da.ctex"]
+source_file="res://quizzes/challenge/glassPanel.png"
+dest_files=["res://.godot/imported/glassPanel.png-c6a82a4f500bd962c1661c3db5edb84f.ctex"]
 
 [params]
 

@@ -1,0 +1,1009 @@
+# LANGUAGE translation for galaxy for the following files:
+# res://board/board.gd
+# res://board/Board.tscn
+# res://board/player.gd
+# res://board/Player.tscn
+# res://board/tile.gd
+# res://board/Tile.tscn
+# res://main/game_state.gd
+# res://main/main.gd
+# res://main/Main.tscn
+# res://quizzes/challenge/challenge.gd
+# res://quizzes/challenge/challenge.tscn
+# res://quizzes/challenge/mini_game.tscn
+# res://quizzes/common/ans_box.gd
+# res://quizzes/common/ans_box.tscn
+# res://quizzes/common/base_quiz.gd
+# res://quizzes/common/Base_quiz.tscn
+# res://quizzes/common/draggable_control.gd
+# res://quizzes/common/draggable_control.tscn
+# res://quizzes/common/drop_zone.gd
+# res://quizzes/common/drop_zone.tscn
+# res://quizzes/common/play_pause.gd
+# res://quizzes/common/play_pause.tscn
+# res://quizzes/common/quiz_typeA.gd
+# res://quizzes/common/quiz_typeB.gd
+# res://quizzes/common/quiz_typeC.gd
+# res://quizzes/common/quiz_typeD.gd
+# res://quizzes/common/swap_puzzle.gd
+# res://quizzes/common/swap_puzzle.tscn
+# res://quizzes/common/swap_tile.gd
+# res://quizzes/common/swap_tile.tscn
+# res://quizzes/quiz01/Quiz01.tscn
+# res://quizzes/quiz02/Quiz02.tscn
+# res://quizzes/quiz03/Quiz03.tscn
+# res://quizzes/quiz04/Quiz04.tscn
+# res://quizzes/quiz05/Quiz05.tscn
+# res://quizzes/quiz06/Quiz06.tscn
+# res://quizzes/quiz07/Quiz07.tscn
+# res://quizzes/quiz08/Quiz08.tscn
+# res://quizzes/quiz09/Quiz09.tscn
+# res://quizzes/quiz10/Quiz10.tscn
+# res://quizzes/quiz11/Quiz11.tscn
+# res://quizzes/quiz12/Quiz12.tscn
+# res://quizzes/quiz13/Quiz13.tscn
+# res://quizzes/quiz14/Quiz14.tscn
+# res://quizzes/quiz15/Quiz15.tscn
+# res://quizzes/quiz16/Quiz16.tscn
+# res://quizzes/quiz17/Quiz17.tscn
+# res://quizzes/quiz18/Quiz18.tscn
+# res://quizzes/quiz19/Quiz19.tscn
+# res://quizzes/quiz20/Quiz20.tscn
+# res://quizzes/quiz21/Quiz21.tscn
+# res://quizzes/quiz22/Quiz22.tscn
+# res://quizzes/quiz23/Quiz23.tscn
+# res://quizzes/quiz24/Quiz24.tscn
+# res://quizzes/quiz25/Quiz25.tscn
+# res://quizzes/quiz26/Quiz26.tscn
+# res://quizzes/quiz27/Quiz27.tscn
+# res://quizzes/quiz28/Quiz28.tscn
+# res://quizzes/quiz29/Quiz29.tscn
+# res://quizzes/quiz30/Quiz30.tscn
+# res://quizzes/quiz31/Quiz31.tscn
+# res://quizzes/quiz32/Quiz32.tscn
+# res://quizzes/quiz33/Quiz33.tscn
+# res://quizzes/quiz34/Quiz34.tscn
+# res://quizzes/quiz35/Quiz35.tscn
+# res://quizzes/quiz36/Quiz36.tscn
+# res://quizzes/quiz37/Quiz37.tscn
+# res://quizzes/quiz38/Quiz38.tscn
+# res://ui/energy_gauge.gd
+# res://ui/Energy_gauge.tscn
+# res://ui/ui.gd
+# res://ui/UI.tscn
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: galaxy\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.8\n"
+
+#: board/Tile.tscn quizzes/challenge/challenge.tscn quizzes/common/ans_box.tscn quizzes/common/Base_quiz.tscn quizzes/common/draggable_control.tscn ui/Energy_gauge.tscn
+msgid "xx"
+msgstr ""
+
+#: quizzes/challenge/challenge.gd
+msgid "CHALLENGE_OPTION1"
+msgstr "Change course to bypass it (Cost: ⚡%dPJ)"
+
+#: quizzes/challenge/challenge.tscn
+msgid "CHALLENGE_TITLE"
+msgstr "A massive cloud of space dust stretches across your path. Choose:"
+
+#: quizzes/challenge/challenge.tscn
+msgid "CHALLENGE_OPTION2"
+msgstr "Stay on course and attempt evasive maneuvers. The final cost will depend on how well you handle the maneuvering"
+
+#: quizzes/common/base_quiz.gd
+msgid "QUIZ_MAX_REWARD"
+msgstr "PERFECT! Maximum energy gained (%dPJ)"
+
+#: quizzes/common/base_quiz.gd
+msgid "QUIZ_NO_REWARD"
+msgstr "No energy gained this time…"
+
+#: quizzes/common/base_quiz.gd
+msgid "QUIZ_REWARD"
+msgstr "You gained %dPJ of energy (max %dPJ)"
+
+#: quizzes/common/base_quiz.gd
+msgid "QUIZ_SUBMIT_TOOLTIP"
+msgstr "make a selection first"
+
+#: quizzes/common/Base_quiz.tscn
+msgid "QUIZ_SUBMIT"
+msgstr "verify"
+
+#: quizzes/common/Base_quiz.tscn
+msgid "QUIZ_CONTINUE"
+msgstr "continue"
+
+#: quizzes/quiz01/Quiz01.tscn
+msgid "QUIZ01_QSTN"
+msgstr "What does the artistic drawing above depict? (The sizes are not to scale)"
+
+#: quizzes/quiz01/Quiz01.tscn
+msgid "QUIZ01_ANS1"
+msgstr "the Solar System"
+
+#: quizzes/quiz01/Quiz01.tscn
+msgid "QUIZ01_ANS2"
+msgstr "a planetary system"
+
+#: quizzes/quiz01/Quiz01.tscn
+msgid "QUIZ01_ANS3"
+msgstr "a galactic system"
+
+#: quizzes/quiz02/Quiz02.tscn
+msgid "QUIZ02_QSTN"
+msgstr "The image above shows the Sun and its planets to scale. Drag each name from the list on the right onto the correct object."
+
+#: quizzes/quiz02/Quiz02.tscn
+msgid "QUIZ02_ANS1"
+msgstr "Mercury"
+
+#: quizzes/quiz02/Quiz02.tscn
+msgid "QUIZ02_ANS2"
+msgstr "Sun"
+
+#: quizzes/quiz02/Quiz02.tscn
+msgid "QUIZ02_ANS3"
+msgstr "Uranus"
+
+#: quizzes/quiz02/Quiz02.tscn
+msgid "QUIZ02_ANS4"
+msgstr "Mars"
+
+#: quizzes/quiz02/Quiz02.tscn
+msgid "QUIZ02_ANS5"
+msgstr "Earth"
+
+#: quizzes/quiz02/Quiz02.tscn
+msgid "QUIZ02_ANS6"
+msgstr "Saturn"
+
+#: quizzes/quiz02/Quiz02.tscn
+msgid "QUIZ02_ANS7"
+msgstr "Venus"
+
+#: quizzes/quiz02/Quiz02.tscn
+msgid "QUIZ02_ANS8"
+msgstr "Neptune"
+
+#: quizzes/quiz02/Quiz02.tscn
+msgid "QUIZ02_ANS9"
+msgstr "Jupiter"
+
+#: quizzes/quiz03/Quiz03.tscn
+msgid "QUIZ03_QSTN"
+msgstr "In the educational programme “RADIIO” (2025–26), student teams from different countries are participating. Select the flags of those countries."
+
+#: quizzes/quiz04/Quiz04.tscn
+msgid "QUIZ04_QSTN"
+msgstr ""
+"The image shows some of the 66 antennas of the ALMA radio telescope, located in the Atacama Desert in Chile.\n"
+"Try to assemble it correctly using as few moves as possible."
+
+#: quizzes/quiz05/Quiz05.tscn
+msgid "QUIZ05_QSTN1"
+msgstr "600 BCE"
+
+#: quizzes/quiz05/Quiz05.tscn
+msgid "QUIZ05_QSTN2"
+msgstr "1600 CE"
+
+#: quizzes/quiz05/Quiz05.tscn
+msgid "QUIZ05_QSTN3"
+msgstr "1850 CE"
+
+#: quizzes/quiz05/Quiz05.tscn
+msgid "QUIZ05_QSTN4"
+msgstr "1930 CE"
+
+#: quizzes/quiz05/Quiz05.tscn
+msgid "QUIZ05_QSTN5"
+msgstr "The observational tools of astronomy shown above were pivotal, as they marked transitions between different eras in the study of the sky. Place them in the correct chronological order, from the oldest to the most recent."
+
+#: quizzes/quiz06/Quiz06.tscn
+msgid "QUIZ06_QSTN1"
+msgstr "nebula"
+
+#: quizzes/quiz06/Quiz06.tscn
+msgid "QUIZ06_QSTN2"
+msgstr "quasar"
+
+#: quizzes/quiz06/Quiz06.tscn
+msgid "QUIZ06_QSTN3"
+msgstr "star"
+
+#: quizzes/quiz06/Quiz06.tscn
+msgid "QUIZ06_QSTN4"
+msgstr "galaxy"
+
+#: quizzes/quiz06/Quiz06.tscn
+msgid "QUIZ06_QSTN5"
+msgstr "pulsar"
+
+#: quizzes/quiz06/Quiz06.tscn
+msgid "QUIZ06_QSTN6"
+msgstr "comet"
+
+#: quizzes/quiz06/Quiz06.tscn
+msgid "QUIZ06_QSTN7"
+msgstr "planet"
+
+#: quizzes/quiz06/Quiz06.tscn
+msgid "QUIZ06_QSTN8"
+msgstr "The images above show various astronomical objects. Place each name from the right column onto the correct celestial body."
+
+#: quizzes/quiz07/Quiz07.tscn
+msgid "QUIZ07_QSTN1"
+msgstr "protoplanetary disk"
+
+#: quizzes/quiz07/Quiz07.tscn
+msgid "QUIZ07_QSTN2"
+msgstr "galaxy"
+
+#: quizzes/quiz07/Quiz07.tscn
+msgid "QUIZ07_QSTN3"
+msgstr "Jupiter"
+
+#: quizzes/quiz07/Quiz07.tscn
+msgid "QUIZ07_QSTN4"
+msgstr "supernova"
+
+#: quizzes/quiz07/Quiz07.tscn
+msgid "QUIZ07_QSTN5"
+msgstr "black hole environment"
+
+#: quizzes/quiz07/Quiz07.tscn
+msgid "QUIZ07_QSTN6"
+msgstr "The images above come from the ALMA and EHT radio telescopes. Place each name from the right column onto the correct image."
+
+#: quizzes/quiz08/Quiz08.tscn
+msgid "QUIZ08_QSTN1"
+msgstr "The images below come from the Hubble Space Telescope. Select the ones that depict galaxies."
+
+#: quizzes/quiz09/Quiz09.tscn
+msgid "QUIZ09_QSTN1"
+msgstr "lens as the main element"
+
+#: quizzes/quiz09/Quiz09.tscn
+msgid "QUIZ09_QSTN2"
+msgstr "mirror as the main element"
+
+#: quizzes/quiz09/Quiz09.tscn
+msgid "QUIZ09_QSTN3"
+msgstr "ability to have a large aperture"
+
+#: quizzes/quiz09/Quiz09.tscn
+msgid "QUIZ09_QSTN4"
+msgstr "collects relatively little light"
+
+#: quizzes/quiz09/Quiz09.tscn
+msgid "QUIZ09_QSTN5"
+msgstr "refracting"
+
+#: quizzes/quiz09/Quiz09.tscn
+msgid "QUIZ09_QSTN6"
+msgstr "reflecting"
+
+#: quizzes/quiz09/Quiz09.tscn
+msgid "QUIZ09_QSTN7"
+msgstr "Optical telescopes are classified as refracting or reflecting. Place the items from the middle column into the correct category."
+
+#: quizzes/quiz10/Quiz10.tscn
+msgid "QUIZ10_QSTN1"
+msgstr "optical telescopes"
+
+#: quizzes/quiz10/Quiz10.tscn
+msgid "QUIZ10_QSTN2"
+msgstr "non-optical telescopes"
+
+#: quizzes/quiz10/Quiz10.tscn
+msgid "QUIZ10_QSTN3"
+msgstr "Arrange the images so that the top row contains only optical telescopes and the bottom row only non-optical telescopes."
+
+#: quizzes/quiz11/Quiz11.tscn
+msgid "QUIZ11_QSTN1"
+msgstr "Of the following images of the Sun, only one was captured using an optical telescope. Select the images that were created using non-optical telescopes."
+
+#: quizzes/quiz12/Quiz12.tscn
+msgid "QUIZ12_QSTN1"
+msgstr "active galaxies"
+
+#: quizzes/quiz12/Quiz12.tscn
+msgid "QUIZ12_QSTN2"
+msgstr "star-forming galaxies"
+
+#: quizzes/quiz12/Quiz12.tscn
+msgid "QUIZ12_QSTN3"
+msgstr "Arrange the images above so that the top row contains only active galaxies and the bottom row only star-forming galaxies."
+
+#: quizzes/quiz13/Quiz13.tscn
+msgid "QUIZ13_QSTN6"
+msgstr "Arrange the following astronomical objects from smallest to largest, based on their diameter."
+
+#: quizzes/quiz13/Quiz13.tscn
+msgid "QUIZ13_QSTN1"
+msgstr "neutron star"
+
+#: quizzes/quiz13/Quiz13.tscn
+msgid "QUIZ13_QSTN2"
+msgstr "nebula"
+
+#: quizzes/quiz13/Quiz13.tscn
+msgid "QUIZ13_QSTN3"
+msgstr "star"
+
+#: quizzes/quiz13/Quiz13.tscn
+msgid "QUIZ13_QSTN4"
+msgstr "planet"
+
+#: quizzes/quiz13/Quiz13.tscn
+msgid "QUIZ13_QSTN5"
+msgstr "galaxy"
+
+#: quizzes/quiz14/Quiz14.tscn
+msgid "QUIZ14_QSTN01"
+msgstr "single-dish"
+
+#: quizzes/quiz14/Quiz14.tscn
+msgid "QUIZ14_QSTN02"
+msgstr "radio telescopes"
+
+#: quizzes/quiz14/Quiz14.tscn
+msgid "QUIZ14_QSTN04"
+msgstr "Green Bank"
+
+#: quizzes/quiz14/Quiz14.tscn
+msgid "QUIZ14_QSTN05"
+msgstr "FAST"
+
+#: quizzes/quiz14/Quiz14.tscn
+msgid "QUIZ14_QSTN06"
+msgstr "LOFAR"
+
+#: quizzes/quiz14/Quiz14.tscn
+msgid "QUIZ14_QSTN07"
+msgstr "Effelsberg"
+
+#: quizzes/quiz14/Quiz14.tscn
+msgid "QUIZ14_QSTN08"
+msgstr "ALMA"
+
+#: quizzes/quiz14/Quiz14.tscn
+msgid "QUIZ14_QSTN09"
+msgstr "GMRT"
+
+#: quizzes/quiz14/Quiz14.tscn
+msgid "QUIZ14_QSTN10"
+msgstr "Parkes"
+
+#: quizzes/quiz14/Quiz14.tscn
+msgid "QUIZ14_QSTN11"
+msgstr "Arecibo"
+
+#: quizzes/quiz14/Quiz14.tscn
+msgid "QUIZ14_QSTN12"
+msgstr "VLA"
+
+#: quizzes/quiz14/Quiz14.tscn
+msgid "QUIZ14_QSTN03"
+msgstr "interferometric"
+
+#: quizzes/quiz14/Quiz14.tscn
+msgid "QUIZ14_QSTN13"
+msgstr "Listed above are some of the most important radio telescopes. Place each one in the column that corresponds to its category."
+
+#: quizzes/quiz15/Quiz15.tscn
+msgid "QUIZ15_QSTN"
+msgstr "Which astronomical object is located at the center of our Galaxy?"
+
+#: quizzes/quiz15/Quiz15.tscn
+msgid "QUIZ15_ANS1"
+msgstr "a protoplanetary disk"
+
+#: quizzes/quiz15/Quiz15.tscn
+msgid "QUIZ15_ANS2"
+msgstr "a supermassive black hole"
+
+#: quizzes/quiz15/Quiz15.tscn
+msgid "QUIZ15_ANS3"
+msgstr "a neutron star"
+
+#: quizzes/quiz15/Quiz15.tscn
+msgid "QUIZ15_ANS4"
+msgstr "a supernova"
+
+#: quizzes/quiz16/Quiz16.tscn
+msgid "QUIZ16_QSTN"
+msgstr "Interferometry is used in single-dish radio telescopes."
+
+#: quizzes/quiz16/Quiz16.tscn
+msgid "QUIZ16_ANS1"
+msgstr "true"
+
+#: quizzes/quiz16/Quiz16.tscn
+msgid "QUIZ16_ANS2"
+msgstr "false"
+
+#: quizzes/quiz17/Quiz17.tscn
+msgid "QUIZ17_QSTN"
+msgstr "The single-dish radio telescope with the largest diameter is FAST in China. What is the diameter of its dish?"
+
+#: quizzes/quiz17/Quiz17.tscn
+msgid "QUIZ17_ANS1"
+msgstr "50m"
+
+#: quizzes/quiz17/Quiz17.tscn
+msgid "QUIZ17_ANS2"
+msgstr "500m"
+
+#: quizzes/quiz17/Quiz17.tscn
+msgid "QUIZ17_ANS3"
+msgstr "5000m"
+
+#: quizzes/quiz18/Quiz18.tscn
+msgid "QUIZ18_QSTN"
+msgstr "In a multi-antenna interferometric radio telescope, each antenna must point in a different direction in order to achieve the widest possible simultaneous coverage of the sky."
+
+#: quizzes/quiz18/Quiz18.tscn
+msgid "QUIZ18_ANS1"
+msgstr "true"
+
+#: quizzes/quiz18/Quiz18.tscn
+msgid "QUIZ18_ANS2"
+msgstr "false"
+
+#: quizzes/quiz19/Quiz19.tscn
+msgid "QUIZ19_QSTN"
+msgstr "Which single-dish radio telescope has the largest diameter?"
+
+#: quizzes/quiz19/Quiz19.tscn
+msgid "QUIZ19_ANS1"
+msgstr "Arecibo (Puerto Rico)"
+
+#: quizzes/quiz19/Quiz19.tscn
+msgid "QUIZ19_ANS2"
+msgstr "LOFAR (Netherlands)"
+
+#: quizzes/quiz19/Quiz19.tscn
+msgid "QUIZ19_ANS3"
+msgstr "FAST (China)"
+
+#: quizzes/quiz19/Quiz19.tscn
+msgid "QUIZ19_ANS4"
+msgstr "VLA (USA)"
+
+#: quizzes/quiz20/Quiz20.tscn
+msgid "QUIZ20_QSTN"
+msgstr "Star-forming galaxies have a supermassive black hole at their center."
+
+#: quizzes/quiz20/Quiz20.tscn
+msgid "QUIZ20_ANS1"
+msgstr "true"
+
+#: quizzes/quiz20/Quiz20.tscn
+msgid "QUIZ20_ANS2"
+msgstr "false"
+
+#: quizzes/quiz21/Quiz21.tscn
+msgid "QUIZ21_QSTN"
+msgstr "A galaxy is called \"active\" when it has a high rate of star formation."
+
+#: quizzes/quiz21/Quiz21.tscn
+msgid "QUIZ21_ANS1"
+msgstr "true"
+
+#: quizzes/quiz21/Quiz21.tscn
+msgid "QUIZ21_ANS2"
+msgstr "false"
+
+#: quizzes/quiz22/Quiz22.tscn
+msgid "QUIZ22_QSTN"
+msgstr "Which of the following astronomical objects emits strongly in the radio-wave region of the spectrum?"
+
+#: quizzes/quiz22/Quiz22.tscn
+msgid "QUIZ22_ANS1"
+msgstr "comet"
+
+#: quizzes/quiz22/Quiz22.tscn
+msgid "QUIZ22_ANS2"
+msgstr "pulsar"
+
+#: quizzes/quiz22/Quiz22.tscn
+msgid "QUIZ22_ANS3"
+msgstr "quasar"
+
+#: quizzes/quiz22/Quiz22.tscn
+msgid "QUIZ22_ANS4"
+msgstr "supernova remnants"
+
+#: quizzes/quiz22/Quiz22.tscn
+msgid "QUIZ22_ANS5"
+msgstr "asteroid"
+
+#: quizzes/quiz23/Quiz23.tscn
+msgid "QUIZ23_QSTN"
+msgstr "What is the name of our galaxy?"
+
+#: quizzes/quiz23/Quiz23.tscn
+msgid "QUIZ23_ANS1"
+msgstr "Andromeda"
+
+#: quizzes/quiz23/Quiz23.tscn
+msgid "QUIZ23_ANS2"
+msgstr "Milky Way"
+
+#: quizzes/quiz23/Quiz23.tscn
+msgid "QUIZ23_ANS3"
+msgstr "Triangulum"
+
+#: quizzes/quiz24/Quiz24.tscn
+msgid "QUIZ24_QSTN"
+msgstr "The image above shows"
+
+#: quizzes/quiz24/Quiz24.tscn
+msgid "QUIZ24_ANS1"
+msgstr "a galaxy"
+
+#: quizzes/quiz24/Quiz24.tscn
+msgid "QUIZ24_ANS2"
+msgstr "a planetary system"
+
+#: quizzes/quiz24/Quiz24.tscn
+msgid "QUIZ24_ANS3"
+msgstr "a nebula"
+
+#: quizzes/quiz25/Quiz25.tscn
+msgid "QUIZ25_QSTN"
+msgstr "All stars have nearly the same size and color."
+
+#: quizzes/quiz25/Quiz25.tscn
+msgid "QUIZ25_ANS1"
+msgstr "true"
+
+#: quizzes/quiz25/Quiz25.tscn
+msgid "QUIZ25_ANS2"
+msgstr "true"
+
+#: quizzes/quiz26/Quiz26.tscn
+msgid "QUIZ26_QSTN"
+msgstr "The human eye is an excellent observational instrument. It has high sensitivity and can detect the entire electromagnetic spectrum (light)."
+
+#: quizzes/quiz26/Quiz26.tscn
+msgid "QUIZ26_ANS1"
+msgstr "true"
+
+#: quizzes/quiz26/Quiz26.tscn
+msgid "QUIZ26_ANS2"
+msgstr "false"
+
+#: quizzes/quiz27/Quiz27.tscn
+msgid "QUIZ27_QSTN"
+msgstr "Which of the following factors contribute to high image quality in radio telescope observations?"
+
+#: quizzes/quiz27/Quiz27.tscn
+msgid "QUIZ27_ANS1"
+msgstr "a large number of antennas"
+
+#: quizzes/quiz27/Quiz27.tscn
+msgid "QUIZ27_ANS3"
+msgstr "a long observing time"
+
+#: quizzes/quiz27/Quiz27.tscn
+msgid "QUIZ27_ANS4"
+msgstr "antennas placed very close to each other"
+
+#: quizzes/quiz27/Quiz27.tscn
+msgid "QUIZ27_ANS2"
+msgstr "observations at different frequencies"
+
+#: quizzes/quiz28/Quiz28.tscn
+msgid "QUIZ28_QSTN"
+msgstr "The images above show the same astronomical object. The first image was taken with an optical telescope (Hubble), while the second was taken with a radio telescope (VLA). Which astronomical object is shown in the images?"
+
+#: quizzes/quiz28/Quiz28.tscn
+msgid "QUIZ28_ANS1"
+msgstr "supernova remnant"
+
+#: quizzes/quiz28/Quiz28.tscn
+msgid "QUIZ28_ANS2"
+msgstr "galaxy"
+
+#: quizzes/quiz28/Quiz28.tscn
+msgid "QUIZ28_ANS3"
+msgstr "protoplanetary disk"
+
+#: quizzes/quiz28/Quiz28.tscn
+msgid "QUIZ28_ANS4"
+msgstr "nebula"
+
+#: quizzes/quiz29/Quiz29.tscn
+msgid "QUIZ29_QSTN"
+msgstr "Synchrotron radiation"
+
+#: quizzes/quiz29/Quiz29.tscn
+msgid "QUIZ29_ANS1"
+msgstr "indicates the presence of strong magnetic fields"
+
+#: quizzes/quiz29/Quiz29.tscn
+msgid "QUIZ29_ANS2"
+msgstr "is also emitted by active galactic nuclei"
+
+#: quizzes/quiz29/Quiz29.tscn
+msgid "QUIZ29_ANS3"
+msgstr "is emitted by very hot stars"
+
+#: quizzes/quiz30/Quiz30.tscn
+msgid "QUIZ30_QSTN"
+msgstr "Below you can listen to three audio signals produced from radio telescope observations of pulsars. Select the pulsar that is rotating the fastest."
+
+#: quizzes/quiz30/Quiz30.tscn
+msgid "QUIZ30_ANS1"
+msgstr "PSR B0329+54"
+
+#: quizzes/quiz30/Quiz30.tscn
+msgid "QUIZ30_ANS2"
+msgstr "PSR B0833-45"
+
+#: quizzes/quiz30/Quiz30.tscn
+msgid "QUIZ30_ANS3"
+msgstr "PSR B0531-21"
+
+#: quizzes/quiz31/Quiz31.tscn
+msgid "QUIZ31_QSTN"
+msgstr "The astronomical object shown is"
+
+#: quizzes/quiz31/Quiz31.tscn
+msgid "QUIZ31_ANS1"
+msgstr "a pulsar"
+
+#: quizzes/quiz31/Quiz31.tscn
+msgid "QUIZ31_ANS2"
+msgstr "a planet"
+
+#: quizzes/quiz31/Quiz31.tscn
+msgid "QUIZ31_ANS3"
+msgstr "a quasar"
+
+#: quizzes/quiz32/Quiz32.tscn
+msgid "QUIZ32_QSTN"
+msgstr "What do we call \"exoplanets\"?"
+
+#: quizzes/quiz32/Quiz32.tscn
+msgid "QUIZ32_ANS1"
+msgstr "planets that do not belong to our Solar System"
+
+#: quizzes/quiz32/Quiz32.tscn
+msgid "QUIZ32_ANS3"
+msgstr "planets that do not belong to any planetary system"
+
+#: quizzes/quiz32/Quiz32.tscn
+msgid "QUIZ32_ANS4"
+msgstr "planets in our Solar System with orbits beyond Earth’s orbit"
+
+#: quizzes/quiz32/Quiz32.tscn
+msgid "QUIZ32_ANS2"
+msgstr "all planets except Earth"
+
+#: quizzes/quiz33/Quiz33.tscn
+msgid "QUIZ33_QSTN"
+msgstr "Why do we build space telescopes in addition to ground-based ones, even though their cost is 10 or even 100 times higher?"
+
+#: quizzes/quiz33/Quiz33.tscn
+msgid "QUIZ33_ANS1"
+msgstr "Earth’s atmosphere distorts astronomical observations"
+
+#: quizzes/quiz33/Quiz33.tscn
+msgid "QUIZ33_ANS3"
+msgstr "Earth’s gravity prevents telescopes from functioning properly"
+
+#: quizzes/quiz33/Quiz33.tscn
+msgid "QUIZ33_ANS4"
+msgstr "light travels at a higher speed in space"
+
+#: quizzes/quiz33/Quiz33.tscn
+msgid "QUIZ33_ANS2"
+msgstr "light pollution makes astronomical observations from Earth difficult"
+
+#: quizzes/quiz34/Quiz34.tscn
+msgid "QUIZ34_QSTN"
+msgstr ""
+"Different regions of the electromagnetic spectrum are named according to the frequency (or wavelength) of the radiation.\n"
+"The images above correspond to these regions and are shown in random order. Arrange them in the correct order, starting with the one that corresponds to the lowest frequency."
+
+#: quizzes/quiz34/Quiz34.tscn
+msgid "QUIZ34_ANS1"
+msgstr "infrared"
+
+#: quizzes/quiz34/Quiz34.tscn
+msgid "QUIZ34_ANS2"
+msgstr "radio waves"
+
+#: quizzes/quiz34/Quiz34.tscn
+msgid "QUIZ34_ANS3"
+msgstr "gamma rays"
+
+#: quizzes/quiz34/Quiz34.tscn
+msgid "QUIZ34_ANS4"
+msgstr "X-rays"
+
+#: quizzes/quiz34/Quiz34.tscn
+msgid "QUIZ34_ANS5"
+msgstr "ultraviolet"
+
+#: quizzes/quiz34/Quiz34.tscn
+msgid "QUIZ34_ANS6"
+msgstr "visible"
+
+#: quizzes/quiz35/Quiz35.tscn
+msgid "QUIZ35_QSTN"
+msgstr "The citizen science project \"Radio Galaxy Zoo: EMU\" has as its main goal"
+
+#: quizzes/quiz35/Quiz35.tscn
+msgid "QUIZ35_ANS1"
+msgstr "to help scientists classify radio sources"
+
+#: quizzes/quiz35/Quiz35.tscn
+msgid "QUIZ35_ANS3"
+msgstr "to compare observations from different optical telescopes"
+
+#: quizzes/quiz35/Quiz35.tscn
+msgid "QUIZ35_ANS4"
+msgstr "to study the Sun’s activity, such as sunspots and solar flares"
+
+#: quizzes/quiz35/Quiz35.tscn
+msgid "QUIZ35_ANS2"
+msgstr "to map the planets of the Solar System"
+
+#: quizzes/quiz36/Quiz36.tscn
+msgid "QUIZ36_QSTN"
+msgstr "In the citizen science project “Radio Galaxy Zoo: EMU”, who can take part?"
+
+#: quizzes/quiz36/Quiz36.tscn
+msgid "QUIZ36_ANS1"
+msgstr "anyone, with no special scientific background required"
+
+#: quizzes/quiz36/Quiz36.tscn
+msgid "QUIZ36_ANS2"
+msgstr "selected individuals after strict evaluation procedures"
+
+#: quizzes/quiz36/Quiz36.tscn
+msgid "QUIZ36_ANS3"
+msgstr "only graduates in the physical sciences"
+
+#: quizzes/quiz37/Quiz37.tscn
+msgid "QUIZ37_QSTN"
+msgstr "Which of the following are key goals of the educational programme \"RADIIO\"?"
+
+#: quizzes/quiz37/Quiz37.tscn
+msgid "QUIZ37_ANS1"
+msgstr "to train professional astrophysicists in radio astronomy"
+
+#: quizzes/quiz37/Quiz37.tscn
+msgid "QUIZ37_ANS3"
+msgstr "to reduce the gap between scientific knowledge and public perception"
+
+#: quizzes/quiz37/Quiz37.tscn
+msgid "QUIZ37_ANS4"
+msgstr "to replace school education with specialized academic research"
+
+#: quizzes/quiz37/Quiz37.tscn
+msgid "QUIZ37_ANS2"
+msgstr "to promote collaboration between students and educators from different countries and cultures"
+
+#: quizzes/quiz38/Quiz38.tscn
+msgid "QUIZ38_QSTN1"
+msgstr "EMU is a large-scale survey of the southern hemisphere of the sky, based on data from the ASKAP radio telescope in Australia."
+
+#: quizzes/quiz38/Quiz38.tscn
+msgid "QUIZ38_QSTN2"
+msgstr "The image shows the progress of the survey up to June 2024."
+
+#: quizzes/quiz38/Quiz38.tscn
+msgid "QUIZ38_QSTN3"
+msgstr "Try to assemble it correctly using as few moves as possible."
+
+#: ui/Energy_gauge.tscn
+msgid "UI_ENERGY"
+msgstr "energy"
+
+#: ui/Energy_gauge.tscn
+msgid "UI_PJ"
+msgstr "(PetaJoule)"
+
+#: ui/ui.gd
+msgid "eng"
+msgstr ""
+
+#: ui/ui.gd ui/UI.tscn
+msgid "ελλ"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "Qz 01-10"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz01"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz02"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz03"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz04"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz05"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz06"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz07"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz08"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz09"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz10"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "Qz 11-20"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz11"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz12"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz13"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz14"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz15"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz16"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz17"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz18"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz19"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz20"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "Qz 21-30"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz21"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz22"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz23"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz24"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz25"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz26"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz27"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz28"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz29"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz30"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "Qz 31-40"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz31"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz32"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz33"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz34"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz35"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz36"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz37"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz38"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz39"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz40"
+msgstr ""

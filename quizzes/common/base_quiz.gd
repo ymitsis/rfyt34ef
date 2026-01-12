@@ -45,13 +45,13 @@ func _on_submit_pressed():
 	_won_energy = calculate_won_energy()
 	if _won_energy < 0: _won_energy = 0
 	if _won_energy == max_energy:
-		_result_lbl.text = "ΤΕΛΕΙΑ! κέρδισες τη μέγιστη ενέργεια (%dPJ)" % _won_energy
+		_result_lbl.text = tr("QUIZ_MAX_REWARD") % _won_energy
 		_result_lbl.add_theme_color_override("font_color", Color(0, 0.6, 0))
 	elif _won_energy == 0:
-		_result_lbl.text = "δεν κέρδισες ενέργεια αυτή τη φορά…"
+		_result_lbl.text = tr("QUIZ_NO_REWARD")
 		_result_lbl.add_theme_color_override("font_color", Color(0.6, 0, 0))
 	else:
-		_result_lbl.text = "κέρδισες %dPJ ενέργειας (μέγιστο %dPJ)" % [_won_energy, max_energy]
+		_result_lbl.text = tr("QUIZ_REWARD") % [_won_energy, max_energy]
 		_result_lbl.add_theme_color_override("font_color", Color(0.4, 0.4, 0.4))
 	_fade_in(_result_lbl)
 	_fade_out(_submit_btn)
@@ -67,7 +67,7 @@ func set_submit_button_enabled(enabled: bool):
 	else:
 		_submit_btn.mouse_default_cursor_shape = Control.CURSOR_ARROW
 		$Container/submit/Label.modulate = Color(1, 1, 1, 0.6)
-		_submit_btn.tooltip_text = "επέλεξε πρώτα κάτι"
+		_submit_btn.tooltip_text = tr("QUIZ_SUBMIT_TOOLTIP")
 
 #κατοχυρωση ενεργειας και κλεισιμο quiz με το πάτημα του κοθμπιου "συνεχεια"
 func _on_continue_pressed():

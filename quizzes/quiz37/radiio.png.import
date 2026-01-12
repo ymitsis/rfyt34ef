@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqeh7nix2u8kj"
-path="res://.godot/imported/galaxy.apple-touch-icon.png-67f91b0a4350406434b6e6330841efb1.ctex"
+uid="uid://dy2fuwo651g28"
+path="res://.godot/imported/radiio.png-43b46bdb3bf25797db470ff90493c884.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://galaxy.apple-touch-icon.png"
-dest_files=["res://.godot/imported/galaxy.apple-touch-icon.png-67f91b0a4350406434b6e6330841efb1.ctex"]
+source_file="res://quizzes/quiz37/radiio.png"
+dest_files=["res://.godot/imported/radiio.png-43b46bdb3bf25797db470ff90493c884.ctex"]
 
 [params]
 

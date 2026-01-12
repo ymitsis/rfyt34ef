@@ -1,0 +1,80 @@
+[gd_scene load_steps=6 format=3 uid="uid://b4nkob1svmutd"]
+
+[ext_resource type="PackedScene" uid="uid://cnldk7rl488nm" path="res://quizzes/common/Base_quiz.tscn" id="1_8vs45"]
+[ext_resource type="Script" uid="uid://70q847xes0nc" path="res://quizzes/common/quiz_typeA.gd" id="2_oxb04"]
+[ext_resource type="Texture2D" uid="uid://c7l2lsray3b5s" path="res://quizzes/quiz36/zoo1.png" id="3_hqay6"]
+[ext_resource type="Texture2D" uid="uid://dftyyh1216qoy" path="res://quizzes/quiz36/zoo2.png" id="4_e1p50"]
+[ext_resource type="PackedScene" uid="uid://bj8dk0h6fwi7r" path="res://quizzes/common/ans_box.tscn" id="4_k87sw"]
+
+[node name="Base_quiz" instance=ExtResource("1_8vs45")]
+script = ExtResource("2_oxb04")
+is_multiselect = true
+
+[node name="TextureRect1" type="TextureRect" parent="Container" index="4"]
+clip_contents = true
+layout_mode = 0
+offset_left = 25.0
+offset_top = 25.0
+offset_right = 305.0
+offset_bottom = 305.0
+size_flags_horizontal = 3
+texture = ExtResource("3_hqay6")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="Container" index="5"]
+clip_contents = true
+layout_mode = 0
+offset_left = 320.0
+offset_top = 25.0
+offset_right = 600.0
+offset_bottom = 305.0
+size_flags_horizontal = 3
+texture = ExtResource("4_e1p50")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Container" index="6"]
+layout_mode = 0
+offset_left = 615.0
+offset_top = 25.0
+offset_right = 1075.0
+offset_bottom = 305.0
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(0.078431375, 0.078431375, 0.078431375, 1)
+theme_override_font_sizes/normal_font_size = 24
+text = "QUIZ36_QSTN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ans_box1" parent="Container" index="7" instance=ExtResource("4_k87sw")]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 360.0
+offset_right = 345.0
+offset_bottom = 480.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+_energy_if_selected = 60
+_ans_text = "QUIZ36_ANS1"
+
+[node name="ans_box2" parent="Container" index="8" instance=ExtResource("4_k87sw")]
+layout_mode = 0
+offset_left = 390.0
+offset_top = 360.0
+offset_right = 710.0
+offset_bottom = 480.0
+size_flags_horizontal = 0
+button_mask = 5
+_energy_if_selected = -30
+_ans_text = "QUIZ36_ANS2"
+
+[node name="ans_box3" parent="Container" index="9" instance=ExtResource("4_k87sw")]
+layout_mode = 0
+offset_left = 755.0
+offset_top = 360.0
+offset_right = 1075.0
+offset_bottom = 480.0
+size_flags_horizontal = 0
+_energy_if_selected = -30
+_ans_text = "QUIZ36_ANS3"

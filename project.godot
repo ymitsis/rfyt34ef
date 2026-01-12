@@ -28,7 +28,16 @@ version_control/autoload_on_startup=true
 
 theme/custom_font="uid://hckt2v3yv11d"
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://localization/el.po", "res://localization/en.po")
+locale/translations_pot_files=PackedStringArray("res://board/board.gd", "res://board/Board.tscn", "res://board/player.gd", "res://board/Player.tscn", "res://board/tile.gd", "res://board/Tile.tscn", "res://main/game_state.gd", "res://main/main.gd", "res://main/Main.tscn", "res://quizzes/challenge/challenge.gd", "res://quizzes/challenge/challenge.tscn", "res://quizzes/challenge/mini_game.tscn", "res://quizzes/common/ans_box.gd", "res://quizzes/common/ans_box.tscn", "res://quizzes/common/base_quiz.gd", "res://quizzes/common/Base_quiz.tscn", "res://quizzes/common/draggable_control.gd", "res://quizzes/common/draggable_control.tscn", "res://quizzes/common/drop_zone.gd", "res://quizzes/common/drop_zone.tscn", "res://quizzes/common/play_pause.gd", "res://quizzes/common/play_pause.tscn", "res://quizzes/common/quiz_typeA.gd", "res://quizzes/common/quiz_typeB.gd", "res://quizzes/common/quiz_typeC.gd", "res://quizzes/common/quiz_typeD.gd", "res://quizzes/common/swap_puzzle.gd", "res://quizzes/common/swap_puzzle.tscn", "res://quizzes/common/swap_tile.gd", "res://quizzes/common/swap_tile.tscn", "res://quizzes/quiz01/Quiz01.tscn", "res://quizzes/quiz02/Quiz02.tscn", "res://quizzes/quiz03/Quiz03.tscn", "res://quizzes/quiz04/Quiz04.tscn", "res://quizzes/quiz05/Quiz05.tscn", "res://quizzes/quiz06/Quiz06.tscn", "res://quizzes/quiz07/Quiz07.tscn", "res://quizzes/quiz08/Quiz08.tscn", "res://quizzes/quiz09/Quiz09.tscn", "res://quizzes/quiz10/Quiz10.tscn", "res://quizzes/quiz11/Quiz11.tscn", "res://quizzes/quiz12/Quiz12.tscn", "res://quizzes/quiz13/Quiz13.tscn", "res://quizzes/quiz14/Quiz14.tscn", "res://quizzes/quiz15/Quiz15.tscn", "res://quizzes/quiz16/Quiz16.tscn", "res://quizzes/quiz17/Quiz17.tscn", "res://quizzes/quiz18/Quiz18.tscn", "res://quizzes/quiz19/Quiz19.tscn", "res://quizzes/quiz20/Quiz20.tscn", "res://quizzes/quiz21/Quiz21.tscn", "res://quizzes/quiz22/Quiz22.tscn", "res://quizzes/quiz23/Quiz23.tscn", "res://quizzes/quiz24/Quiz24.tscn", "res://quizzes/quiz25/Quiz25.tscn", "res://quizzes/quiz26/Quiz26.tscn", "res://quizzes/quiz27/Quiz27.tscn", "res://quizzes/quiz28/Quiz28.tscn", "res://quizzes/quiz29/Quiz29.tscn", "res://quizzes/quiz30/Quiz30.tscn", "res://quizzes/quiz31/Quiz31.tscn", "res://quizzes/quiz32/Quiz32.tscn", "res://quizzes/quiz33/Quiz33.tscn", "res://quizzes/quiz34/Quiz34.tscn", "res://quizzes/quiz35/Quiz35.tscn", "res://quizzes/quiz36/Quiz36.tscn", "res://quizzes/quiz37/Quiz37.tscn", "res://quizzes/quiz38/Quiz38.tscn", "res://ui/energy_gauge.gd", "res://ui/Energy_gauge.tscn", "res://ui/ui.gd", "res://ui/UI.tscn")
+locale/fallback="el"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
+2d/snap/snap_2d_transforms_to_pixel=true
+2d/snap/snap_2d_vertices_to_pixel=true

@@ -4,7 +4,7 @@
 extends TextureButton
 
 @export var _energy_if_selected: int = 20
-@export var _ans_text: String = "απάντηση (αλλάζει από editor/inspector )"
+@export var _ans_text: String = ""
 @export var _auto_unpressed_img: bool = true
 @export var _is_txt: bool = true
 

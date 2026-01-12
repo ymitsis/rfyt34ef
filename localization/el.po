@@ -1,0 +1,1009 @@
+# LANGUAGE translation for galaxy for the following files:
+# res://board/board.gd
+# res://board/Board.tscn
+# res://board/player.gd
+# res://board/Player.tscn
+# res://board/tile.gd
+# res://board/Tile.tscn
+# res://main/game_state.gd
+# res://main/main.gd
+# res://main/Main.tscn
+# res://quizzes/challenge/challenge.gd
+# res://quizzes/challenge/challenge.tscn
+# res://quizzes/challenge/mini_game.tscn
+# res://quizzes/common/ans_box.gd
+# res://quizzes/common/ans_box.tscn
+# res://quizzes/common/base_quiz.gd
+# res://quizzes/common/Base_quiz.tscn
+# res://quizzes/common/draggable_control.gd
+# res://quizzes/common/draggable_control.tscn
+# res://quizzes/common/drop_zone.gd
+# res://quizzes/common/drop_zone.tscn
+# res://quizzes/common/play_pause.gd
+# res://quizzes/common/play_pause.tscn
+# res://quizzes/common/quiz_typeA.gd
+# res://quizzes/common/quiz_typeB.gd
+# res://quizzes/common/quiz_typeC.gd
+# res://quizzes/common/quiz_typeD.gd
+# res://quizzes/common/swap_puzzle.gd
+# res://quizzes/common/swap_puzzle.tscn
+# res://quizzes/common/swap_tile.gd
+# res://quizzes/common/swap_tile.tscn
+# res://quizzes/quiz01/Quiz01.tscn
+# res://quizzes/quiz02/Quiz02.tscn
+# res://quizzes/quiz03/Quiz03.tscn
+# res://quizzes/quiz04/Quiz04.tscn
+# res://quizzes/quiz05/Quiz05.tscn
+# res://quizzes/quiz06/Quiz06.tscn
+# res://quizzes/quiz07/Quiz07.tscn
+# res://quizzes/quiz08/Quiz08.tscn
+# res://quizzes/quiz09/Quiz09.tscn
+# res://quizzes/quiz10/Quiz10.tscn
+# res://quizzes/quiz11/Quiz11.tscn
+# res://quizzes/quiz12/Quiz12.tscn
+# res://quizzes/quiz13/Quiz13.tscn
+# res://quizzes/quiz14/Quiz14.tscn
+# res://quizzes/quiz15/Quiz15.tscn
+# res://quizzes/quiz16/Quiz16.tscn
+# res://quizzes/quiz17/Quiz17.tscn
+# res://quizzes/quiz18/Quiz18.tscn
+# res://quizzes/quiz19/Quiz19.tscn
+# res://quizzes/quiz20/Quiz20.tscn
+# res://quizzes/quiz21/Quiz21.tscn
+# res://quizzes/quiz22/Quiz22.tscn
+# res://quizzes/quiz23/Quiz23.tscn
+# res://quizzes/quiz24/Quiz24.tscn
+# res://quizzes/quiz25/Quiz25.tscn
+# res://quizzes/quiz26/Quiz26.tscn
+# res://quizzes/quiz27/Quiz27.tscn
+# res://quizzes/quiz28/Quiz28.tscn
+# res://quizzes/quiz29/Quiz29.tscn
+# res://quizzes/quiz30/Quiz30.tscn
+# res://quizzes/quiz31/Quiz31.tscn
+# res://quizzes/quiz32/Quiz32.tscn
+# res://quizzes/quiz33/Quiz33.tscn
+# res://quizzes/quiz34/Quiz34.tscn
+# res://quizzes/quiz35/Quiz35.tscn
+# res://quizzes/quiz36/Quiz36.tscn
+# res://quizzes/quiz37/Quiz37.tscn
+# res://quizzes/quiz38/Quiz38.tscn
+# res://ui/energy_gauge.gd
+# res://ui/Energy_gauge.tscn
+# res://ui/ui.gd
+# res://ui/UI.tscn
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: galaxy\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: gymfyt\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.8\n"
+
+#: board/Tile.tscn quizzes/challenge/challenge.tscn quizzes/common/ans_box.tscn quizzes/common/Base_quiz.tscn quizzes/common/draggable_control.tscn ui/Energy_gauge.tscn
+msgid "xx"
+msgstr ""
+
+#: quizzes/challenge/challenge.gd
+msgid "CHALLENGE_OPTION1"
+msgstr "Αλλάζεις πορεία για να το παρακάμψεις (κόστος: ⚡%dPJ)"
+
+#: quizzes/challenge/challenge.tscn
+msgid "CHALLENGE_TITLE"
+msgstr "Μπροστά σου απλώνεται ένα τεράστιο νέφος διαστημικής σκόνης. Διάλεξε:"
+
+#: quizzes/challenge/challenge.tscn
+msgid "CHALLENGE_OPTION2"
+msgstr "Παραμένεις στην πορεία σου και επιχειρείς ελιγμούς αποφυγής. Το κόστος θα εξαρτηθεί από το πόσο καλά θα τα καταφέρεις"
+
+#: quizzes/common/base_quiz.gd
+msgid "QUIZ_MAX_REWARD"
+msgstr "ΤΕΛΕΙΑ! κέρδισες τη μέγιστη ενέργεια (%dPJ)"
+
+#: quizzes/common/base_quiz.gd
+msgid "QUIZ_NO_REWARD"
+msgstr "Δεν κέρδισες ενέργεια αυτή τη φορά…"
+
+#: quizzes/common/base_quiz.gd
+msgid "QUIZ_REWARD"
+msgstr "Kέρδισες %dPJ ενέργειας (μέγιστο %dPJ)"
+
+#: quizzes/common/base_quiz.gd
+msgid "QUIZ_SUBMIT_TOOLTIP"
+msgstr "επέλεξε πρώτα κάτι"
+
+#: quizzes/common/Base_quiz.tscn
+msgid "QUIZ_SUBMIT"
+msgstr "έλεγχος"
+
+#: quizzes/common/Base_quiz.tscn
+msgid "QUIZ_CONTINUE"
+msgstr "συνέχεια"
+
+#: quizzes/quiz01/Quiz01.tscn
+msgid "QUIZ01_QSTN"
+msgstr "Τι απεικονίζει το παραπάνω καλλιτεχνικό σχέδιο; (τα μεγέθη δεν είναι σε ακριβή κλίμακα)"
+
+#: quizzes/quiz01/Quiz01.tscn
+msgid "QUIZ01_ANS1"
+msgstr "το ηλιακό σύστημα"
+
+#: quizzes/quiz01/Quiz01.tscn
+msgid "QUIZ01_ANS2"
+msgstr "ένα πλανητικό σύστημα"
+
+#: quizzes/quiz01/Quiz01.tscn
+msgid "QUIZ01_ANS3"
+msgstr "ένα γαλαξιακό σύστημα"
+
+#: quizzes/quiz02/Quiz02.tscn
+msgid "QUIZ02_QSTN"
+msgstr "Στην παραπάνω εικόνα παρουσιάζονται σε πραγματικές αναλογίες μεγέθους ο Ήλιος και οι πλανήτες του. Τοποθέτησε κάθε όνομα της δεξιάς στήλης στο σωστό ουράνιο σώμα."
+
+#: quizzes/quiz02/Quiz02.tscn
+msgid "QUIZ02_ANS1"
+msgstr "Ερμής"
+
+#: quizzes/quiz02/Quiz02.tscn
+msgid "QUIZ02_ANS2"
+msgstr "Ήλιος"
+
+#: quizzes/quiz02/Quiz02.tscn
+msgid "QUIZ02_ANS3"
+msgstr "Ουρανός"
+
+#: quizzes/quiz02/Quiz02.tscn
+msgid "QUIZ02_ANS4"
+msgstr "Άρης"
+
+#: quizzes/quiz02/Quiz02.tscn
+msgid "QUIZ02_ANS5"
+msgstr "Γη"
+
+#: quizzes/quiz02/Quiz02.tscn
+msgid "QUIZ02_ANS6"
+msgstr "Κρόνος"
+
+#: quizzes/quiz02/Quiz02.tscn
+msgid "QUIZ02_ANS7"
+msgstr "Αφροδίτη"
+
+#: quizzes/quiz02/Quiz02.tscn
+msgid "QUIZ02_ANS8"
+msgstr "Ποσειδώνας"
+
+#: quizzes/quiz02/Quiz02.tscn
+msgid "QUIZ02_ANS9"
+msgstr "Δίας"
+
+#: quizzes/quiz03/Quiz03.tscn
+msgid "QUIZ03_QSTN"
+msgstr "Στο εκπαιδευτικό πρόγραμμα \"RADIIO\" (2025-26) συμμετέχουν ομάδες μαθητών από διαφορετικές χώρες. Επέλεξε τις σημαίες των χωρών αυτών."
+
+#: quizzes/quiz04/Quiz04.tscn
+msgid "QUIZ04_QSTN"
+msgstr ""
+"Η εικόνα δείχνει μερικές από τις 66 κεραίες του ραδιοτηλεσκοπίου ALMA που βρίσκεται στην έρημο Ατακάμα της Χιλής.\n"
+"Προσπάθησε να τη σχηματίσεις σωστά με όσο το δυνατόν λιγότερες κινήσεις."
+
+#: quizzes/quiz05/Quiz05.tscn
+msgid "QUIZ05_QSTN1"
+msgstr "600 π.Χ."
+
+#: quizzes/quiz05/Quiz05.tscn
+msgid "QUIZ05_QSTN2"
+msgstr "1600 μ.Χ."
+
+#: quizzes/quiz05/Quiz05.tscn
+msgid "QUIZ05_QSTN3"
+msgstr "1850 μ.Χ."
+
+#: quizzes/quiz05/Quiz05.tscn
+msgid "QUIZ05_QSTN4"
+msgstr "1930 μ.Χ."
+
+#: quizzes/quiz05/Quiz05.tscn
+msgid "QUIZ05_QSTN5"
+msgstr "Τα παραπάνω παρατηρησιακά εργαλεία της αστρονομίας υπήρξαν κομβικά, καθώς σηματοδότησαν μεταβάσεις σε διαφορετικές εποχές της μελέτης του ουρανού. Τοποθέτησέ τα στη σωστή χρονολογική σειρά, από το παλαιότερο προς το νεότερο."
+
+#: quizzes/quiz06/Quiz06.tscn
+msgid "QUIZ06_QSTN1"
+msgstr "νεφέλωμα"
+
+#: quizzes/quiz06/Quiz06.tscn
+msgid "QUIZ06_QSTN2"
+msgstr "κβάζαρ"
+
+#: quizzes/quiz06/Quiz06.tscn
+msgid "QUIZ06_QSTN3"
+msgstr "αστέρι"
+
+#: quizzes/quiz06/Quiz06.tscn
+msgid "QUIZ06_QSTN4"
+msgstr "γαλαξίας"
+
+#: quizzes/quiz06/Quiz06.tscn
+msgid "QUIZ06_QSTN5"
+msgstr "πάλσαρ"
+
+#: quizzes/quiz06/Quiz06.tscn
+msgid "QUIZ06_QSTN6"
+msgstr "κομήτης"
+
+#: quizzes/quiz06/Quiz06.tscn
+msgid "QUIZ06_QSTN7"
+msgstr "πλανήτης"
+
+#: quizzes/quiz06/Quiz06.tscn
+msgid "QUIZ06_QSTN8"
+msgstr "Στις παραπάνω εικόνες παρουσιάζονται διάφορα αστρονομικά αντικείμενα. Τοποθέτησε κάθε όνομα της δεξιάς στήλης στο σωστό ουράνιο σώμα."
+
+#: quizzes/quiz07/Quiz07.tscn
+msgid "QUIZ07_QSTN1"
+msgstr "πρωτοπλανητικός δίσκος"
+
+#: quizzes/quiz07/Quiz07.tscn
+msgid "QUIZ07_QSTN2"
+msgstr "γαλαξίας"
+
+#: quizzes/quiz07/Quiz07.tscn
+msgid "QUIZ07_QSTN3"
+msgstr "πλανήτης Δίας"
+
+#: quizzes/quiz07/Quiz07.tscn
+msgid "QUIZ07_QSTN4"
+msgstr "υπερκαινοφανής"
+
+#: quizzes/quiz07/Quiz07.tscn
+msgid "QUIZ07_QSTN5"
+msgstr "περιβάλλον μαύρης τρύπας"
+
+#: quizzes/quiz07/Quiz07.tscn
+msgid "QUIZ07_QSTN6"
+msgstr "Οι παραπάνω εικόνες προέρχονται από τα ραδιοτηλεσκόπια ALMA και EHT. Τοποθέτησε κάθε όνομα της δεξιάς στήλης στη σωστή εικόνα."
+
+#: quizzes/quiz08/Quiz08.tscn
+msgid "QUIZ08_QSTN1"
+msgstr "Οι παρακάτω εικόνες προέρχονται από το τηλεσκόπιο Hubble. Επέλεξε αυτές που απεικονίζουν γαλαξίες."
+
+#: quizzes/quiz09/Quiz09.tscn
+msgid "QUIZ09_QSTN1"
+msgstr "φακός ως κύριο στοιχείο"
+
+#: quizzes/quiz09/Quiz09.tscn
+msgid "QUIZ09_QSTN2"
+msgstr "καθρέπτης ως κύριο στοιχείο"
+
+#: quizzes/quiz09/Quiz09.tscn
+msgid "QUIZ09_QSTN3"
+msgstr "δυνατότητα μεγάλης διαμέτρου"
+
+#: quizzes/quiz09/Quiz09.tscn
+msgid "QUIZ09_QSTN4"
+msgstr "συλλέγει σχετικά λίγο φως"
+
+#: quizzes/quiz09/Quiz09.tscn
+msgid "QUIZ09_QSTN5"
+msgstr "διοπτρικό"
+
+#: quizzes/quiz09/Quiz09.tscn
+msgid "QUIZ09_QSTN6"
+msgstr "κατοπτρικό"
+
+#: quizzes/quiz09/Quiz09.tscn
+msgid "QUIZ09_QSTN7"
+msgstr "Τα οπτικά τηλεσκόπια διακρίνονται σε διοπτρικά και κατοπτρικά. Τοποθέτησε τα στοιχεία της μεσαίας στήλης, στη σωστή κατηγορία."
+
+#: quizzes/quiz10/Quiz10.tscn
+msgid "QUIZ10_QSTN1"
+msgstr "οπτικά τηλεσκόπια"
+
+#: quizzes/quiz10/Quiz10.tscn
+msgid "QUIZ10_QSTN2"
+msgstr "μη οπτικά τηλεσκόπια"
+
+#: quizzes/quiz10/Quiz10.tscn
+msgid "QUIZ10_QSTN3"
+msgstr "Τακτοποίησε τις παραπάνω εικόνες ώστε η επάνω σειρά να έχει μόνο οπτικά τηλεσκόπια και η κάτω μόνο μη οπτικά."
+
+#: quizzes/quiz11/Quiz11.tscn
+msgid "QUIZ11_QSTN1"
+msgstr "Από τις παρακάτω εικόνες του Ήλιου, μόνο η μία προέρχεται από οπτικό τηλεσκόπιο. Επέλεξε τις εικόνες που δημιουργήθηκαν με τη βοήθεια μη οπτικών τηλεσκοπίων."
+
+#: quizzes/quiz12/Quiz12.tscn
+msgid "QUIZ12_QSTN1"
+msgstr "ενεργοί γαλαξίες"
+
+#: quizzes/quiz12/Quiz12.tscn
+msgid "QUIZ12_QSTN2"
+msgstr "αστρογόνοι γαλαξίες"
+
+#: quizzes/quiz12/Quiz12.tscn
+msgid "QUIZ12_QSTN3"
+msgstr "Τακτοποίησε τις παραπάνω εικόνες ώστε η επάνω σειρά να έχει μόνο ενεργούς γαλαξίες και η κάτω μόνο αστρογόνους."
+
+#: quizzes/quiz13/Quiz13.tscn
+msgid "QUIZ13_QSTN6"
+msgstr "Κατάταξε τα παρακάτω αστρονομικά αντικείμενα από το μικρότερο στο μεγαλύτερο, με βάση τη διάμετρό τους."
+
+#: quizzes/quiz13/Quiz13.tscn
+msgid "QUIZ13_QSTN1"
+msgstr "αστέρας νετρονίων"
+
+#: quizzes/quiz13/Quiz13.tscn
+msgid "QUIZ13_QSTN2"
+msgstr "νεφέλωμα"
+
+#: quizzes/quiz13/Quiz13.tscn
+msgid "QUIZ13_QSTN3"
+msgstr "αστέρι"
+
+#: quizzes/quiz13/Quiz13.tscn
+msgid "QUIZ13_QSTN4"
+msgstr "πλανήτης"
+
+#: quizzes/quiz13/Quiz13.tscn
+msgid "QUIZ13_QSTN5"
+msgstr "γαλαξίας"
+
+#: quizzes/quiz14/Quiz14.tscn
+msgid "QUIZ14_QSTN01"
+msgstr "ενιαίου κατόπτρου"
+
+#: quizzes/quiz14/Quiz14.tscn
+msgid "QUIZ14_QSTN02"
+msgstr "ραδιοτηλεσκόπια"
+
+#: quizzes/quiz14/Quiz14.tscn
+msgid "QUIZ14_QSTN04"
+msgstr "Green Bank"
+
+#: quizzes/quiz14/Quiz14.tscn
+msgid "QUIZ14_QSTN05"
+msgstr "FAST"
+
+#: quizzes/quiz14/Quiz14.tscn
+msgid "QUIZ14_QSTN06"
+msgstr "LOFAR"
+
+#: quizzes/quiz14/Quiz14.tscn
+msgid "QUIZ14_QSTN07"
+msgstr "Effelsberg"
+
+#: quizzes/quiz14/Quiz14.tscn
+msgid "QUIZ14_QSTN08"
+msgstr "ALMA"
+
+#: quizzes/quiz14/Quiz14.tscn
+msgid "QUIZ14_QSTN09"
+msgstr "GMRT"
+
+#: quizzes/quiz14/Quiz14.tscn
+msgid "QUIZ14_QSTN10"
+msgstr "Parkes"
+
+#: quizzes/quiz14/Quiz14.tscn
+msgid "QUIZ14_QSTN11"
+msgstr "Arecibo"
+
+#: quizzes/quiz14/Quiz14.tscn
+msgid "QUIZ14_QSTN12"
+msgstr "VLA"
+
+#: quizzes/quiz14/Quiz14.tscn
+msgid "QUIZ14_QSTN03"
+msgstr "συμβολομετρίας"
+
+#: quizzes/quiz14/Quiz14.tscn
+msgid "QUIZ14_QSTN13"
+msgstr "Παραπάνω αναφέρονται μερικά από τα σημαντικότερα ραδιοτηλεσκόπια. Τοποθέτησε καθένα από αυτά στη στήλη που αντιστοιχεί στην κατηγορία του."
+
+#: quizzes/quiz15/Quiz15.tscn
+msgid "QUIZ15_QSTN"
+msgstr "Ποιο αστρονομικό αντικείμενο βρίσκεται στο κέντρο του Γαλαξία μας;"
+
+#: quizzes/quiz15/Quiz15.tscn
+msgid "QUIZ15_ANS1"
+msgstr "ένας πρωτοπλανητικός δίσκος"
+
+#: quizzes/quiz15/Quiz15.tscn
+msgid "QUIZ15_ANS2"
+msgstr "μια υπερμεγέθης μαύρη τρύπα"
+
+#: quizzes/quiz15/Quiz15.tscn
+msgid "QUIZ15_ANS3"
+msgstr "ένα αστέρι νετρονίων"
+
+#: quizzes/quiz15/Quiz15.tscn
+msgid "QUIZ15_ANS4"
+msgstr "ένας υπερκαινοφανής αστέρας"
+
+#: quizzes/quiz16/Quiz16.tscn
+msgid "QUIZ16_QSTN"
+msgstr "Η τεχνική της συμβολομετρίας χρησιμοποιείται στα ραδιοτηλεσκόπια ενιαίου κατόπτρου."
+
+#: quizzes/quiz16/Quiz16.tscn
+msgid "QUIZ16_ANS1"
+msgstr "σωστό"
+
+#: quizzes/quiz16/Quiz16.tscn
+msgid "QUIZ16_ANS2"
+msgstr "λάθος"
+
+#: quizzes/quiz17/Quiz17.tscn
+msgid "QUIZ17_QSTN"
+msgstr "Το ραδιοτηλεσκόπιο ενιαίου κατόπτρου με τη μεγαλύτερη διάμετρο είναι το FAST στην Κίνα. Ποια είναι η διάμετρος του κατόπτρου του;"
+
+#: quizzes/quiz17/Quiz17.tscn
+msgid "QUIZ17_ANS1"
+msgstr "50m"
+
+#: quizzes/quiz17/Quiz17.tscn
+msgid "QUIZ17_ANS2"
+msgstr "500m"
+
+#: quizzes/quiz17/Quiz17.tscn
+msgid "QUIZ17_ANS3"
+msgstr "5000m"
+
+#: quizzes/quiz18/Quiz18.tscn
+msgid "QUIZ18_QSTN"
+msgstr "Σε ένα συμβολομετρικό ραδιοτηλεσκόπιο πολλαπλών κεραιών, καθεμία από αυτές πρέπει να είναι στραμμένη σε διαφορετική κατεύθυνση, ώστε να επιτυγχάνεται ταυτόχρονα όσο το δυνατόν ευρύτερη κάλυψη του ουρανού."
+
+#: quizzes/quiz18/Quiz18.tscn
+msgid "QUIZ18_ANS1"
+msgstr "σωστό"
+
+#: quizzes/quiz18/Quiz18.tscn
+msgid "QUIZ18_ANS2"
+msgstr "λάθος"
+
+#: quizzes/quiz19/Quiz19.tscn
+msgid "QUIZ19_QSTN"
+msgstr "Ποιο είναι το μεγαλύτερο σε διάμετρο ραδιοτηλεσκόπιο ενιαίου κατόπτρου;"
+
+#: quizzes/quiz19/Quiz19.tscn
+msgid "QUIZ19_ANS1"
+msgstr "Arecibo (Πουέρτο Ρίκο)"
+
+#: quizzes/quiz19/Quiz19.tscn
+msgid "QUIZ19_ANS2"
+msgstr "LOFAR (Ολλανδία)"
+
+#: quizzes/quiz19/Quiz19.tscn
+msgid "QUIZ19_ANS3"
+msgstr "FAST (Κίνα)"
+
+#: quizzes/quiz19/Quiz19.tscn
+msgid "QUIZ19_ANS4"
+msgstr "VLA (ΗΠΑ)"
+
+#: quizzes/quiz20/Quiz20.tscn
+msgid "QUIZ20_QSTN"
+msgstr "Οι αστρογόνοι γαλαξίες έχουν στο κέντρο τους μια υπερμεγέθη μαύρη τρύπα."
+
+#: quizzes/quiz20/Quiz20.tscn
+msgid "QUIZ20_ANS1"
+msgstr "σωστό"
+
+#: quizzes/quiz20/Quiz20.tscn
+msgid "QUIZ20_ANS2"
+msgstr "λάθος"
+
+#: quizzes/quiz21/Quiz21.tscn
+msgid "QUIZ21_QSTN"
+msgstr "Ένας γαλαξίας ονομάζεται \"ενεργός\" όταν έχει υψηλό ρυθμό σχηματισμού άστρων."
+
+#: quizzes/quiz21/Quiz21.tscn
+msgid "QUIZ21_ANS1"
+msgstr "σωστό"
+
+#: quizzes/quiz21/Quiz21.tscn
+msgid "QUIZ21_ANS2"
+msgstr "λάθος"
+
+#: quizzes/quiz22/Quiz22.tscn
+msgid "QUIZ22_QSTN"
+msgstr "Ποιο από τα παρακάτω αστρονομικά αντικείμενα εκπέμπει ισχυρά στην περιοχή των ραδιοκυμάτων;"
+
+#: quizzes/quiz22/Quiz22.tscn
+msgid "QUIZ22_ANS1"
+msgstr "κομήτης"
+
+#: quizzes/quiz22/Quiz22.tscn
+msgid "QUIZ22_ANS2"
+msgstr "πάλσαρ"
+
+#: quizzes/quiz22/Quiz22.tscn
+msgid "QUIZ22_ANS3"
+msgstr "κβάζαρ"
+
+#: quizzes/quiz22/Quiz22.tscn
+msgid "QUIZ22_ANS4"
+msgstr "υπολείματα υπερκαινοφανούς"
+
+#: quizzes/quiz22/Quiz22.tscn
+msgid "QUIZ22_ANS5"
+msgstr "αστεροειδής"
+
+#: quizzes/quiz23/Quiz23.tscn
+msgid "QUIZ23_QSTN"
+msgstr "Πώς ονομάζεται ο δικός μας γαλαξίας;"
+
+#: quizzes/quiz23/Quiz23.tscn
+msgid "QUIZ23_ANS1"
+msgstr "Andromeda"
+
+#: quizzes/quiz23/Quiz23.tscn
+msgid "QUIZ23_ANS2"
+msgstr "Milky Way"
+
+#: quizzes/quiz23/Quiz23.tscn
+msgid "QUIZ23_ANS3"
+msgstr "Triangulum"
+
+#: quizzes/quiz24/Quiz24.tscn
+msgid "QUIZ24_QSTN"
+msgstr "Στην παραπάνω εικόνα παρουσιάζεται"
+
+#: quizzes/quiz24/Quiz24.tscn
+msgid "QUIZ24_ANS1"
+msgstr "ένας γαλαξίας"
+
+#: quizzes/quiz24/Quiz24.tscn
+msgid "QUIZ24_ANS2"
+msgstr "ένα πλανητικό σύστημα"
+
+#: quizzes/quiz24/Quiz24.tscn
+msgid "QUIZ24_ANS3"
+msgstr "ένα νεφέλωμα"
+
+#: quizzes/quiz25/Quiz25.tscn
+msgid "QUIZ25_QSTN"
+msgstr "Όλα τα άστρα έχουν σχεδόν το ίδιο μέγεθος και χρώμα."
+
+#: quizzes/quiz25/Quiz25.tscn
+msgid "QUIZ25_ANS1"
+msgstr "σωστό"
+
+#: quizzes/quiz25/Quiz25.tscn
+msgid "QUIZ25_ANS2"
+msgstr "λάθος"
+
+#: quizzes/quiz26/Quiz26.tscn
+msgid "QUIZ26_QSTN"
+msgstr "Το ανθρώπινο μάτι είναι ένα εξαιρετικό όργανο παρατήρησης. Έχει μεγάλη ευαισθησία και μπορεί να αντιληφθεί το σύνολο του ηλεκτρομαγνητικού φάσματος (φωτός)."
+
+#: quizzes/quiz26/Quiz26.tscn
+msgid "QUIZ26_ANS1"
+msgstr "σωστό"
+
+#: quizzes/quiz26/Quiz26.tscn
+msgid "QUIZ26_ANS2"
+msgstr "λάθος"
+
+#: quizzes/quiz27/Quiz27.tscn
+msgid "QUIZ27_QSTN"
+msgstr "Ποιοι από τους παρακάτω παράγοντες συμβάλλουν στην υψηλή ποιότητα εικόνας στις παρατηρήσεις με ραδιοτηλεσκόπια;"
+
+#: quizzes/quiz27/Quiz27.tscn
+msgid "QUIZ27_ANS1"
+msgstr "μεγάλος αριθμός κεραιών"
+
+#: quizzes/quiz27/Quiz27.tscn
+msgid "QUIZ27_ANS3"
+msgstr "μεγάλος χρόνος παρατήρησης"
+
+#: quizzes/quiz27/Quiz27.tscn
+msgid "QUIZ27_ANS4"
+msgstr "κεραίες τοποθετημένες πολύ κοντά μεταξύ τους"
+
+#: quizzes/quiz27/Quiz27.tscn
+msgid "QUIZ27_ANS2"
+msgstr "παρατηρήσεις σε διαφορετικές συχνότητες"
+
+#: quizzes/quiz28/Quiz28.tscn
+msgid "QUIZ28_QSTN"
+msgstr "Στις παραπάνω εικόνες παρουσιάζεται το ίδιο αστρονομικό αντικείμενο. Η πρώτη εικόνα προέρχεται από οπτικό τηλεσκόπιο (Hubble), ενώ η δεύτερη από ραδιοτηλεσκόπιο (VLA). Τι αστρονομικό αντικείμενο παρουσιάζεται στις εικόνες;"
+
+#: quizzes/quiz28/Quiz28.tscn
+msgid "QUIZ28_ANS1"
+msgstr "υπόλειμμα υπερκαινοφανούς"
+
+#: quizzes/quiz28/Quiz28.tscn
+msgid "QUIZ28_ANS2"
+msgstr "γαλαξίας"
+
+#: quizzes/quiz28/Quiz28.tscn
+msgid "QUIZ28_ANS3"
+msgstr "πρωτοπλανητικός δίσκος"
+
+#: quizzes/quiz28/Quiz28.tscn
+msgid "QUIZ28_ANS4"
+msgstr "νεφέλωμα"
+
+#: quizzes/quiz29/Quiz29.tscn
+msgid "QUIZ29_QSTN"
+msgstr "Η ακτινοβολία σύγχροτρον"
+
+#: quizzes/quiz29/Quiz29.tscn
+msgid "QUIZ29_ANS1"
+msgstr "υποδηλώνει παρουσία ισχυρών μαγνητικών πεδίων"
+
+#: quizzes/quiz29/Quiz29.tscn
+msgid "QUIZ29_ANS2"
+msgstr "εκπέμπεται και από ενεργούς γαλαξικούς πυρήνες"
+
+#: quizzes/quiz29/Quiz29.tscn
+msgid "QUIZ29_ANS3"
+msgstr "εκπέμπεται από πολύ θερμά αστέρια"
+
+#: quizzes/quiz30/Quiz30.tscn
+msgid "QUIZ30_QSTN"
+msgstr "Παρακάτω μπορείς να ακούσεις τρία ηχητικά σήματα που προέκυψαν από παρατηρήσεις πάλσαρ με ραδιοτηλεσκόπια. Επέλεξε το πάλσαρ που περιστρέφεται πιο γρήγορα."
+
+#: quizzes/quiz30/Quiz30.tscn
+msgid "QUIZ30_ANS1"
+msgstr "PSR B0329+54"
+
+#: quizzes/quiz30/Quiz30.tscn
+msgid "QUIZ30_ANS2"
+msgstr "PSR B0833-45"
+
+#: quizzes/quiz30/Quiz30.tscn
+msgid "QUIZ30_ANS3"
+msgstr "PSR B0531-21"
+
+#: quizzes/quiz31/Quiz31.tscn
+msgid "QUIZ31_QSTN"
+msgstr "Το διπλανό αστρονομικό αντικείμενο είναι"
+
+#: quizzes/quiz31/Quiz31.tscn
+msgid "QUIZ31_ANS1"
+msgstr "ένα πάλσαρ"
+
+#: quizzes/quiz31/Quiz31.tscn
+msgid "QUIZ31_ANS2"
+msgstr "ένας πλανήτης"
+
+#: quizzes/quiz31/Quiz31.tscn
+msgid "QUIZ31_ANS3"
+msgstr "ένα κβάζαρ"
+
+#: quizzes/quiz32/Quiz32.tscn
+msgid "QUIZ32_QSTN"
+msgstr "Τι ονομάζουμε \"εξωπλανήτες\";"
+
+#: quizzes/quiz32/Quiz32.tscn
+msgid "QUIZ32_ANS1"
+msgstr "πλανήτες που δεν ανήκουν στο ηλιακό μας σύστημα"
+
+#: quizzes/quiz32/Quiz32.tscn
+msgid "QUIZ32_ANS3"
+msgstr "πλανήτες που δεν ανήκουν σε κάποιο πλανητικό σύστημα"
+
+#: quizzes/quiz32/Quiz32.tscn
+msgid "QUIZ32_ANS4"
+msgstr "πλανήτες του ηλιακού μας συστήματος με τροχιά εξωτερικά της τροχιάς της Γης"
+
+#: quizzes/quiz32/Quiz32.tscn
+msgid "QUIZ32_ANS2"
+msgstr "όλοι οι πλανήτες εκτός από τη Γη"
+
+#: quizzes/quiz33/Quiz33.tscn
+msgid "QUIZ33_QSTN"
+msgstr "Γιατί, εκτός από επίγεια, κατασκευάζουμε και διαστημικά τηλεσκόπια, παρότι το κόστος τους είναι 10 ή και 100 φορές μεγαλύτερο;"
+
+#: quizzes/quiz33/Quiz33.tscn
+msgid "QUIZ33_ANS1"
+msgstr "η ατμόσφαιρα της Γης αλλοιώνει τις αστρονομικές παρατηρήσεις"
+
+#: quizzes/quiz33/Quiz33.tscn
+msgid "QUIZ33_ANS3"
+msgstr "η βαρυτική έλξη της Γης εμποδίζει τη σωστή λειτουργία των τηλεσκοπίων"
+
+#: quizzes/quiz33/Quiz33.tscn
+msgid "QUIZ33_ANS4"
+msgstr "στο Διάστημα το φως διαδίδεται με μεγαλύτερη ταχύτητα"
+
+#: quizzes/quiz33/Quiz33.tscn
+msgid "QUIZ33_ANS2"
+msgstr "η φωτορύπανση δυσκολεύει τις αστρονομικές παρατηρήσεις από τη Γη"
+
+#: quizzes/quiz34/Quiz34.tscn
+msgid "QUIZ34_QSTN"
+msgstr ""
+"Διαφορετικές περιοχές του ηλεκτρομαγνητικού φάσματος έχουν ονομαστεί με βάση τη συχνότητα (ή το μήκος κύματος) της ακτινοβολίας.\n"
+"Οι παραπάνω εικόνες αντιστοιχούν σε αυτές τις περιοχές και έχουν τοποθετηθεί σε τυχαία σειρά. Τοποθέτησέ τες στη σωστή σειρά, ξεκινώντας από αυτή που αντιστοιχεί στη μικρότερη συχνότητα."
+
+#: quizzes/quiz34/Quiz34.tscn
+msgid "QUIZ34_ANS1"
+msgstr "υπέρυρθο"
+
+#: quizzes/quiz34/Quiz34.tscn
+msgid "QUIZ34_ANS2"
+msgstr "ραδιοκύματα"
+
+#: quizzes/quiz34/Quiz34.tscn
+msgid "QUIZ34_ANS3"
+msgstr "ακτίνες γ"
+
+#: quizzes/quiz34/Quiz34.tscn
+msgid "QUIZ34_ANS4"
+msgstr "ακτίνες X"
+
+#: quizzes/quiz34/Quiz34.tscn
+msgid "QUIZ34_ANS5"
+msgstr "υπεριώδες"
+
+#: quizzes/quiz34/Quiz34.tscn
+msgid "QUIZ34_ANS6"
+msgstr "ορατό"
+
+#: quizzes/quiz35/Quiz35.tscn
+msgid "QUIZ35_QSTN"
+msgstr "Το πρόγραμμα επιστήμης των πολιτών \"Radio Galaxy Zoo: EMU\" έχει ως κύριο στόχο"
+
+#: quizzes/quiz35/Quiz35.tscn
+msgid "QUIZ35_ANS1"
+msgstr "να βοηθήσει τους επιστήμονες να ταξινομήσουν ραδιοπηγές"
+
+#: quizzes/quiz35/Quiz35.tscn
+msgid "QUIZ35_ANS3"
+msgstr "να συγκρίνει παρατηρήσεις από διαφορετικά οπτικά τηλεσκόπια"
+
+#: quizzes/quiz35/Quiz35.tscn
+msgid "QUIZ35_ANS4"
+msgstr "να μελετήσει τη δραστηριότητα του Ήλιου, όπως τις ηλιακές κηλίδες και τις εκλάμψεις"
+
+#: quizzes/quiz35/Quiz35.tscn
+msgid "QUIZ35_ANS2"
+msgstr "να χαρτογραφήσει τους πλανήτες του ηλιακού συστήματος"
+
+#: quizzes/quiz36/Quiz36.tscn
+msgid "QUIZ36_QSTN"
+msgstr "Στο πρόγραμμα επιστήμης των πολιτών \"Radio Galaxy Zoo: EMU\", ποιοι μπορούν να συμμετέχουν;"
+
+#: quizzes/quiz36/Quiz36.tscn
+msgid "QUIZ36_ANS1"
+msgstr "ο καθένας, χωρίς να απαιτείται ειδικό επιστημονικό υπόβαθρο"
+
+#: quizzes/quiz36/Quiz36.tscn
+msgid "QUIZ36_ANS2"
+msgstr "επιλεγμένα άτομα μετά από αυστηρές διαδικασίες αξιολόγησης"
+
+#: quizzes/quiz36/Quiz36.tscn
+msgid "QUIZ36_ANS3"
+msgstr "μόνο πτυχιούχοι φυσικών επιστημών"
+
+#: quizzes/quiz37/Quiz37.tscn
+msgid "QUIZ37_QSTN"
+msgstr "Ποιοι από τους παρακάτω είναι βασικοί στόχοι του εκπαιδευτικού προγράμματος \"RADIIO\";"
+
+#: quizzes/quiz37/Quiz37.tscn
+msgid "QUIZ37_ANS1"
+msgstr "να εκπαιδεύσει επαγγελματίες αστροφυσικούς στη ραδιοαστρονομία"
+
+#: quizzes/quiz37/Quiz37.tscn
+msgid "QUIZ37_ANS3"
+msgstr "η μείωση του χάσματος μεταξύ επιστημονικής γνώσης και κοινωνικής αντίληψης"
+
+#: quizzes/quiz37/Quiz37.tscn
+msgid "QUIZ37_ANS4"
+msgstr "η αντικατάσταση της σχολικής εκπαίδευσης με εξειδικευμένη ακαδημαϊκή έρευνα"
+
+#: quizzes/quiz37/Quiz37.tscn
+msgid "QUIZ37_ANS2"
+msgstr "η συνεργασία μεταξύ μαθητών και εκπαιδευτικών από διαφορετικές χώρες και πολιτισμούς"
+
+#: quizzes/quiz38/Quiz38.tscn
+msgid "QUIZ38_QSTN1"
+msgstr "Το EMU αποτελεί μια χαρτογράφηση μεγάλης κλίμακας του νότιου ημισφαιρίου του ουρανού, βασισμένη σε δεδομένα από το ραδιοτηλεσκόπιο ASKAP στην Αυστραλία."
+
+#: quizzes/quiz38/Quiz38.tscn
+msgid "QUIZ38_QSTN2"
+msgstr "Η εικόνα αποτυπώνει την πρόοδο της χαρτογράφησης έως τον Ιούνιο του 2024."
+
+#: quizzes/quiz38/Quiz38.tscn
+msgid "QUIZ38_QSTN3"
+msgstr "Προσπάθησε να τη σχηματίσεις σωστά με όσο το δυνατόν λιγότερες κινήσεις."
+
+#: ui/Energy_gauge.tscn
+msgid "UI_ENERGY"
+msgstr "ενέργεια"
+
+#: ui/Energy_gauge.tscn
+msgid "UI_PJ"
+msgstr "(PetaJoule)"
+
+#: ui/ui.gd
+msgid "eng"
+msgstr ""
+
+#: ui/ui.gd ui/UI.tscn
+msgid "ελλ"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "Qz 01-10"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz01"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz02"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz03"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz04"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz05"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz06"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz07"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz08"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz09"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz10"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "Qz 11-20"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz11"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz12"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz13"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz14"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz15"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz16"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz17"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz18"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz19"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz20"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "Qz 21-30"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz21"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz22"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz23"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz24"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz25"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz26"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz27"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz28"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz29"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz30"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "Qz 31-40"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz31"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz32"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz33"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz34"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz35"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz36"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz37"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz38"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz39"
+msgstr ""
+
+#: ui/UI.tscn
+msgid "quiz40"
+msgstr ""

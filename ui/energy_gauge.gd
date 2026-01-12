@@ -27,8 +27,6 @@ func _update_scaler():
 	_scaler.scale = Vector2(s, s)
 	_scaler.position = Vector2((parent_size.x - base_size.x * _scaler.scale.x) * 0.5, 0.0)
 
-
-
 #ζωγραφια του gauge αναλογα με την τιμη που πρεπει να απεικονιζει
 func draw_gauge(value: float) -> void:
 	var t: float = value / GameState.MAX_ENERGY

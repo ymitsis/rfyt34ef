@@ -30,7 +30,7 @@ offset_bottom = 400.0
 size_flags_horizontal = 3
 theme_override_colors/default_color = Color(0.078431375, 0.078431375, 0.078431375, 1)
 theme_override_font_sizes/normal_font_size = 24
-text = "Η τεχνική της συμβολομετρίας χρησιμοποιείται στα ραδιοτηλεσκόπια ενιαίου κατόπτρου."
+text = "QUIZ16_QSTN"
 horizontal_alignment = 1
 vertical_alignment = 1
 justification_flags = 35
@@ -44,7 +44,7 @@ offset_bottom = 480.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
 _energy_if_selected = 0
-_ans_text = "σωστό"
+_ans_text = "QUIZ16_ANS1"
 
 [node name="ans_box2" parent="Container" index="7" instance=ExtResource("4_n1ihu")]
 layout_mode = 0
@@ -54,5 +54,5 @@ offset_right = 820.0
 offset_bottom = 480.0
 size_flags_horizontal = 0
 button_mask = 5
-_energy_if_selected = 40
-_ans_text = "λάθος"
+_energy_if_selected = 60
+_ans_text = "QUIZ16_ANS2"

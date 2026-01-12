@@ -19,12 +19,16 @@ func init():
 	_player.init()
 	for t in _tiles: t.init()
 	update_tiles_state()
+	GameState.energy_changed.connect(_on_energy_changed)
 
 
 # Συνδέει τα click signals όλων των tiles
 func _ready():
 	for t in _tiles: t.clicked.connect(_on_tile_clicked)
 	GameState.zoom_changed.connect(_on_zoom_changed)
+
+func _on_energy_changed(_value):
+	update_tiles_state()
 
 # κάνει zoom την κάμερα του board με smooth τροπο
 func _on_zoom_changed(value):
@@ -37,11 +41,9 @@ func _on_zoom_changed(value):
 # Χειρίζεται click σε clickabe tile και ξεκινά τη μετακίνηση του παίκτη
 func _on_tile_clicked(tile: Tile):
 	if _player.is_moving: return
-	GameState.energy += tile.move_energy
 	_active_tile = tile
-	update_tiles_state()
+	GameState.energy += tile.move_energy
 	_camera.global_position = _active_tile.global_position
-	#_camera.offset = Vector2(get_viewport_rect().size.x * 0.1, 0.0)
 	_player.new_target = _active_tile.global_position
 
 # Υπολογίζει το ενεργειακό κόστος μετάβασης μεταξύ δύο τύπων tiles

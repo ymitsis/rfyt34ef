@@ -26,9 +26,10 @@ offset_bottom = 12.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(1, 1, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.39215687)
-theme_override_font_sizes/font_size = 32
-text = "λαμ"
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.5882353)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 50
+text = "xx"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -37,7 +38,6 @@ z_index = 1
 closed = true
 width = 3.0
 default_color = Color(1, 1, 0, 0.3019608)
-sharp_limit = 1.0
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

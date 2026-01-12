@@ -26,7 +26,7 @@ offset_bottom = 95.0
 size_flags_horizontal = 3
 theme_override_colors/default_color = Color(0.078431375, 0.078431375, 0.078431375, 1)
 theme_override_font_sizes/normal_font_size = 24
-text = "Οι παρακάτω εικόνες προέρχονται από το τηλεσκόπιο Hubble. Επέλεξε αυτές που απεικονίζουν γαλαξίες."
+text = "QUIZ08_QSTN1"
 horizontal_alignment = 3
 justification_flags = 35
 
@@ -39,8 +39,7 @@ offset_bottom = 285.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
 texture_normal = ExtResource("4_l3png")
-_energy_if_selected = -7
-_ans_text = ""
+_energy_if_selected = -10
 _is_txt = false
 
 [node name="ans_box2" parent="Container" index="6" instance=ExtResource("3_dui87")]
@@ -51,8 +50,7 @@ offset_right = 423.0
 offset_bottom = 285.0
 size_flags_horizontal = 0
 texture_normal = ExtResource("5_3wn1f")
-_energy_if_selected = -7
-_ans_text = ""
+_energy_if_selected = -10
 _is_txt = false
 
 [node name="ans_box3" parent="Container" index="7" instance=ExtResource("3_dui87")]
@@ -63,8 +61,6 @@ offset_right = 640.0
 offset_bottom = 285.0
 size_flags_horizontal = 0
 texture_normal = ExtResource("6_l6lg1")
-_energy_if_selected = 13
-_ans_text = ""
 _is_txt = false
 
 [node name="ans_box4" parent="Container" index="8" instance=ExtResource("3_dui87")]
@@ -75,8 +71,6 @@ offset_right = 857.0
 offset_bottom = 285.0
 size_flags_horizontal = 0
 texture_normal = ExtResource("7_s8y7w")
-_energy_if_selected = 13
-_ans_text = ""
 _is_txt = false
 
 [node name="ans_box5" parent="Container" index="9" instance=ExtResource("3_dui87")]
@@ -87,8 +81,7 @@ offset_right = 1074.0
 offset_bottom = 285.0
 size_flags_horizontal = 0
 texture_normal = ExtResource("8_8h7mq")
-_energy_if_selected = -7
-_ans_text = ""
+_energy_if_selected = -10
 _is_txt = false
 
 [node name="ans_box6" parent="Container" index="10" instance=ExtResource("3_dui87")]
@@ -99,8 +92,7 @@ offset_right = 314.0
 offset_bottom = 490.0
 size_flags_horizontal = 0
 texture_normal = ExtResource("9_hnp3o")
-_energy_if_selected = -7
-_ans_text = ""
+_energy_if_selected = -10
 _is_txt = false
 
 [node name="ans_box7" parent="Container" index="11" instance=ExtResource("3_dui87")]
@@ -111,8 +103,6 @@ offset_right = 531.0
 offset_bottom = 490.0
 size_flags_horizontal = 0
 texture_normal = ExtResource("10_2qhn6")
-_energy_if_selected = 13
-_ans_text = ""
 _is_txt = false
 
 [node name="ans_box8" parent="Container" index="12" instance=ExtResource("3_dui87")]
@@ -124,8 +114,7 @@ offset_right = 748.0
 offset_bottom = 490.0
 size_flags_horizontal = 0
 texture_normal = ExtResource("11_i5fg6")
-_energy_if_selected = -7
-_ans_text = ""
+_energy_if_selected = -10
 _is_txt = false
 
 [node name="ans_box9" parent="Container" index="13" instance=ExtResource("3_dui87")]
@@ -136,6 +125,5 @@ offset_right = 965.0
 offset_bottom = 490.0
 size_flags_horizontal = 0
 texture_normal = ExtResource("12_btbjs")
-_energy_if_selected = -7
-_ans_text = ""
+_energy_if_selected = -10
 _is_txt = false

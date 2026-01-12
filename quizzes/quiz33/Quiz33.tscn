@@ -30,7 +30,7 @@ offset_bottom = 275.0
 size_flags_horizontal = 3
 theme_override_colors/default_color = Color(0.078431375, 0.078431375, 0.078431375, 1)
 theme_override_font_sizes/normal_font_size = 24
-text = "Γιατί, εκτός από επίγεια, κατασκευάζουμε και διαστημικά τηλεσκόπια, παρότι το κόστος τους είναι 10 ή και 100 φορές μεγαλύτερο;"
+text = "QUIZ33_QSTN"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -42,7 +42,8 @@ offset_right = 525.0
 offset_bottom = 395.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
-_ans_text = "η ατμόσφαιρα της Γης αλλοιώνει τις αστρονομικές παρατηρήσεις"
+_energy_if_selected = 30
+_ans_text = "QUIZ33_ANS1"
 
 [node name="ans_box2" parent="Container" index="7" instance=ExtResource("4_kla6b")]
 layout_mode = 0
@@ -52,8 +53,8 @@ offset_right = 525.0
 offset_bottom = 510.0
 size_flags_horizontal = 0
 button_mask = 5
-_energy_if_selected = -20
-_ans_text = "η βαρυτική έλξη της Γης εμποδίζει τη σωστή λειτουργία των τηλεσκοπίων"
+_energy_if_selected = -30
+_ans_text = "QUIZ33_ANS3"
 
 [node name="ans_box3" parent="Container" index="8" instance=ExtResource("4_kla6b")]
 layout_mode = 0
@@ -62,8 +63,8 @@ offset_top = 430.0
 offset_right = 1075.0
 offset_bottom = 510.0
 size_flags_horizontal = 0
-_energy_if_selected = -20
-_ans_text = "στο Διάστημα το φως διαδίδεται με μεγαλύτερη ταχύτητα"
+_energy_if_selected = -30
+_ans_text = "QUIZ33_ANS4"
 
 [node name="ans_box4" parent="Container" index="9" instance=ExtResource("4_kla6b")]
 layout_mode = 0
@@ -72,4 +73,5 @@ offset_top = 315.0
 offset_right = 1075.0
 offset_bottom = 395.0
 size_flags_horizontal = 0
-_ans_text = "η φωτορύπανση δυσκολεύει τις αστρονομικές παρατηρήσεις από τη Γη"
+_energy_if_selected = 30
+_ans_text = "QUIZ33_ANS2"
