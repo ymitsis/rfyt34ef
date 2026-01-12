@@ -232,9 +232,6 @@ texture_pressed = ExtResource("9_evet4")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="BackBufferCopy_B" type="BackBufferCopy" parent="."]
-copy_mode = 2
-
 [node name="MenuButton1" type="MenuButton" parent="."]
 offset_right = 110.0
 offset_bottom = 42.0

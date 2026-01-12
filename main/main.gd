@@ -1,7 +1,7 @@
 extends Node2D
 
 func init():
-	GameState.energy = 100
+	GameState.energy = 80
 	TranslationServer.set_locale("en")
 	$Board.init()
 
