@@ -88,21 +88,38 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.8\n"
 
-#: board/Tile.tscn quizzes/challenge/challenge.tscn quizzes/common/ans_box.tscn quizzes/common/Base_quiz.tscn quizzes/common/draggable_control.tscn ui/Energy_gauge.tscn
-msgid "xx"
-msgstr ""
 
-#: quizzes/challenge/challenge.gd
+#: challenge/challenge.tscn
+msgid "CHALLENGE_TITLE0"
+msgstr "δοκιμασία"
+
+#: challenge/challenge.gd
 msgid "CHALLENGE_OPTION1"
 msgstr "Αλλάζεις πορεία για να το παρακάμψεις (κόστος: ⚡%dPJ)"
 
-#: quizzes/challenge/challenge.tscn
+#: challenge/challenge.tscn
 msgid "CHALLENGE_TITLE"
 msgstr "Μπροστά σου απλώνεται ένα τεράστιο νέφος διαστημικής σκόνης. Διάλεξε:"
 
-#: quizzes/challenge/challenge.tscn
+#: challenge/challenge.tscn
 msgid "CHALLENGE_OPTION2"
 msgstr "Παραμένεις στην πορεία σου και επιχειρείς ελιγμούς αποφυγής. Το κόστος θα εξαρτηθεί από το πόσο καλά θα τα καταφέρεις"
+
+#: challenge/minigame.tscn
+msgid "CHALLENGE_END0"
+msgstr "τέλος δοκιμασίας"
+
+#: challenge/minigame.tscn
+msgid "CHALLENGE_END1"
+msgstr "Η πορεία μπροστά σου είναι πλέον ασφαλής και μπορείς να συνεχίσεις το ταξίδι χωρίς εμπόδια"
+
+#: challenge/minigame.tscn
+msgid "CHALLENGE_END2"
+msgstr "Το πέρασμα δεν ήταν ανώδυνο· έχασες %dPJ ενέργειας"
+
+#: challenge/minigame.tscn
+msgid "CHALLENGE_END3"
+msgstr "συνέχεια"
 
 #: quizzes/common/base_quiz.gd
 msgid "QUIZ_MAX_REWARD"
@@ -115,10 +132,6 @@ msgstr "Δεν κέρδισες ενέργεια αυτή τη φορά…"
 #: quizzes/common/base_quiz.gd
 msgid "QUIZ_REWARD"
 msgstr "Kέρδισες %dPJ ενέργειας (μέγιστο %dPJ)"
-
-#: quizzes/common/base_quiz.gd
-msgid "QUIZ_SUBMIT_TOOLTIP"
-msgstr "επέλεξε πρώτα κάτι"
 
 #: quizzes/common/Base_quiz.tscn
 msgid "QUIZ_SUBMIT"
@@ -271,7 +284,7 @@ msgid "QUIZ07_QSTN6"
 msgstr "Οι παραπάνω εικόνες προέρχονται από τα ραδιοτηλεσκόπια ALMA και EHT. Τοποθέτησε κάθε όνομα της δεξιάς στήλης στη σωστή εικόνα."
 
 #: quizzes/quiz08/Quiz08.tscn
-msgid "QUIZ08_QSTN1"
+msgid "QUIZ08_QSTN"
 msgstr "Οι παρακάτω εικόνες προέρχονται από το τηλεσκόπιο Hubble. Επέλεξε αυτές που απεικονίζουν γαλαξίες."
 
 #: quizzes/quiz09/Quiz09.tscn
@@ -315,7 +328,7 @@ msgid "QUIZ10_QSTN3"
 msgstr "Τακτοποίησε τις παραπάνω εικόνες ώστε η επάνω σειρά να έχει μόνο οπτικά τηλεσκόπια και η κάτω μόνο μη οπτικά."
 
 #: quizzes/quiz11/Quiz11.tscn
-msgid "QUIZ11_QSTN1"
+msgid "QUIZ11_QSTN"
 msgstr "Από τις παρακάτω εικόνες του Ήλιου, μόνο η μία προέρχεται από οπτικό τηλεσκόπιο. Επέλεξε τις εικόνες που δημιουργήθηκαν με τη βοήθεια μη οπτικών τηλεσκοπίων."
 
 #: quizzes/quiz12/Quiz12.tscn
@@ -430,14 +443,6 @@ msgstr "ένας υπερκαινοφανής αστέρας"
 msgid "QUIZ16_QSTN"
 msgstr "Η τεχνική της συμβολομετρίας χρησιμοποιείται στα ραδιοτηλεσκόπια ενιαίου κατόπτρου."
 
-#: quizzes/quiz16/Quiz16.tscn
-msgid "QUIZ16_ANS1"
-msgstr "σωστό"
-
-#: quizzes/quiz16/Quiz16.tscn
-msgid "QUIZ16_ANS2"
-msgstr "λάθος"
-
 #: quizzes/quiz17/Quiz17.tscn
 msgid "QUIZ17_QSTN"
 msgstr "Το ραδιοτηλεσκόπιο ενιαίου κατόπτρου με τη μεγαλύτερη διάμετρο είναι το FAST στην Κίνα. Ποια είναι η διάμετρος του κατόπτρου του;"
@@ -457,14 +462,6 @@ msgstr "5000m"
 #: quizzes/quiz18/Quiz18.tscn
 msgid "QUIZ18_QSTN"
 msgstr "Σε ένα συμβολομετρικό ραδιοτηλεσκόπιο πολλαπλών κεραιών, καθεμία από αυτές πρέπει να είναι στραμμένη σε διαφορετική κατεύθυνση, ώστε να επιτυγχάνεται ταυτόχρονα όσο το δυνατόν ευρύτερη κάλυψη του ουρανού."
-
-#: quizzes/quiz18/Quiz18.tscn
-msgid "QUIZ18_ANS1"
-msgstr "σωστό"
-
-#: quizzes/quiz18/Quiz18.tscn
-msgid "QUIZ18_ANS2"
-msgstr "λάθος"
 
 #: quizzes/quiz19/Quiz19.tscn
 msgid "QUIZ19_QSTN"
@@ -490,25 +487,9 @@ msgstr "VLA (ΗΠΑ)"
 msgid "QUIZ20_QSTN"
 msgstr "Οι αστρογόνοι γαλαξίες έχουν στο κέντρο τους μια υπερμεγέθη μαύρη τρύπα."
 
-#: quizzes/quiz20/Quiz20.tscn
-msgid "QUIZ20_ANS1"
-msgstr "σωστό"
-
-#: quizzes/quiz20/Quiz20.tscn
-msgid "QUIZ20_ANS2"
-msgstr "λάθος"
-
 #: quizzes/quiz21/Quiz21.tscn
 msgid "QUIZ21_QSTN"
 msgstr "Ένας γαλαξίας ονομάζεται \"ενεργός\" όταν έχει υψηλό ρυθμό σχηματισμού άστρων."
-
-#: quizzes/quiz21/Quiz21.tscn
-msgid "QUIZ21_ANS1"
-msgstr "σωστό"
-
-#: quizzes/quiz21/Quiz21.tscn
-msgid "QUIZ21_ANS2"
-msgstr "λάθος"
 
 #: quizzes/quiz22/Quiz22.tscn
 msgid "QUIZ22_QSTN"
@@ -570,25 +551,9 @@ msgstr "ένα νεφέλωμα"
 msgid "QUIZ25_QSTN"
 msgstr "Όλα τα άστρα έχουν σχεδόν το ίδιο μέγεθος και χρώμα."
 
-#: quizzes/quiz25/Quiz25.tscn
-msgid "QUIZ25_ANS1"
-msgstr "σωστό"
-
-#: quizzes/quiz25/Quiz25.tscn
-msgid "QUIZ25_ANS2"
-msgstr "λάθος"
-
 #: quizzes/quiz26/Quiz26.tscn
 msgid "QUIZ26_QSTN"
 msgstr "Το ανθρώπινο μάτι είναι ένα εξαιρετικό όργανο παρατήρησης. Έχει μεγάλη ευαισθησία και μπορεί να αντιληφθεί το σύνολο του ηλεκτρομαγνητικού φάσματος (φωτός)."
-
-#: quizzes/quiz26/Quiz26.tscn
-msgid "QUIZ26_ANS1"
-msgstr "σωστό"
-
-#: quizzes/quiz26/Quiz26.tscn
-msgid "QUIZ26_ANS2"
-msgstr "λάθος"
 
 #: quizzes/quiz27/Quiz27.tscn
 msgid "QUIZ27_QSTN"
@@ -649,18 +614,6 @@ msgstr "εκπέμπεται από πολύ θερμά αστέρια"
 #: quizzes/quiz30/Quiz30.tscn
 msgid "QUIZ30_QSTN"
 msgstr "Παρακάτω μπορείς να ακούσεις τρία ηχητικά σήματα που προέκυψαν από παρατηρήσεις πάλσαρ με ραδιοτηλεσκόπια. Επέλεξε το πάλσαρ που περιστρέφεται πιο γρήγορα."
-
-#: quizzes/quiz30/Quiz30.tscn
-msgid "QUIZ30_ANS1"
-msgstr "PSR B0329+54"
-
-#: quizzes/quiz30/Quiz30.tscn
-msgid "QUIZ30_ANS2"
-msgstr "PSR B0833-45"
-
-#: quizzes/quiz30/Quiz30.tscn
-msgid "QUIZ30_ANS3"
-msgstr "PSR B0531-21"
 
 #: quizzes/quiz31/Quiz31.tscn
 msgid "QUIZ31_QSTN"
@@ -816,6 +769,12 @@ msgstr "Η εικόνα αποτυπώνει την πρόοδο της χαρτ
 msgid "QUIZ38_QSTN3"
 msgstr "Προσπάθησε να τη σχηματίσεις σωστά με όσο το δυνατόν λιγότερες κινήσεις."
 
+msgid "ANS_TRUE"
+msgstr "σωστό"
+
+msgid "ANS_FALSE"
+msgstr "λάθος"
+
 #: ui/Energy_gauge.tscn
 msgid "UI_ENERGY"
 msgstr "ενέργεια"
@@ -824,186 +783,46 @@ msgstr "ενέργεια"
 msgid "UI_PJ"
 msgstr "(PetaJoule)"
 
-#: ui/ui.gd
-msgid "eng"
+#: ui/Escape_btn.tscn
+msgid "UI_ESCAPE"
 msgstr ""
+"ΩΘΗΣΗ\n"
+"ΔΙΑΦΥΓΗΣ"
 
-#: ui/ui.gd ui/UI.tscn
-msgid "ελλ"
+#: intro/intro.tscn
+msgid "INTRO_STORY"
 msgstr ""
+"Στο κέντρο του γαλαξία, η υπερμεγέθης μαύρη τρύπα γίνεται ολοένα και πιο ασταθής. Η κατάρρευση της δομής του είναι πια θέμα χρόνου\n"
+"Η ενέργειά σου δεν ειναι αρκετή για να διαφύγεις. Κάθε κίνηση κοστίζει\n"
+"Σε κάθε γαλαξιακό τομέα σε περιμένει μια δοκιμασία. Η σωστή απόφαση είναι καύσιμο\n"
+"Φτάσε στην περιφέρεια του γαλαξία και κάνε το μεγάλο άλμα, πριν το σκοτάδι σε τραβήξει πίσω\n"
 
-#: ui/UI.tscn
-msgid "Qz 01-10"
-msgstr ""
+#: intro/intro.tscn
+msgid "INTRO_START"
+msgstr "ΕΝΑΡΞΗ"
 
-#: ui/UI.tscn
-msgid "quiz01"
-msgstr ""
+#: intro/intro.tscn
+msgid "INFO_TITLE"
+msgstr "πληροφορίες"
 
-#: ui/UI.tscn
-msgid "quiz02"
+#: intro/intro.tscn
+msgid "INFO_MAIN"
 msgstr ""
+"Το παρόν παιχνίδι δημιουργήθηκε στο πλαίσιο του διεθνούς εκπαιδευτικού προγράμματος RADIIO (2025–2026), το οποίο συντονίζει το ΙΑΑΔΕΤ/ΕΑΑ\n"
+"Σχεδιάστηκε και υλοποιήθηκε από ομάδα μαθητών και εκπαιδευτικών του Γυμνασίου & Λ.Τ. Φυτειών, σε συνεργασία με το Shanghai North America International School για τη μετάφρασή του στα Κινεζικά\n"
+"Για την ανάπτυξή του χρησιμοποιήθηκε η μηχανή παιχνιδιών Godot"
 
-#: ui/UI.tscn
-msgid "quiz03"
-msgstr ""
+#: final/final_win.tscn
+msgid "FINAL_WIN"
+msgstr "Καθώς ο γαλαξίας καταρρέει πίσω σου,\n"
+"μπροστά σου ανοίγεται η ελευθερία... και το άγνωστο"
 
-#: ui/UI.tscn
-msgid "quiz04"
-msgstr ""
+#: final/final_lose.tscn
+msgid "FINAL_LOSE"
+msgstr "Η ενέργεια εξαντλήθηκε\n"
+"Ο χωροχρόνος γύρω σου καταρρέει\n"
+"Η μαύρη τρύπα σε κάνει δικό της"
 
-#: ui/UI.tscn
-msgid "quiz05"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz06"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz07"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz08"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz09"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz10"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "Qz 11-20"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz11"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz12"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz13"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz14"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz15"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz16"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz17"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz18"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz19"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz20"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "Qz 21-30"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz21"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz22"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz23"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz24"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz25"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz26"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz27"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz28"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz29"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz30"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "Qz 31-40"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz31"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz32"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz33"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz34"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz35"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz36"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz37"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz38"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz39"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz40"
-msgstr ""
+#: final/final_win.tscn & final/final_lose.tscn
+msgid "FINAL_RESTART"
+msgstr "ΕΠΑΝΕΚΚΙΝΗΣΗ"

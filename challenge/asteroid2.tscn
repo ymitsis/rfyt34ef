@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://5ncy0mvqqgef"]
+
+[ext_resource type="Script" uid="uid://fupwhgqu2bmo" path="res://challenge/scripts/asteroid.gd" id="1_sfp6j"]
+[ext_resource type="Shader" uid="uid://6wibpqcmqwop" path="res://challenge/scripts/asteroid.gdshader" id="2_dhlk6"]
+[ext_resource type="Texture2D" uid="uid://bjsdrsff23m2n" path="res://challenge/assets/asteroid2.png" id="3_sfp6j"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_p0ukn"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mc61r"]
+shader = ExtResource("2_dhlk6")
+shader_parameter/shadow_alpha = 1.0
+shader_parameter/transition = 0.2000000095
+shader_parameter/boundary = 0.30000001425
+shader_parameter/light_dir = Vector2(0.6, -1)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p0ukn"]
+radius = 24.999998
+height = 100.0
+
+[node name="Asteroin_rigid" type="RigidBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_p0ukn")
+gravity_scale = 0.0
+linear_damp_mode = 1
+angular_damp_mode = 1
+script = ExtResource("1_sfp6j")
+
+[node name="Texture" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_mc61r")
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_sfp6j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.1920929e-07, -4.7683716e-07)
+scale = Vector2(0.2, 0.2)
+skew = -0.143117
+shape = SubResource("CapsuleShape2D_p0ukn")

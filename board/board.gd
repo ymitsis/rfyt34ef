@@ -14,6 +14,7 @@ var _zoom_tween: Tween
 # Αρχικοποιεί το board: ορίζει αρχικό tile, παίκτη, κάμερα και tiles
 func init():
 	_active_tile = get_node("A01")
+	GameState.active_tile_type = "A"
 	_camera.global_position = _active_tile.global_position
 	_player.global_position = _active_tile.global_position
 	_player.init()
@@ -43,6 +44,7 @@ func _on_tile_clicked(tile: Tile):
 	if _player.is_moving: return
 	_active_tile = tile
 	GameState.energy += tile.move_energy
+	GameState.active_tile_type = tile.tile_type
 	_camera.global_position = _active_tile.global_position
 	_player.new_target = _active_tile.global_position
 
@@ -59,10 +61,15 @@ func get_move_energy(from_type: String, to_type: String) -> int:
 
 # Ενημερώνει την κατάσταση όλων των tiles (active, clickable, κόστος, visuals)
 func update_tiles_state():
+	var no_clickable_tiles = true
 	for t in _tiles:
 		t.is_clickable = false; t.move_energy = 0;
 		t.is_active = (t == _active_tile)
 		if t in _active_tile.neighbors:
 			t.move_energy = get_move_energy(_active_tile.tile_type, t.tile_type)
 			t.is_clickable = (GameState.energy + t.move_energy >= 0)
+			if t.is_clickable: no_clickable_tiles = false
 		t.update_visual()
+	if no_clickable_tiles:
+		await get_tree().create_timer(2.0).timeout
+		get_tree().change_scene_to_file("res://final/final_lose.tscn")

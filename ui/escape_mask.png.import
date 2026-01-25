@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://byictnl4kho4k"
+path="res://.godot/imported/escape_mask.png-c9c5881b6e526e16f1d9cedee36ba18f.res"
+
+[deps]
+
+source_file="res://ui/escape_mask.png"
+dest_files=["res://.godot/imported/escape_mask.png-c9c5881b6e526e16f1d9cedee36ba18f.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

@@ -44,7 +44,7 @@ offset_bottom = 500.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
 _energy_if_selected = 0
-_ans_text = "QUIZ18_ANS1"
+_ans_text = "ANS_TRUE"
 
 [node name="ans_box2" parent="Container" index="7" instance=ExtResource("4_1jrj1")]
 layout_mode = 0
@@ -55,4 +55,4 @@ offset_bottom = 500.0
 size_flags_horizontal = 0
 button_mask = 5
 _energy_if_selected = 60
-_ans_text = "QUIZ18_ANS2"
+_ans_text = "ANS_FALSE"

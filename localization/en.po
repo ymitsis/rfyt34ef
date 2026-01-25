@@ -88,21 +88,38 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.8\n"
 
-#: board/Tile.tscn quizzes/challenge/challenge.tscn quizzes/common/ans_box.tscn quizzes/common/Base_quiz.tscn quizzes/common/draggable_control.tscn ui/Energy_gauge.tscn
-msgid "xx"
-msgstr ""
 
-#: quizzes/challenge/challenge.gd
+#: challenge/challenge.tscn
+msgid "CHALLENGE_TITLE0"
+msgstr "challenge"
+
+#: challenge/challenge.gd
 msgid "CHALLENGE_OPTION1"
 msgstr "Change course to bypass it (Cost: ⚡%dPJ)"
 
-#: quizzes/challenge/challenge.tscn
+#: challenge/challenge.tscn
 msgid "CHALLENGE_TITLE"
 msgstr "A massive cloud of space dust stretches across your path. Choose:"
 
-#: quizzes/challenge/challenge.tscn
+#: challenge/challenge.tscn
 msgid "CHALLENGE_OPTION2"
 msgstr "Stay on course and attempt evasive maneuvers. The final cost will depend on how well you handle the maneuvering"
+
+#: challenge/minigame.tscn
+msgid "CHALLENGE_END0"
+msgstr "challenge completed"
+
+#: challenge/minigame.tscn
+msgid "CHALLENGE_END1"
+msgstr "The path ahead is clear! You can now continue your journey"
+
+#: challenge/minigame.tscn
+msgid "CHALLENGE_END2"
+msgstr "However, the crossing cost you %dPJ of energy"
+
+#: challenge/minigame.tscn
+msgid "CHALLENGE_END3"
+msgstr "continue"
 
 #: quizzes/common/base_quiz.gd
 msgid "QUIZ_MAX_REWARD"
@@ -116,13 +133,9 @@ msgstr "No energy gained this time…"
 msgid "QUIZ_REWARD"
 msgstr "You gained %dPJ of energy (max %dPJ)"
 
-#: quizzes/common/base_quiz.gd
-msgid "QUIZ_SUBMIT_TOOLTIP"
-msgstr "make a selection first"
-
 #: quizzes/common/Base_quiz.tscn
 msgid "QUIZ_SUBMIT"
-msgstr "verify"
+msgstr "check"
 
 #: quizzes/common/Base_quiz.tscn
 msgid "QUIZ_CONTINUE"
@@ -271,7 +284,7 @@ msgid "QUIZ07_QSTN6"
 msgstr "The images above come from the ALMA and EHT radio telescopes. Place each name from the right column onto the correct image."
 
 #: quizzes/quiz08/Quiz08.tscn
-msgid "QUIZ08_QSTN1"
+msgid "QUIZ08_QSTN"
 msgstr "The images below come from the Hubble Space Telescope. Select the ones that depict galaxies."
 
 #: quizzes/quiz09/Quiz09.tscn
@@ -315,7 +328,7 @@ msgid "QUIZ10_QSTN3"
 msgstr "Arrange the images so that the top row contains only optical telescopes and the bottom row only non-optical telescopes."
 
 #: quizzes/quiz11/Quiz11.tscn
-msgid "QUIZ11_QSTN1"
+msgid "QUIZ11_QSTN"
 msgstr "Of the following images of the Sun, only one was captured using an optical telescope. Select the images that were created using non-optical telescopes."
 
 #: quizzes/quiz12/Quiz12.tscn
@@ -430,14 +443,6 @@ msgstr "a supernova"
 msgid "QUIZ16_QSTN"
 msgstr "Interferometry is used in single-dish radio telescopes."
 
-#: quizzes/quiz16/Quiz16.tscn
-msgid "QUIZ16_ANS1"
-msgstr "true"
-
-#: quizzes/quiz16/Quiz16.tscn
-msgid "QUIZ16_ANS2"
-msgstr "false"
-
 #: quizzes/quiz17/Quiz17.tscn
 msgid "QUIZ17_QSTN"
 msgstr "The single-dish radio telescope with the largest diameter is FAST in China. What is the diameter of its dish?"
@@ -457,14 +462,6 @@ msgstr "5000m"
 #: quizzes/quiz18/Quiz18.tscn
 msgid "QUIZ18_QSTN"
 msgstr "In a multi-antenna interferometric radio telescope, each antenna must point in a different direction in order to achieve the widest possible simultaneous coverage of the sky."
-
-#: quizzes/quiz18/Quiz18.tscn
-msgid "QUIZ18_ANS1"
-msgstr "true"
-
-#: quizzes/quiz18/Quiz18.tscn
-msgid "QUIZ18_ANS2"
-msgstr "false"
 
 #: quizzes/quiz19/Quiz19.tscn
 msgid "QUIZ19_QSTN"
@@ -490,25 +487,9 @@ msgstr "VLA (USA)"
 msgid "QUIZ20_QSTN"
 msgstr "Star-forming galaxies have a supermassive black hole at their center."
 
-#: quizzes/quiz20/Quiz20.tscn
-msgid "QUIZ20_ANS1"
-msgstr "true"
-
-#: quizzes/quiz20/Quiz20.tscn
-msgid "QUIZ20_ANS2"
-msgstr "false"
-
 #: quizzes/quiz21/Quiz21.tscn
 msgid "QUIZ21_QSTN"
 msgstr "A galaxy is called \"active\" when it has a high rate of star formation."
-
-#: quizzes/quiz21/Quiz21.tscn
-msgid "QUIZ21_ANS1"
-msgstr "true"
-
-#: quizzes/quiz21/Quiz21.tscn
-msgid "QUIZ21_ANS2"
-msgstr "false"
 
 #: quizzes/quiz22/Quiz22.tscn
 msgid "QUIZ22_QSTN"
@@ -570,25 +551,9 @@ msgstr "a nebula"
 msgid "QUIZ25_QSTN"
 msgstr "All stars have nearly the same size and color."
 
-#: quizzes/quiz25/Quiz25.tscn
-msgid "QUIZ25_ANS1"
-msgstr "true"
-
-#: quizzes/quiz25/Quiz25.tscn
-msgid "QUIZ25_ANS2"
-msgstr "true"
-
 #: quizzes/quiz26/Quiz26.tscn
 msgid "QUIZ26_QSTN"
 msgstr "The human eye is an excellent observational instrument. It has high sensitivity and can detect the entire electromagnetic spectrum (light)."
-
-#: quizzes/quiz26/Quiz26.tscn
-msgid "QUIZ26_ANS1"
-msgstr "true"
-
-#: quizzes/quiz26/Quiz26.tscn
-msgid "QUIZ26_ANS2"
-msgstr "false"
 
 #: quizzes/quiz27/Quiz27.tscn
 msgid "QUIZ27_QSTN"
@@ -649,18 +614,6 @@ msgstr "is emitted by very hot stars"
 #: quizzes/quiz30/Quiz30.tscn
 msgid "QUIZ30_QSTN"
 msgstr "Below you can listen to three audio signals produced from radio telescope observations of pulsars. Select the pulsar that is rotating the fastest."
-
-#: quizzes/quiz30/Quiz30.tscn
-msgid "QUIZ30_ANS1"
-msgstr "PSR B0329+54"
-
-#: quizzes/quiz30/Quiz30.tscn
-msgid "QUIZ30_ANS2"
-msgstr "PSR B0833-45"
-
-#: quizzes/quiz30/Quiz30.tscn
-msgid "QUIZ30_ANS3"
-msgstr "PSR B0531-21"
 
 #: quizzes/quiz31/Quiz31.tscn
 msgid "QUIZ31_QSTN"
@@ -816,6 +769,12 @@ msgstr "The image shows the progress of the survey up to June 2024."
 msgid "QUIZ38_QSTN3"
 msgstr "Try to assemble it correctly using as few moves as possible."
 
+msgid "ANS_TRUE"
+msgstr "true"
+
+msgid "ANS_FALSE"
+msgstr "false"
+
 #: ui/Energy_gauge.tscn
 msgid "UI_ENERGY"
 msgstr "energy"
@@ -824,186 +783,46 @@ msgstr "energy"
 msgid "UI_PJ"
 msgstr "(PetaJoule)"
 
-#: ui/ui.gd
-msgid "eng"
+#: ui/Escape_btn.tscn
+msgid "UI_ESCAPE"
 msgstr ""
+"ESCAPE\n"
+"BOOST"
 
-#: ui/ui.gd ui/UI.tscn
-msgid "ελλ"
+#: intro/intro.tscn
+msgid "INTRO_STORY"
 msgstr ""
+"At the center of the galaxy, the supermassive black hole is becoming increasingly unstable. Its structural collapse is now only a matter of time\n"
+"Your energy is not enough to escape. Every move has a cost\n"
+"In every galactic sector, a trial awaits you. Making the right decision is your fuel\n"
+"Reach the edge of the galaxy and make the Great Leap, before the darkness pulls you back in"
 
-#: ui/UI.tscn
-msgid "Qz 01-10"
-msgstr ""
+#: intro/intro.tscn
+msgid "INTRO_START"
+msgstr "START"
 
-#: ui/UI.tscn
-msgid "quiz01"
-msgstr ""
+#: intro/intro.tscn
+msgid "INFO_TITLE"
+msgstr "info"
 
-#: ui/UI.tscn
-msgid "quiz02"
+#: intro/intro.tscn
+msgid "INFO_MAIN"
 msgstr ""
+"This game was created as part of the international educational programme RADIIO (2025–2026), coordinated by IAASARS/NOA\n"
+"It was designed and developed by a team of students and teachers from Fyteies Gymnasium & Lyceum Classes (Western Greece), in collaboration with Shanghai North America International School for its Chinese translation\n"
+"The game was developed using the Godot game engine\n"
 
-#: ui/UI.tscn
-msgid "quiz03"
-msgstr ""
+#: final/final_win.tscn
+msgid "FINAL_WIN"
+msgstr "The galaxy collapses behind you\n"
+"Ahead lies freedom... and the unknown"
 
-#: ui/UI.tscn
-msgid "quiz04"
-msgstr ""
+#: final/final_lose.tscn
+msgid "FINAL_LOSE"
+msgstr "Power levels at zero\n"
+"Spacetime is collapsing around you\n"
+"The black hole claims its prize"
 
-#: ui/UI.tscn
-msgid "quiz05"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz06"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz07"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz08"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz09"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz10"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "Qz 11-20"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz11"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz12"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz13"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz14"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz15"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz16"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz17"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz18"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz19"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz20"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "Qz 21-30"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz21"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz22"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz23"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz24"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz25"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz26"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz27"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz28"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz29"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz30"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "Qz 31-40"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz31"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz32"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz33"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz34"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz35"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz36"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz37"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz38"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz39"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz40"
-msgstr ""
+#: final/final_win.tscn & final/final_lose.tscn
+msgid "FINAL_RESTART"
+msgstr "RESTART"

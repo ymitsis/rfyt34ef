@@ -1,23 +1,37 @@
-[gd_scene load_steps=18 format=3 uid="uid://drpuyot3kseii"]
+[gd_scene load_steps=25 format=3 uid="uid://drpuyot3kseii"]
 
 [ext_resource type="Script" uid="uid://dsifloa523f" path="res://ui/ui.gd" id="1_au5f4"]
-[ext_resource type="AudioStream" uid="uid://bqajt28ihwll2" path="res://main/space_Music.mp3" id="2_mwp23"]
-[ext_resource type="Shader" uid="uid://c05ur7p2rhp36" path="res://ui/panel.gdshader" id="3_1qfk0"]
-[ext_resource type="Texture2D" uid="uid://bvlil2sslhogy" path="res://ui/glassPanel.png" id="4_16sqb"]
+[ext_resource type="AudioStream" uid="uid://bqajt28ihwll2" path="res://mainGame/space_Music.mp3" id="2_mwp23"]
 [ext_resource type="PackedScene" uid="uid://camnjaj6mgjso" path="res://ui/Energy_gauge.tscn" id="5_6d87a"]
-[ext_resource type="Texture2D" uid="uid://tl7xnht0l6ve" path="res://ui/sound_on.png" id="6_3bffh"]
-[ext_resource type="Texture2D" uid="uid://di7uyk137a7tv" path="res://ui/sound_off.png" id="7_a4etw"]
-[ext_resource type="Texture2D" uid="uid://bblr20fphu6py" path="res://ui/maximize_window.png" id="8_jo024"]
-[ext_resource type="Texture2D" uid="uid://dg213yd0vne3c" path="res://ui/restore_window.png" id="9_evet4"]
-[ext_resource type="Texture2D" uid="uid://c2p54rwgw6fjg" path="res://ui/lang.png" id="10_mwp23"]
+[ext_resource type="Texture2D" uid="uid://dax13yrsc0qmy" path="res://ui/ui_frame.png" id="11_16sqb"]
+[ext_resource type="Texture2D" uid="uid://1vu661hm6j4l" path="res://ui/noise_tile.png" id="12_3bffh"]
+[ext_resource type="PackedScene" uid="uid://moj0dfdg06ff" path="res://ui/Escape_btn.tscn" id="12_4g6kr"]
+[ext_resource type="Texture2D" uid="uid://br684ynindibn" path="res://ui/gradiant.png" id="13_3bffh"]
+[ext_resource type="Texture2D" uid="uid://buyrymb080f26" path="res://ui/lang_nor.png" id="14_3bffh"]
+[ext_resource type="Texture2D" uid="uid://cjkyrfvqguxwf" path="res://ui/sound_nor.png" id="14_46jmb"]
+[ext_resource type="Texture2D" uid="uid://bdeo6d3mjtrgp" path="res://ui/slider_bar.png" id="14_gw1de"]
+[ext_resource type="Texture2D" uid="uid://cjrjmjcpgdct3" path="res://ui/lang_prs.png" id="15_a4etw"]
+[ext_resource type="Texture2D" uid="uid://bd5lmt84d31x6" path="res://ui/sound_prs.png" id="15_vergi"]
+[ext_resource type="Texture2D" uid="uid://d14k3yk2rf7ma" path="res://ui/size_nor.png" id="18_4g6kr"]
+[ext_resource type="Texture2D" uid="uid://s5lphhy4mbx4" path="res://ui/size_prs.png" id="19_gw1de"]
+[ext_resource type="Texture2D" uid="uid://c7j1mnakpkoxx" path="res://ui/restart_nor.png" id="20_4g6kr"]
+[ext_resource type="Texture2D" uid="uid://nfo368gsd67u" path="res://ui/restart_prs.png" id="21_gw1de"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_xpksx"]
-shader = ExtResource("3_1qfk0")
-shader_parameter/blur_size = 3.0
-shader_parameter/radius = 4
-shader_parameter/desat = 0.30000001425
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_evet4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_75u2n"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kgudc"]
 content_margin_left = 0.0
 content_margin_top = 0.0
 content_margin_right = 0.0
@@ -34,7 +48,7 @@ content_margin_left = 0.0
 content_margin_top = 0.0
 content_margin_right = 0.0
 content_margin_bottom = 0.0
-bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0.47058824)
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0)
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
@@ -42,11 +56,6 @@ corner_radius_bottom_left = 3
 corner_detail = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3bffh"]
-bg_color = Color(0.1, 0.1, 0.1, 0.6)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mwp23"]
 content_margin_left = 4.0
@@ -75,7 +84,7 @@ content_margin_left = 0.0
 content_margin_top = 0.0
 content_margin_right = 0.0
 content_margin_bottom = 0.0
-bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0.47058824)
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0)
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
@@ -89,16 +98,15 @@ script = ExtResource("1_au5f4")
 stream = ExtResource("2_mwp23")
 autoplay = true
 bus = &"Music"
-
-[node name="BackBufferCopy_A" type="BackBufferCopy" parent="."]
-copy_mode = 2
+parameters/looping = true
 
 [node name="Main_panel" type="Panel" parent="."]
-material = SubResource("ShaderMaterial_xpksx")
+material = SubResource("ShaderMaterial_evet4")
 anchors_preset = -1
 anchor_left = 0.8
+anchor_top = 0.05
 anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_bottom = 0.95
 grow_horizontal = 0
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
@@ -108,98 +116,144 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -10.0
-offset_right = 3.0
-offset_bottom = 5.0
+offset_left = -14.0
+offset_top = -10.0
+offset_bottom = 15.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("4_16sqb")
-patch_margin_left = 20
-patch_margin_top = 20
-patch_margin_right = 20
-patch_margin_bottom = 20
+texture = ExtResource("11_16sqb")
+draw_center = false
+patch_margin_left = 31
+patch_margin_top = 28
+patch_margin_bottom = 31
 
-[node name="Energy_panel" type="Panel" parent="Main_panel"]
+[node name="gradient" type="NinePatchRect" parent="Main_panel/glass_texture"]
+show_behind_parent = true
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.05
-anchor_top = 0.01
-anchor_right = 0.95
-anchor_bottom = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 11.0
+offset_bottom = -15.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("13_3bffh")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_bottom = 3
+
+[node name="noise" type="TextureRect" parent="Main_panel/glass_texture"]
+self_modulate = Color(1, 1, 1, 0.7058824)
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 11.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_3bffh")
+stretch_mode = 1
+
+[node name="Energy_panel" type="Panel" parent="Main_panel"]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 50.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_75u2n")
 
 [node name="Energy_gauge" parent="Main_panel/Energy_panel" instance=ExtResource("5_6d87a")]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 0.0
-offset_bottom = 0.0
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 0
+offset_bottom = 207.0
+
+[node name="Escape_panel" type="Panel" parent="Main_panel"]
+layout_mode = 0
+offset_top = 300.0
+offset_right = 200.0
+offset_bottom = 350.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_kgudc")
+
+[node name="Escape_btn" parent="Main_panel/Escape_panel" instance=ExtResource("12_4g6kr")]
+layout_mode = 0
 
 [node name="Zoom_panel" type="Panel" parent="Main_panel"]
-custom_minimum_size = Vector2(0, 30)
+layout_mode = 0
+offset_top = 400.0
+offset_right = 200.0
+offset_bottom = 450.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6d87a")
+
+[node name="sliderbar" type="TextureRect" parent="Main_panel/Zoom_panel"]
+show_behind_parent = true
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.05
-anchor_top = 0.75
-anchor_right = 0.95
-anchor_bottom = 0.8
-offset_left = 2.0980835e-05
-offset_right = 4.5776367e-05
+anchor_left = 0.01
+anchor_top = 0.4
+anchor_right = 0.99
+anchor_bottom = 0.6
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_6d87a")
+texture = ExtResource("14_gw1de")
+expand_mode = 1
 
 [node name="Zoom_slider" type="HSlider" parent="Main_panel/Zoom_panel"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.02
-anchor_right = 0.98
+anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/grabber_offset = 5
 theme_override_styles/slider = SubResource("StyleBoxFlat_3bffh")
 theme_override_styles/grabber_area = SubResource("StyleBoxFlat_mwp23")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_1qfk0")
 max_value = 1.0
 step = 0.01
 value = 1.0
-tick_count = 6
-ticks_on_borders = true
 
 [node name="Options_panel" type="Panel" parent="Main_panel"]
-custom_minimum_size = Vector2(0, 40)
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.05
-anchor_top = 0.9
-anchor_right = 0.95
-anchor_bottom = 0.95
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 0
+offset_top = 500.0
+offset_right = 200.0
+offset_bottom = 550.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_16sqb")
 
 [node name="Sound_toggle" type="TextureButton" parent="Main_panel/Options_panel"]
-layout_mode = 1
-offset_right = 30.0
-offset_bottom = 30.0
+layout_mode = 0
+offset_right = 50.0
+offset_bottom = 50.0
 mouse_default_cursor_shape = 2
 toggle_mode = true
-texture_normal = ExtResource("6_3bffh")
-texture_pressed = ExtResource("7_a4etw")
+texture_normal = ExtResource("14_46jmb")
+texture_pressed = ExtResource("15_vergi")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="lang" type="MenuButton" parent="Main_panel/Options_panel"]
+[node name="lang_toggle" type="TextureButton" parent="Main_panel/Options_panel"]
+layout_mode = 0
+offset_left = 50.0
+offset_right = 100.0
+offset_bottom = 50.0
+mouse_default_cursor_shape = 2
+toggle_mode = true
+texture_normal = ExtResource("14_3bffh")
+texture_pressed = ExtResource("15_a4etw")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="lang" type="MenuButton" parent="Main_panel/Options_panel/lang_toggle"]
 layout_mode = 1
-offset_left = 33.0
-offset_right = 63.0
-offset_bottom = 30.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+mouse_default_cursor_shape = 2
 toggle_mode = false
+action_mode = 1
 icon_alignment = 1
 expand_icon = true
 item_count = 2
@@ -208,27 +262,26 @@ popup/item_0/id = 0
 popup/item_1/text = "English"
 popup/item_1/id = 1
 
-[node name="TextureRect" type="TextureRect" parent="Main_panel/Options_panel/lang"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="restart" type="TextureButton" parent="Main_panel/Options_panel"]
+layout_mode = 0
+offset_left = 100.0
+offset_right = 150.0
+offset_bottom = 50.0
 mouse_default_cursor_shape = 2
-texture = ExtResource("10_mwp23")
-expand_mode = 1
-stretch_mode = 4
+texture_normal = ExtResource("20_4g6kr")
+texture_pressed = ExtResource("21_gw1de")
+ignore_texture_size = true
+stretch_mode = 5
 
 [node name="window_size" type="TextureButton" parent="Main_panel/Options_panel"]
-layout_mode = 1
-offset_left = 67.0
-offset_right = 97.0
-offset_bottom = 30.0
+layout_mode = 0
+offset_left = 150.0
+offset_right = 200.0
+offset_bottom = 50.0
 mouse_default_cursor_shape = 2
 toggle_mode = true
-texture_normal = ExtResource("8_jo024")
-texture_pressed = ExtResource("9_evet4")
+texture_normal = ExtResource("18_4g6kr")
+texture_pressed = ExtResource("19_gw1de")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -237,127 +290,104 @@ offset_right = 110.0
 offset_bottom = 42.0
 theme_override_font_sizes/font_size = 24
 toggle_mode = false
-text = "dev_tst"
+text = "God mode"
 flat = false
 switch_on_hover = true
-item_count = 10
-popup/item_0/text = "quiz01"
+item_count = 41
+popup/item_0/text = "+100PJ"
 popup/item_0/id = 0
-popup/item_1/text = "quiz02"
+popup/item_1/text = "challenge"
 popup/item_1/id = 1
-popup/item_2/text = "quiz03"
 popup/item_2/id = 2
-popup/item_3/text = "quiz04"
+popup/item_2/separator = true
+popup/item_3/text = "quiz01"
 popup/item_3/id = 3
-popup/item_4/text = "quiz05"
+popup/item_4/text = "quiz02"
 popup/item_4/id = 4
-popup/item_5/text = "quiz06"
+popup/item_5/text = "quiz03"
 popup/item_5/id = 5
-popup/item_6/text = "quiz07"
+popup/item_6/text = "quiz04"
 popup/item_6/id = 6
-popup/item_7/text = "quiz08"
+popup/item_7/text = "quiz05"
 popup/item_7/id = 7
-popup/item_8/text = "quiz09"
+popup/item_8/text = "quiz06"
 popup/item_8/id = 8
-popup/item_9/text = "quiz10"
+popup/item_9/text = "quiz07"
 popup/item_9/id = 9
+popup/item_10/text = "quiz08"
+popup/item_10/id = 10
+popup/item_11/text = "quiz09"
+popup/item_11/id = 11
+popup/item_12/text = "quiz10"
+popup/item_12/id = 12
+popup/item_13/text = "quiz11"
+popup/item_13/id = 13
+popup/item_14/text = "quiz12"
+popup/item_14/id = 14
+popup/item_15/text = "quiz13"
+popup/item_15/id = 15
+popup/item_16/text = "quiz14"
+popup/item_16/id = 16
+popup/item_17/text = "quiz15"
+popup/item_17/id = 17
+popup/item_18/text = "quiz16"
+popup/item_18/id = 18
+popup/item_19/text = "quiz17"
+popup/item_19/id = 19
+popup/item_20/text = "quiz18"
+popup/item_20/id = 20
+popup/item_21/text = "quiz19"
+popup/item_21/id = 21
+popup/item_22/text = "quiz20"
+popup/item_22/id = 22
+popup/item_23/text = "quiz21"
+popup/item_23/id = 23
+popup/item_24/text = "quiz22"
+popup/item_24/id = 24
+popup/item_25/text = "quiz23"
+popup/item_25/id = 25
+popup/item_26/text = "quiz24"
+popup/item_26/id = 26
+popup/item_27/text = "quiz25"
+popup/item_27/id = 27
+popup/item_28/text = "quiz26"
+popup/item_28/id = 28
+popup/item_29/text = "quiz27"
+popup/item_29/id = 29
+popup/item_30/text = "quiz28"
+popup/item_30/id = 30
+popup/item_31/text = "quiz29"
+popup/item_31/id = 31
+popup/item_32/text = "quiz30"
+popup/item_32/id = 32
+popup/item_33/text = "quiz31"
+popup/item_33/id = 33
+popup/item_34/text = "quiz32"
+popup/item_34/id = 34
+popup/item_35/text = "quiz33"
+popup/item_35/id = 35
+popup/item_36/text = "quiz34"
+popup/item_36/id = 36
+popup/item_37/text = "quiz35"
+popup/item_37/id = 37
+popup/item_38/text = "quiz36"
+popup/item_38/id = 38
+popup/item_39/text = "quiz37"
+popup/item_39/id = 39
+popup/item_40/text = "quiz38"
+popup/item_40/id = 40
 
-[node name="MenuButton2" type="MenuButton" parent="."]
-offset_left = 115.0
-offset_right = 225.0
-offset_bottom = 42.0
-theme_override_font_sizes/font_size = 24
-toggle_mode = false
-text = "dev_tst"
-flat = false
-switch_on_hover = true
-item_count = 10
-popup/item_0/text = "quiz11"
-popup/item_0/id = 0
-popup/item_1/text = "quiz12"
-popup/item_1/id = 1
-popup/item_2/text = "quiz13"
-popup/item_2/id = 2
-popup/item_3/text = "quiz14"
-popup/item_3/id = 3
-popup/item_4/text = "quiz15"
-popup/item_4/id = 4
-popup/item_5/text = "quiz16"
-popup/item_5/id = 5
-popup/item_6/text = "quiz17"
-popup/item_6/id = 6
-popup/item_7/text = "quiz18"
-popup/item_7/id = 7
-popup/item_8/text = "quiz19"
-popup/item_8/id = 8
-popup/item_9/text = "quiz20"
-popup/item_9/id = 9
-
-[node name="MenuButton3" type="MenuButton" parent="."]
-offset_left = 230.0
-offset_right = 340.0
-offset_bottom = 42.0
-theme_override_font_sizes/font_size = 24
-toggle_mode = false
-text = "dev_tst"
-flat = false
-switch_on_hover = true
-item_count = 10
-popup/item_0/text = "quiz21"
-popup/item_0/id = 0
-popup/item_1/text = "quiz22"
-popup/item_1/id = 1
-popup/item_2/text = "quiz23"
-popup/item_2/id = 2
-popup/item_3/text = "quiz24"
-popup/item_3/id = 3
-popup/item_4/text = "quiz25"
-popup/item_4/id = 4
-popup/item_5/text = "quiz26"
-popup/item_5/id = 5
-popup/item_6/text = "quiz27"
-popup/item_6/id = 6
-popup/item_7/text = "quiz28"
-popup/item_7/id = 7
-popup/item_8/text = "quiz29"
-popup/item_8/id = 8
-popup/item_9/text = "quiz30"
-popup/item_9/id = 9
-
-[node name="MenuButton4" type="MenuButton" parent="."]
-offset_left = 345.0
-offset_right = 455.0
-offset_bottom = 42.0
-theme_override_font_sizes/font_size = 24
-toggle_mode = false
-text = "dev_tst"
-flat = false
-switch_on_hover = true
-item_count = 10
-popup/item_0/text = "quiz31"
-popup/item_0/id = 0
-popup/item_1/text = "quiz32"
-popup/item_1/id = 1
-popup/item_2/text = "quiz33"
-popup/item_2/id = 2
-popup/item_3/text = "quiz34"
-popup/item_3/id = 3
-popup/item_4/text = "quiz35"
-popup/item_4/id = 4
-popup/item_5/text = "quiz36"
-popup/item_5/id = 5
-popup/item_6/text = "quiz37"
-popup/item_6/id = 6
-popup/item_7/text = "quiz38"
-popup/item_7/id = 7
-popup/item_8/text = "quizx"
-popup/item_8/id = 8
-popup/item_9/text = "quizx"
-popup/item_9/id = 9
+[node name="BackBufferCopy" type="BackBufferCopy" parent="."]
+position = Vector2(578.5, 326)
+scale = Vector2(5.805, 3.2500002)
+copy_mode = 2
 
 [connection signal="resized" from="Main_panel" to="." method="_on_main_panel_resized"]
+[connection signal="resized" from="Main_panel/Energy_panel" to="." method="_on_energy_panel_resized"]
+[connection signal="resized" from="Main_panel/Escape_panel" to="." method="_on_boost_panel_resized"]
 [connection signal="resized" from="Main_panel/Zoom_panel" to="." method="_on_zoom_panel_resized"]
 [connection signal="value_changed" from="Main_panel/Zoom_panel/Zoom_slider" to="." method="_on_zoom_slider_value_changed"]
 [connection signal="resized" from="Main_panel/Options_panel" to="." method="_on_options_panel_resized"]
 [connection signal="toggled" from="Main_panel/Options_panel/Sound_toggle" to="." method="_on_sound_button_toggled"]
+[connection signal="pressed" from="Main_panel/Options_panel/restart" to="." method="_on_restart_pressed"]
 [connection signal="toggled" from="Main_panel/Options_panel/window_size" to="." method="_on_window_size_toggled"]

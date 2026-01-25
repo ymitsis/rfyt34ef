@@ -15,6 +15,9 @@ func init():
 	_continue_btn.visible = false
 	_result_lbl.visible = false
 	_on_resize()
+	modulate.a = 0.0
+	var t := create_tween()
+	t.tween_property(self, "modulate:a", 1.0, 0.5)
 
 #συνδεση με signal resize
 func _ready():
@@ -63,16 +66,16 @@ func set_submit_button_enabled(enabled: bool):
 	if enabled:
 		_submit_btn.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
 		$Container/submit/Label.modulate = Color(1, 1, 1, 1)
-		_submit_btn.tooltip_text = ""
 	else:
 		_submit_btn.mouse_default_cursor_shape = Control.CURSOR_ARROW
 		$Container/submit/Label.modulate = Color(1, 1, 1, 0.6)
-		_submit_btn.tooltip_text = tr("QUIZ_SUBMIT_TOOLTIP")
 
 #κατοχυρωση ενεργειας και κλεισιμο quiz με το πάτημα του κοθμπιου "συνεχεια"
 func _on_continue_pressed():
 	GameState.energy += _won_energy
-	queue_free()
+	var t := create_tween()
+	t.tween_property(self, "modulate:a", 0.0, 0.5)
+	t.finished.connect(queue_free)
 
 #βοηθητικες συναρτησεις εμφανησης/αποκυψης κουμπιών και αποτελέσματος
 func _fade_in(node: CanvasItem, duration := 1.0):
