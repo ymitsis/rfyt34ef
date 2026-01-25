@@ -1,0 +1,377 @@
+[gd_scene load_steps=32 format=3 uid="uid://ejs78m5tt4qx"]
+
+[ext_resource type="Script" uid="uid://cq73p13ssac57" path="res://challenge/scripts/minigame.gd" id="1_n1jei"]
+[ext_resource type="Shader" uid="uid://by1j111ya38xo" path="res://quizzes/common/UI.gdshader" id="1_t63gc"]
+[ext_resource type="Script" uid="uid://kc6nqnb4jsd0" path="res://challenge/scripts/minigame_base.gd" id="2_fucjo"]
+[ext_resource type="AudioStream" uid="uid://bb5bjxntqws5p" path="res://challenge/assets/music.ogg" id="2_t63gc"]
+[ext_resource type="Texture2D" uid="uid://cxv7k8dq2byeu" path="res://challenge/assets/bg1.jpg" id="3_fucjo"]
+[ext_resource type="Script" uid="uid://ct4h8rotxff02" path="res://challenge/scripts/player.gd" id="4_eittp"]
+[ext_resource type="Texture2D" uid="uid://n5m16ma13g7d" path="res://challenge/assets/spsship.png" id="5_3qi5t"]
+[ext_resource type="Texture2D" uid="uid://b5rya7y55c37o" path="res://challenge/assets/spsship_left.png" id="6_ig5ew"]
+[ext_resource type="Texture2D" uid="uid://cwn18mnogo6od" path="res://challenge/assets/spsship_right.png" id="7_h6tu1"]
+[ext_resource type="Texture2D" uid="uid://cwtagvy31mwmw" path="res://challenge/assets/exost1.png" id="8_fjljt"]
+[ext_resource type="Texture2D" uid="uid://nxqkdbw40pdb" path="res://challenge/assets/exost2.png" id="9_ek6k1"]
+[ext_resource type="Texture2D" uid="uid://dsvgl711q4kkw" path="res://challenge/assets/exost3.png" id="10_mvghh"]
+[ext_resource type="Texture2D" uid="uid://5fa1mot0b7yq" path="res://challenge/assets/hit.png" id="11_llaxr"]
+[ext_resource type="AudioStream" uid="uid://dfwnmesgew888" path="res://challenge/assets/hit1.wav" id="12_siepb"]
+[ext_resource type="AudioStream" uid="uid://msihrek1vxj8" path="res://challenge/assets/hit2.wav" id="13_0upcr"]
+[ext_resource type="Texture2D" uid="uid://rafrfxxor5ls" path="res://challenge/assets/bg2.png" id="14_6284t"]
+[ext_resource type="Script" uid="uid://tqic1c0i0a5q" path="res://challenge/scripts/spawner.gd" id="15_t8a6o"]
+[ext_resource type="PackedScene" uid="uid://b6klu54cspbkt" path="res://challenge/asteroid1.tscn" id="16_hxfg3"]
+[ext_resource type="PackedScene" uid="uid://5ncy0mvqqgef" path="res://challenge/asteroid2.tscn" id="17_w8s62"]
+[ext_resource type="PackedScene" uid="uid://d0nwgg08uhoyc" path="res://challenge/asteroid3.tscn" id="18_w0x1p"]
+[ext_resource type="Texture2D" uid="uid://bu65scth3e34s" path="res://challenge/assets/arow.png" id="19_h2mtb"]
+[ext_resource type="Texture2D" uid="uid://cjx13rbo6fxad" path="res://challenge/assets/window.png" id="22_fucjo"]
+[ext_resource type="Texture2D" uid="uid://bsau3jd5bg51o" path="res://challenge/assets/btn_nor.png" id="23_eittp"]
+[ext_resource type="Texture2D" uid="uid://dqag34hjwg26w" path="res://challenge/assets/btn_prs.png" id="24_3qi5t"]
+[ext_resource type="Texture2D" uid="uid://dqtowbcelrn6d" path="res://challenge/assets/btn_hvr.png" id="25_ig5ew"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fucjo"]
+shader = ExtResource("1_t63gc")
+shader_parameter/blur_size = 3.0
+shader_parameter/radius = 4
+shader_parameter/darkness = 0.5
+
+[sub_resource type="Shader" id="Shader_c7bn6"]
+code = "shader_type canvas_item;
+
+uniform vec2 scroll_speed = vec2(0.0, 0.1);
+
+void fragment() {
+    vec2 uv = UV - scroll_speed * TIME;
+    COLOR = texture(TEXTURE, fract(uv));
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_arxre"]
+shader = SubResource("Shader_c7bn6")
+shader_parameter/scroll_speed = Vector2(0.002, 0.02)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_arxre"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_fjljt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ek6k1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_mvghh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ek6k1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2lqcv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_fjljt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ek6k1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_mvghh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ek6k1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2lqcv"]
+shader = SubResource("Shader_c7bn6")
+shader_parameter/scroll_speed = Vector2(-0.002, 0.04)
+
+[node name="bg_blur" type="ColorRect"]
+material = SubResource("ShaderMaterial_fucjo")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_fucjo")
+metadata/_edit_vertical_guides_ = [400.0]
+
+[node name="minigameWraper" type="SubViewportContainer" parent="."]
+layout_mode = 0
+offset_right = 800.0
+offset_bottom = 800.0
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="minigameWraper"]
+disable_3d = true
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(800, 800)
+render_target_update_mode = 4
+
+[node name="Minigame" type="Control" parent="minigameWraper/SubViewport"]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 0
+offset_right = 800.0
+offset_bottom = 800.0
+script = ExtResource("1_n1jei")
+
+[node name="Timer" type="Timer" parent="minigameWraper/SubViewport/Minigame"]
+wait_time = 100.0
+autostart = true
+
+[node name="music" type="AudioStreamPlayer" parent="minigameWraper/SubViewport/Minigame"]
+stream = ExtResource("2_t63gc")
+volume_db = -30.0
+autoplay = true
+bus = &"Music"
+
+[node name="Stars" type="TextureRect" parent="minigameWraper/SubViewport/Minigame"]
+material = SubResource("ShaderMaterial_arxre")
+layout_mode = 1
+offset_right = 1024.0
+offset_bottom = 1536.0
+texture = ExtResource("3_fucjo")
+stretch_mode = 1
+
+[node name="Player" type="Area2D" parent="minigameWraper/SubViewport/Minigame"]
+position = Vector2(606, 700)
+scale = Vector2(0.6, 0.6)
+script = ExtResource("4_eittp")
+tex_center = ExtResource("5_3qi5t")
+tex_left = ExtResource("6_ig5ew")
+tex_right = ExtResource("7_h6tu1")
+
+[node name="Spaceship" type="Sprite2D" parent="minigameWraper/SubViewport/Minigame/Player"]
+texture = ExtResource("5_3qi5t")
+
+[node name="exhaust_left" type="AnimatedSprite2D" parent="minigameWraper/SubViewport/Minigame/Player"]
+position = Vector2(-95, 50)
+scale = Vector2(0.99999994, 0.99999994)
+sprite_frames = SubResource("SpriteFrames_arxre")
+autoplay = "default"
+frame = 2
+frame_progress = 0.26644814
+centered = false
+offset = Vector2(-60, 0)
+
+[node name="exhaust_right" type="AnimatedSprite2D" parent="minigameWraper/SubViewport/Minigame/Player"]
+position = Vector2(95, 50)
+scale = Vector2(0.9999998, 0.9999998)
+sprite_frames = SubResource("SpriteFrames_2lqcv")
+autoplay = "default"
+frame = 3
+frame_progress = 0.4304286
+centered = false
+offset = Vector2(-60, 0)
+flip_h = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="minigameWraper/SubViewport/Minigame/Player"]
+position = Vector2(-6.1035156e-05, 19.97705)
+scale = Vector2(0.99999994, 0.99999994)
+polygon = PackedVector2Array(-117.99988, 3.0228882, -43.999878, -50.97711, 0.00012207031, -112.97711, 45.000122, -52.97711, 116.00012, 2.0228882, 114.00012, 34.02289, 74.00012, 34.02289, 25.000122, 73.02289, -25.999878, 72.02289, -74.99988, 33.02289, -113.99988, 33.02289)
+
+[node name="Hit_sprite" type="Sprite2D" parent="minigameWraper/SubViewport/Minigame/Player"]
+visible = false
+texture = ExtResource("11_llaxr")
+
+[node name="Hit_sfx1" type="AudioStreamPlayer" parent="minigameWraper/SubViewport/Minigame/Player"]
+stream = ExtResource("12_siepb")
+max_polyphony = 4
+bus = &"SFX"
+
+[node name="Hit_sfx2" type="AudioStreamPlayer" parent="minigameWraper/SubViewport/Minigame/Player"]
+stream = ExtResource("13_0upcr")
+max_polyphony = 4
+bus = &"SFX"
+
+[node name="Fog" type="TextureRect" parent="minigameWraper/SubViewport/Minigame"]
+material = SubResource("ShaderMaterial_2lqcv")
+layout_mode = 1
+offset_right = 981.0
+offset_bottom = 1236.0
+scale = Vector2(3, 3)
+texture = ExtResource("14_6284t")
+stretch_mode = 1
+
+[node name="Spawner1" type="Node2D" parent="minigameWraper/SubViewport/Minigame"]
+position = Vector2(400, -50)
+script = ExtResource("15_t8a6o")
+enemy = ExtResource("16_hxfg3")
+
+[node name="Timer" type="Timer" parent="minigameWraper/SubViewport/Minigame/Spawner1"]
+process_callback = 0
+wait_time = 4.0
+autostart = true
+
+[node name="Spawner2" type="Node2D" parent="minigameWraper/SubViewport/Minigame"]
+position = Vector2(400, -50)
+script = ExtResource("15_t8a6o")
+enemy = ExtResource("17_w8s62")
+
+[node name="Timer" type="Timer" parent="minigameWraper/SubViewport/Minigame/Spawner2"]
+process_callback = 0
+wait_time = 6.0
+autostart = true
+
+[node name="Spawner3" type="Node2D" parent="minigameWraper/SubViewport/Minigame"]
+position = Vector2(400, -50)
+script = ExtResource("15_t8a6o")
+enemy = ExtResource("18_w0x1p")
+
+[node name="Timer" type="Timer" parent="minigameWraper/SubViewport/Minigame/Spawner3"]
+process_callback = 0
+wait_time = 8.0
+autostart = true
+
+[node name="left" type="Button" parent="minigameWraper/SubViewport/Minigame"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 680.0
+offset_right = 120.0
+offset_bottom = 780.0
+pivot_offset = Vector2(50, 50)
+focus_mode = 0
+icon = ExtResource("19_h2mtb")
+icon_alignment = 1
+expand_icon = true
+
+[node name="right" type="Button" parent="minigameWraper/SubViewport/Minigame"]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 680.0
+offset_right = 240.0
+offset_bottom = 780.0
+rotation = 3.1415927
+pivot_offset = Vector2(50, 50)
+focus_mode = 0
+icon = ExtResource("19_h2mtb")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Dialog" type="TextureRect" parent="minigameWraper/SubViewport/Minigame"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -379.0
+offset_top = -254.0
+offset_right = 379.0
+offset_bottom = 245.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("22_fucjo")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Label0" type="Label" parent="minigameWraper/SubViewport/Minigame/Dialog"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.44
+offset_left = 159.2
+offset_top = -45.9
+offset_right = -156.20001
+offset_bottom = -174.56
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 24
+text = "CHALLENGE_END0"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Label1" type="Label" parent="minigameWraper/SubViewport/Minigame/Dialog"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.44
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.627451, 0.9019608, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.39215687)
+theme_override_constants/line_spacing = 0
+theme_override_constants/shadow_offset_x = -1
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 30
+text = "CHALLENGE_END1"
+horizontal_alignment = 1
+vertical_alignment = 2
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="minigameWraper/SubViewport/Minigame/Dialog"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.46
+anchor_right = 0.9
+anchor_bottom = 0.75
+offset_bottom = 3.0517578e-05
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.627451, 0.627451, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.39215687)
+theme_override_constants/line_spacing = 0
+theme_override_constants/shadow_offset_x = -1
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 30
+text = "CHALLENGE_END2"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="btn_ok" type="TextureButton" parent="minigameWraper/SubViewport/Minigame/Dialog"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -94.0
+offset_top = 105.5
+offset_right = 94.0
+offset_bottom = 193.5
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("23_eittp")
+texture_pressed = ExtResource("24_3qi5t")
+texture_hover = ExtResource("25_ig5ew")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="minigameWraper/SubViewport/Minigame/Dialog/btn_ok"]
+layout_mode = 0
+offset_left = 14.5
+offset_top = 6.5
+offset_right = 174.0
+offset_bottom = 78.0
+theme_override_font_sizes/font_size = 30
+text = "CHALLENGE_END3"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[connection signal="timeout" from="minigameWraper/SubViewport/Minigame/Timer" to="minigameWraper/SubViewport/Minigame" method="_on_timer_timeout"]
+[connection signal="body_entered" from="minigameWraper/SubViewport/Minigame/Player" to="minigameWraper/SubViewport/Minigame/Player" method="_on_body_entered"]
+[connection signal="timeout" from="minigameWraper/SubViewport/Minigame/Spawner1/Timer" to="minigameWraper/SubViewport/Minigame/Spawner1" method="_on_timer_timeout"]
+[connection signal="timeout" from="minigameWraper/SubViewport/Minigame/Spawner2/Timer" to="minigameWraper/SubViewport/Minigame/Spawner2" method="_on_timer_timeout"]
+[connection signal="timeout" from="minigameWraper/SubViewport/Minigame/Spawner3/Timer" to="minigameWraper/SubViewport/Minigame/Spawner3" method="_on_timer_timeout"]
+[connection signal="button_down" from="minigameWraper/SubViewport/Minigame/left" to="minigameWraper/SubViewport/Minigame" method="_on_left_button_down"]
+[connection signal="button_up" from="minigameWraper/SubViewport/Minigame/left" to="minigameWraper/SubViewport/Minigame" method="_on_left_button_up"]
+[connection signal="button_down" from="minigameWraper/SubViewport/Minigame/right" to="minigameWraper/SubViewport/Minigame" method="_on_right_button_down"]
+[connection signal="button_up" from="minigameWraper/SubViewport/Minigame/right" to="minigameWraper/SubViewport/Minigame" method="_on_right_button_up"]
+[connection signal="button_down" from="minigameWraper/SubViewport/Minigame/Dialog/btn_ok" to="minigameWraper/SubViewport/Minigame" method="_on_btn_ok_button_down"]
+[connection signal="button_up" from="minigameWraper/SubViewport/Minigame/Dialog/btn_ok" to="minigameWraper/SubViewport/Minigame" method="_on_btn_ok_button_up"]
+[connection signal="pressed" from="minigameWraper/SubViewport/Minigame/Dialog/btn_ok" to="minigameWraper/SubViewport/Minigame" method="_on_btn_ok_pressed"]

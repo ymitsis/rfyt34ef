@@ -88,19 +88,38 @@ msgstr ""
 #: quizzes/common/Base_quiz.tscn
 #: quizzes/common/draggable_control.tscn
 #: ui/Energy_gauge.tscn
-msgid "xx"
+
+
+#: challenge/challenge.tscn
+msgid "CHALLENGE_TITLE0"
 msgstr ""
 
-#: quizzes/challenge/challenge.gd
+#: challenge/challenge.gd
 msgid "CHALLENGE_OPTION1"
 msgstr ""
 
-#: quizzes/challenge/challenge.tscn
+#: challenge/challenge.tscn
 msgid "CHALLENGE_TITLE"
 msgstr ""
 
-#: quizzes/challenge/challenge.tscn
+#: challenge/challenge.tscn
 msgid "CHALLENGE_OPTION2"
+msgstr ""
+
+#: challenge/minigame.tscn
+msgid "CHALLENGE_END0"
+msgstr ""
+
+#: challenge/minigame.tscn
+msgid "CHALLENGE_END1"
+msgstr ""
+
+#: challenge/minigame.tscn
+msgid "CHALLENGE_END2"
+msgstr ""
+
+#: challenge/minigame.tscn
+msgid "CHALLENGE_END3"
 msgstr ""
 
 #: quizzes/common/base_quiz.gd
@@ -113,14 +132,6 @@ msgstr ""
 
 #: quizzes/common/base_quiz.gd
 msgid "QUIZ_REWARD"
-msgstr ""
-
-#: quizzes/common/base_quiz.gd
-msgid ""
-msgstr ""
-
-#: quizzes/common/base_quiz.gd
-msgid "QUIZ_SUBMIT_TOOLTIP"
 msgstr ""
 
 #: quizzes/common/Base_quiz.tscn
@@ -194,6 +205,8 @@ msgstr ""
 #: quizzes/quiz04/Quiz04.tscn
 msgid "QUIZ04_QSTN"
 msgstr ""
+
+
 
 #: quizzes/quiz05/Quiz05.tscn
 msgid "QUIZ05_QSTN1"
@@ -272,7 +285,7 @@ msgid "QUIZ07_QSTN6"
 msgstr ""
 
 #: quizzes/quiz08/Quiz08.tscn
-msgid "QUIZ08_QSTN1"
+msgid "QUIZ08_QSTN"
 msgstr ""
 
 #: quizzes/quiz09/Quiz09.tscn
@@ -316,7 +329,7 @@ msgid "QUIZ10_QSTN3"
 msgstr ""
 
 #: quizzes/quiz11/Quiz11.tscn
-msgid "QUIZ11_QSTN1"
+msgid "QUIZ11_QSTN"
 msgstr ""
 
 #: quizzes/quiz12/Quiz12.tscn
@@ -431,14 +444,6 @@ msgstr ""
 msgid "QUIZ16_QSTN"
 msgstr ""
 
-#: quizzes/quiz16/Quiz16.tscn
-msgid "QUIZ16_ANS1"
-msgstr ""
-
-#: quizzes/quiz16/Quiz16.tscn
-msgid "QUIZ16_ANS2"
-msgstr ""
-
 #: quizzes/quiz17/Quiz17.tscn
 msgid "QUIZ17_QSTN"
 msgstr ""
@@ -457,14 +462,6 @@ msgstr ""
 
 #: quizzes/quiz18/Quiz18.tscn
 msgid "QUIZ18_QSTN"
-msgstr ""
-
-#: quizzes/quiz18/Quiz18.tscn
-msgid "QUIZ18_ANS1"
-msgstr ""
-
-#: quizzes/quiz18/Quiz18.tscn
-msgid "QUIZ18_ANS2"
 msgstr ""
 
 #: quizzes/quiz19/Quiz19.tscn
@@ -491,24 +488,8 @@ msgstr ""
 msgid "QUIZ20_QSTN"
 msgstr ""
 
-#: quizzes/quiz20/Quiz20.tscn
-msgid "QUIZ20_ANS1"
-msgstr ""
-
-#: quizzes/quiz20/Quiz20.tscn
-msgid "QUIZ20_ANS2"
-msgstr ""
-
 #: quizzes/quiz21/Quiz21.tscn
 msgid "QUIZ21_QSTN"
-msgstr ""
-
-#: quizzes/quiz21/Quiz21.tscn
-msgid "QUIZ21_ANS1"
-msgstr ""
-
-#: quizzes/quiz21/Quiz21.tscn
-msgid "QUIZ21_ANS2"
 msgstr ""
 
 #: quizzes/quiz22/Quiz22.tscn
@@ -571,24 +552,8 @@ msgstr ""
 msgid "QUIZ25_QSTN"
 msgstr ""
 
-#: quizzes/quiz25/Quiz25.tscn
-msgid "QUIZ25_ANS1"
-msgstr ""
-
-#: quizzes/quiz25/Quiz25.tscn
-msgid "QUIZ25_ANS2"
-msgstr ""
-
 #: quizzes/quiz26/Quiz26.tscn
 msgid "QUIZ26_QSTN"
-msgstr ""
-
-#: quizzes/quiz26/Quiz26.tscn
-msgid "QUIZ26_ANS1"
-msgstr ""
-
-#: quizzes/quiz26/Quiz26.tscn
-msgid "QUIZ26_ANS2"
 msgstr ""
 
 #: quizzes/quiz27/Quiz27.tscn
@@ -651,18 +616,6 @@ msgstr ""
 msgid "QUIZ30_QSTN"
 msgstr ""
 
-#: quizzes/quiz30/Quiz30.tscn
-msgid "QUIZ30_ANS1"
-msgstr ""
-
-#: quizzes/quiz30/Quiz30.tscn
-msgid "QUIZ30_ANS2"
-msgstr ""
-
-#: quizzes/quiz30/Quiz30.tscn
-msgid "QUIZ30_ANS3"
-msgstr ""
-
 #: quizzes/quiz31/Quiz31.tscn
 msgid "QUIZ31_QSTN"
 msgstr ""
@@ -722,6 +675,8 @@ msgstr ""
 #: quizzes/quiz34/Quiz34.tscn
 msgid "QUIZ34_QSTN"
 msgstr ""
+
+
 
 #: quizzes/quiz34/Quiz34.tscn
 msgid "QUIZ34_ANS1"
@@ -815,6 +770,12 @@ msgstr ""
 msgid "QUIZ38_QSTN3"
 msgstr ""
 
+msgid "ANS_TRUE"
+msgstr ""
+
+msgid "ANS_FALSE"
+msgstr ""
+
 #: ui/Energy_gauge.tscn
 msgid "UI_ENERGY"
 msgstr ""
@@ -823,187 +784,34 @@ msgstr ""
 msgid "UI_PJ"
 msgstr ""
 
-#: ui/ui.gd
-msgid "eng"
+#: ui/Escape_btn.tscn
+msgid "UI_ESCAPE"
 msgstr ""
 
-#: ui/ui.gd
-#: ui/UI.tscn
-msgid "ελλ"
+#: intro/intro.tscn
+msgid "INTRO_STORY"
 msgstr ""
 
-#: ui/UI.tscn
-msgid "Qz 01-10"
+#: intro/intro.tscn
+msgid "INTRO_START"
 msgstr ""
 
-#: ui/UI.tscn
-msgid "quiz01"
+#: intro/intro.tscn
+msgid "INFO_TITLE"
 msgstr ""
 
-#: ui/UI.tscn
-msgid "quiz02"
+#: intro/intro.tscn
+msgid "INFO_MAIN"
 msgstr ""
 
-#: ui/UI.tscn
-msgid "quiz03"
+#: final/final_win.tscn
+msgid "FINAL_WIN"
 msgstr ""
 
-#: ui/UI.tscn
-msgid "quiz04"
+#: final/final_lose.tscn
+msgid "FINAL_LOSE"
 msgstr ""
 
-#: ui/UI.tscn
-msgid "quiz05"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz06"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz07"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz08"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz09"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz10"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "Qz 11-20"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz11"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz12"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz13"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz14"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz15"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz16"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz17"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz18"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz19"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz20"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "Qz 21-30"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz21"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz22"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz23"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz24"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz25"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz26"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz27"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz28"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz29"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz30"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "Qz 31-40"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz31"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz32"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz33"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz34"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz35"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz36"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz37"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz38"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz39"
-msgstr ""
-
-#: ui/UI.tscn
-msgid "quiz40"
+#: final/final_win.tscn & final/final_lose.tscn
+msgid "FINAL_RESTART"
 msgstr ""

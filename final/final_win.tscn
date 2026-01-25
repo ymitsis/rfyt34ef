@@ -1,0 +1,63 @@
+[gd_scene load_steps=7 format=3 uid="uid://cv4c6gphroub5"]
+
+[ext_resource type="Texture2D" uid="uid://b4er20bh320b2" path="res://final/bg_win.png" id="1_p5lrp"]
+[ext_resource type="Texture2D" uid="uid://ogxua1hf28pp" path="res://intro/startBtn_nor.png" id="2_6jfej"]
+[ext_resource type="Script" uid="uid://dmim8wcgy1qrt" path="res://final/final_win.gd" id="2_c5qxn"]
+[ext_resource type="Texture2D" uid="uid://b8nu4la0rx68j" path="res://intro/startBtn_prs.png" id="3_c5qxn"]
+[ext_resource type="Texture2D" uid="uid://dyyv1ooaw7pqd" path="res://intro/startBtn_hvr.png" id="4_ab1hq"]
+[ext_resource type="AudioStream" uid="uid://jogqvgowxn1j" path="res://final/bgmusic.ogg" id="6_ab1hq"]
+
+[node name="background" type="TextureRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_p5lrp")
+expand_mode = 1
+stretch_mode = 6
+script = ExtResource("2_c5qxn")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+offset_left = 62.0
+offset_top = 461.0
+offset_right = 904.0
+offset_bottom = 593.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.78431374)
+theme_override_constants/shadow_offset_x = -1
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 22
+text = "FINAL_WIN"
+
+[node name="Restart_btn" type="TextureButton" parent="."]
+layout_mode = 1
+offset_left = 582.0
+offset_top = 443.0
+offset_right = 858.0
+offset_bottom = 541.0
+texture_normal = ExtResource("2_6jfej")
+texture_pressed = ExtResource("3_c5qxn")
+texture_hover = ExtResource("4_ab1hq")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Restart_txt" type="Label" parent="Restart_btn"]
+layout_mode = 1
+offset_left = 33.0
+offset_top = 20.0
+offset_right = 242.0
+offset_bottom = 76.0
+theme_override_font_sizes/font_size = 26
+text = "FINAL_RESTART"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Bg_music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_ab1hq")
+autoplay = true
+bus = &"Music"
+parameters/looping = true
+
+[connection signal="resized" from="." to="." method="_on_resized"]
+[connection signal="pressed" from="Restart_btn" to="." method="_on_restart_btn_pressed"]

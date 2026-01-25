@@ -56,7 +56,7 @@ func update_visual():
 	var new_color : Color
 	if is_active: new_color = Color(0.5, 0.5, 0.5, 0)     
 	elif _has_been_visited: new_color = Color(0.5, 0.5, 0.5, 0)          
-	elif is_clickable: new_color = Color(0.5, 0.5, 0.5, 0.7)               
+	elif is_clickable: new_color = Color(0.5, 0.5, 0.5, 0.6)               
 	else: new_color = Color(0.5, 0.5, 0.5, 0.8)  
 	var tween_poly := create_tween()
 	tween_poly.tween_property(_polygon2D, "color", new_color, 1).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)

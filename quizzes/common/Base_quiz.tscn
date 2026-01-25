@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cnldk7rl488nm"]
+[gd_scene load_steps=14 format=3 uid="uid://cnldk7rl488nm"]
 
 [ext_resource type="Shader" uid="uid://by1j111ya38xo" path="res://quizzes/common/UI.gdshader" id="1_3qmi5"]
 [ext_resource type="Texture2D" uid="uid://bd7ossyvslgxl" path="res://quizzes/common/quiz_bg.jpg" id="1_i5773"]
@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://uheaq13adjya" path="res://quizzes/common/cont_hover.png" id="12_gcj7o"]
 [ext_resource type="BitMap" uid="uid://dsd4wyuqjxolu" path="res://quizzes/common/cont_mask.png" id="13_cte8i"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_puguc"]
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qc65l"]
 shader = ExtResource("1_3qmi5")
 shader_parameter/blur_size = 3.0
@@ -19,6 +21,7 @@ shader_parameter/radius = 4
 shader_parameter/darkness = 0.5
 
 [node name="Base_quiz" type="ColorRect"]
+material = SubResource("ShaderMaterial_puguc")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -26,8 +29,6 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(1, 1, 1, 0)
 script = ExtResource("2_nmvrc")
-
-[node name="BackBufferCopy" type="BackBufferCopy" parent="."]
 
 [node name="blur" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_qc65l")
@@ -37,7 +38,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(1, 1, 1, 0)
 
 [node name="Container" type="Control" parent="."]
 layout_mode = 1

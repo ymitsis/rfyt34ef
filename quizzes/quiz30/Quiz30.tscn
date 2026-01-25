@@ -46,7 +46,7 @@ offset_top = 5.0
 offset_right = 157.0
 offset_bottom = 45.0
 theme_override_font_sizes/font_size = 20
-text = "QUIZ30_ANS1"
+text = "PSR B0329+54"
 
 [node name="play-pause" parent="Container/ans_box1" index="5" instance=ExtResource("5_8ksb5")]
 layout_mode = 0
@@ -74,7 +74,7 @@ offset_top = 5.0
 offset_right = 157.0
 offset_bottom = 45.0
 theme_override_font_sizes/font_size = 20
-text = "QUIZ30_ANS2"
+text = "PSR B0833-45"
 
 [node name="play-pause" parent="Container/ans_box2" index="5" instance=ExtResource("5_8ksb5")]
 layout_mode = 0
@@ -102,7 +102,7 @@ offset_top = 5.0
 offset_right = 157.0
 offset_bottom = 45.0
 theme_override_font_sizes/font_size = 20
-text = "QUIZ30_ANS3"
+text = "PSR B0531-21"
 
 [node name="play-pause" parent="Container/ans_box3" index="5" instance=ExtResource("5_8ksb5")]
 layout_mode = 0
